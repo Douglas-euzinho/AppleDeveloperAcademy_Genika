@@ -11,7 +11,7 @@
 		50BCEC41284EC02200C85359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC40284EC02200C85359 /* Assets.xcassets */; };
 		50BCEC47284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 50BCEC46284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		50BCEC4C284EC02300C85359 /* Mini06_watchOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC4B284EC02300C85359 /* Mini06_watchOSAppApp.swift */; };
-		50BCEC4E284EC02300C85359 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC4D284EC02300C85359 /* ContentView.swift */; };
+		50BCEC4E284EC02300C85359 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC4D284EC02300C85359 /* ContainerView.swift */; };
 		50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC4F284EC02300C85359 /* NotificationController.swift */; };
 		50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC51284EC02300C85359 /* NotificationView.swift */; };
 		50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC53284EC02300C85359 /* ComplicationController.swift */; };
@@ -67,7 +67,7 @@
 		50BCEC40284EC02200C85359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50BCEC46284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mini06-watchOSApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BCEC4B284EC02300C85359 /* Mini06_watchOSAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini06_watchOSAppApp.swift; sourceTree = "<group>"; };
-		50BCEC4D284EC02300C85359 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		50BCEC4D284EC02300C85359 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		50BCEC4F284EC02300C85359 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		50BCEC51284EC02300C85359 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		50BCEC53284EC02300C85359 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -88,6 +88,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		509E5D8728511B4C00393673 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				509E5D8B28511BD600393673 /* Screens */,
+				50BCEC4B284EC02300C85359 /* Mini06_watchOSAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		509E5D8828511B5400393673 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				50BCEC5B284EC02300C85359 /* PushNotificationPayload.apns */,
+				50BCEC4F284EC02300C85359 /* NotificationController.swift */,
+				50BCEC51284EC02300C85359 /* NotificationView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		509E5D8928511B7B00393673 /* Complication */ = {
+			isa = PBXGroup;
+			children = (
+				50BCEC55284EC02300C85359 /* Assets.xcassets */,
+				50BCEC53284EC02300C85359 /* ComplicationController.swift */,
+			);
+			path = Complication;
+			sourceTree = "<group>";
+		};
+		509E5D8B28511BD600393673 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				509E5D8C28511BE000393673 /* Container */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		509E5D8C28511BE000393673 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				50BCEC4D284EC02300C85359 /* ContainerView.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		509E5D8D28511C9700393673 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50BCEC40284EC02200C85359 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		50BCEC30284EC02100C85359 = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +162,7 @@
 		50BCEC3F284EC02100C85359 /* Mini06-watchOSApp WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				50BCEC40284EC02200C85359 /* Assets.xcassets */,
+				509E5D8D28511C9700393673 /* Resources */,
 			);
 			path = "Mini06-watchOSApp WatchKit App";
 			sourceTree = "<group>";
@@ -118,14 +170,10 @@
 		50BCEC4A284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				50BCEC4B284EC02300C85359 /* Mini06_watchOSAppApp.swift */,
-				50BCEC4D284EC02300C85359 /* ContentView.swift */,
-				50BCEC4F284EC02300C85359 /* NotificationController.swift */,
-				50BCEC51284EC02300C85359 /* NotificationView.swift */,
-				50BCEC53284EC02300C85359 /* ComplicationController.swift */,
-				50BCEC55284EC02300C85359 /* Assets.xcassets */,
+				509E5D8928511B7B00393673 /* Complication */,
+				509E5D8828511B5400393673 /* Notification */,
+				509E5D8728511B4C00393673 /* App */,
 				50BCEC5A284EC02300C85359 /* Info.plist */,
-				50BCEC5B284EC02300C85359 /* PushNotificationPayload.apns */,
 				50BCEC57284EC02300C85359 /* Preview Content */,
 			);
 			path = "Mini06-watchOSApp WatchKit Extension";
@@ -267,7 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
-				50BCEC4E284EC02300C85359 /* ContentView.swift in Sources */,
+				50BCEC4E284EC02300C85359 /* ContainerView.swift in Sources */,
 				50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */,
 				50BCEC4C284EC02300C85359 /* Mini06_watchOSAppApp.swift in Sources */,
 				50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */,

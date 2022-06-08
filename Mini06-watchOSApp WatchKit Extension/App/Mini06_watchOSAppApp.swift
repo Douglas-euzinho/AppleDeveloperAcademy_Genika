@@ -12,7 +12,7 @@ struct Mini06_watchOSAppApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                ContainerView()
             }
         }
 

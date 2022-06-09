@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		509E5D9028515CFB00393673 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509E5D8F28515CFB00393673 /* HomeView.swift */; };
 		50BCEC3C284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		50BCEC41284EC02200C85359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC40284EC02200C85359 /* Assets.xcassets */; };
 		50BCEC47284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 50BCEC46284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -17,6 +18,10 @@
 		50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC53284EC02300C85359 /* ComplicationController.swift */; };
 		50BCEC56284EC02300C85359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC55284EC02300C85359 /* Assets.xcassets */; };
 		50BCEC59284EC02300C85359 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC58284EC02300C85359 /* Preview Assets.xcassets */; };
+		50FE6AEE2851861B007F6073 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AED2851861B007F6073 /* HomeViewModel.swift */; };
+		50FE6AF5285186A0007F6073 /* HomeGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF4285186A0007F6073 /* HomeGridView.swift */; };
+		50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */; };
+		50FE6AFA285186F7007F6073 /* LinearProgressiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF9285186F7007F6073 /* LinearProgressiveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		509E5D8F28515CFB00393673 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		50BCEC37284EC02100C85359 /* Mini06-watchOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini06-watchOSApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini06-watchOSApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BCEC40284EC02200C85359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +81,10 @@
 		50BCEC58284EC02300C85359 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		50BCEC5A284EC02300C85359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50BCEC5B284EC02300C85359 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		50FE6AED2851861B007F6073 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		50FE6AF4285186A0007F6073 /* HomeGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGridView.swift; sourceTree = "<group>"; };
+		50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSegmentView.swift; sourceTree = "<group>"; };
+		50FE6AF9285186F7007F6073 /* LinearProgressiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressiveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +101,7 @@
 		509E5D8728511B4C00393673 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				509E5D8B28511BD600393673 /* Screens */,
+				509E5D8B28511BD600393673 /* View */,
 				50BCEC4B284EC02300C85359 /* Mini06_watchOSAppApp.swift */,
 			);
 			path = App;
@@ -116,12 +126,13 @@
 			path = Complication;
 			sourceTree = "<group>";
 		};
-		509E5D8B28511BD600393673 /* Screens */ = {
+		509E5D8B28511BD600393673 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				509E5D8C28511BE000393673 /* Container */,
+				50FE6AF8285186DC007F6073 /* Shared */,
+				50FE6AEF2851863D007F6073 /* Screens */,
 			);
-			path = Screens;
+			path = View;
 			sourceTree = "<group>";
 		};
 		509E5D8C28511BE000393673 /* Container */ = {
@@ -138,6 +149,16 @@
 				50BCEC40284EC02200C85359 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		509E5D8E28515CCC00393673 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				50FE6AF228518685007F6073 /* Components */,
+				509E5D8F28515CFB00393673 /* HomeView.swift */,
+				50FE6AED2851861B007F6073 /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		50BCEC30284EC02100C85359 = {
@@ -185,6 +206,32 @@
 				50BCEC58284EC02300C85359 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		50FE6AEF2851863D007F6073 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				509E5D8E28515CCC00393673 /* Home */,
+				509E5D8C28511BE000393673 /* Container */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		50FE6AF228518685007F6073 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				50FE6AF4285186A0007F6073 /* HomeGridView.swift */,
+				50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		50FE6AF8285186DC007F6073 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				50FE6AF9285186F7007F6073 /* LinearProgressiveView.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,11 +361,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */,
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
 				50BCEC4E284EC02300C85359 /* ContainerView.swift in Sources */,
+				50FE6AFA285186F7007F6073 /* LinearProgressiveView.swift in Sources */,
+				50FE6AEE2851861B007F6073 /* HomeViewModel.swift in Sources */,
 				50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */,
+				509E5D9028515CFB00393673 /* HomeView.swift in Sources */,
 				50BCEC4C284EC02300C85359 /* Mini06_watchOSAppApp.swift in Sources */,
 				50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */,
+				50FE6AF5285186A0007F6073 /* HomeGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

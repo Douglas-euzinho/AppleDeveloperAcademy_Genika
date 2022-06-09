@@ -15,25 +15,25 @@ struct HomeView: View {
             HomeSegmentView(mainImagePath: "doc.fill",
                             lowLabel: "0r", highLabel: "9r",
                             lowImagePath: "book", highImagePath: "star",
-                            qualityProgressValue: homeViewModel.foodQualityValue)
+                            qualityProgressValue: homeViewModel.foodQualityValue, quantityProgressValue: homeViewModel.foodQuantityValue)
             .frame(width: 82.5, height: 75)
         } row1Column2View: {
             HomeSegmentView(mainImagePath: "doc.fill",
                             lowLabel: "0d", highLabel: "7d",
                             lowImagePath: "book", highImagePath: "star",
-                            qualityProgressValue: homeViewModel.activityQualityValue)
+                            qualityProgressValue: homeViewModel.activityQualityValue, quantityProgressValue: homeViewModel.activityQuantityValue)
             .frame(width: 82.5, height: 75)
         } row2Column1View: {
             HomeSegmentView(mainImagePath: "doc.fill",
                             lowLabel: "0h", highLabel: "11h",
                             lowImagePath: "book", highImagePath: "star",
-                            qualityProgressValue: homeViewModel.sleepQualityValue)
+                            qualityProgressValue: homeViewModel.sleepQualityValue, quantityProgressValue: homeViewModel.sleepQuantityValue)
             .frame(width: 82.5, height: 75)
         } row2Column2View: {
             HomeSegmentView(mainImagePath: "doc.fill",
                             lowLabel: "fra", highLabel: "int",
                             lowImagePath: "book", highImagePath: "star",
-                            qualityProgressValue: homeViewModel.emotionalQualityValue)
+                            qualityProgressValue: homeViewModel.emotionalQualityValue, quantityProgressValue: homeViewModel.emotionalQuantityValue)
             .frame(width: 82.5, height: 75)
         }
         .navigationTitle("Health")

@@ -14,18 +14,15 @@ struct HomeSegmentView: View {
     let lowImagePath: String
     let highImagePath: String
     var qualityProgressValue: CGFloat
+    var quantityProgressValue: DashedProgressView.QuantityIndicator
     
     var body: some View {
         GeometryReader { metrics in
             ZStack {
                 LinearProgressView(percentage: qualityProgressValue,
-                                    metrics: metrics)
+                                   metrics: metrics)
                 
-                Circle()
-                    .trim(from: 0.55, to: 0.95)
-                    .stroke(style: StrokeStyle(lineWidth: metrics.size.height * 0.075, lineCap: .round))
-                    .frame(width: metrics.size.height * 0.75)
-                    .foregroundColor(Color(uiColor: .darkGray))
+                DashedProgressView(value: quantityProgressValue, metrics: metrics)
                 
                 Image(systemName: "doc.fill")
                     .resizable()
@@ -69,5 +66,16 @@ struct HomeSegmentView: View {
             .frame(width: metrics.size.width * 0.175,
                    height: metrics.size.width * 0.175)
             .foregroundColor(Color(uiColor: .lightGray))
+    }
+    
+}
+
+struct HomeSegmentView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeSegmentView(mainImagePath: "doc.fill",
+                        lowLabel: "0d", highLabel: "7d",
+                        lowImagePath: "star", highImagePath: "book",
+                        qualityProgressValue: 90,
+                        quantityProgressValue: .medium)
     }
 }

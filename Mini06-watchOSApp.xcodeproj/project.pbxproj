@@ -22,6 +22,9 @@
 		50FE6AF5285186A0007F6073 /* HomeGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF4285186A0007F6073 /* HomeGridView.swift */; };
 		50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */; };
 		50FE6AFA285186F7007F6073 /* LinearProgressiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF9285186F7007F6073 /* LinearProgressiveView.swift */; };
+		50FE6AFC28528D56007F6073 /* RoundedTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AFB28528D56007F6073 /* RoundedTriangle.swift */; };
+		50FE6AFE28528D95007F6073 /* CircularSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AFD28528D95007F6073 /* CircularSegment.swift */; };
+		50FE6B0028528DB2007F6073 /* DashedProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AFF28528DB2007F6073 /* DashedProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		50FE6AF4285186A0007F6073 /* HomeGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGridView.swift; sourceTree = "<group>"; };
 		50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSegmentView.swift; sourceTree = "<group>"; };
 		50FE6AF9285186F7007F6073 /* LinearProgressiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressiveView.swift; sourceTree = "<group>"; };
+		50FE6AFB28528D56007F6073 /* RoundedTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTriangle.swift; sourceTree = "<group>"; };
+		50FE6AFD28528D95007F6073 /* CircularSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSegment.swift; sourceTree = "<group>"; };
+		50FE6AFF28528DB2007F6073 /* DashedProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +236,9 @@
 			isa = PBXGroup;
 			children = (
 				50FE6AF9285186F7007F6073 /* LinearProgressiveView.swift */,
+				50FE6AFB28528D56007F6073 /* RoundedTriangle.swift */,
+				50FE6AFD28528D95007F6073 /* CircularSegment.swift */,
+				50FE6AFF28528DB2007F6073 /* DashedProgressView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -361,6 +370,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FE6AFE28528D95007F6073 /* CircularSegment.swift in Sources */,
+				50FE6B0028528DB2007F6073 /* DashedProgressView.swift in Sources */,
 				50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */,
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
 				50BCEC4E284EC02300C85359 /* ContainerView.swift in Sources */,
@@ -370,6 +381,7 @@
 				509E5D9028515CFB00393673 /* HomeView.swift in Sources */,
 				50BCEC4C284EC02300C85359 /* Mini06_watchOSAppApp.swift in Sources */,
 				50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */,
+				50FE6AFC28528D56007F6073 /* RoundedTriangle.swift in Sources */,
 				50FE6AF5285186A0007F6073 /* HomeGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

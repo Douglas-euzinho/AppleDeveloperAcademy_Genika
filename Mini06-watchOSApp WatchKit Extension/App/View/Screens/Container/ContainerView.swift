@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContainerView: View {
     var body: some View {
-        Text("Mini 06")
-            .padding()
+        HomeView()
     }
 }
 

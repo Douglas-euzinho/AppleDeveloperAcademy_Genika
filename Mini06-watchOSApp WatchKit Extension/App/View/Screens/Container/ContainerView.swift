@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ContainerView: View {
     var body: some View {
-        HomeView()
+        TabView {
+            HomeView()
+            DiaryView()
+        }
+        .tabViewStyle(PageTabViewStyle())
     }
 }
 

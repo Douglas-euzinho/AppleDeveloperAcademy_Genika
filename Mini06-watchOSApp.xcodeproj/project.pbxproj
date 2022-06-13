@@ -18,6 +18,11 @@
 		50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC53284EC02300C85359 /* ComplicationController.swift */; };
 		50BCEC56284EC02300C85359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC55284EC02300C85359 /* Assets.xcassets */; };
 		50BCEC59284EC02300C85359 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC58284EC02300C85359 /* Preview Assets.xcassets */; };
+		50DCF8932857B0320053887C /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8922857B0320053887C /* DiaryView.swift */; };
+		50DCF8972857B2130053887C /* CGFloat+ScreenMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */; };
+		50DCF8992857BA340053887C /* View+AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8982857BA340053887C /* View+AppColor.swift */; };
+		50DCF89D2857BA6F0053887C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF89C2857BA6F0053887C /* AppColors.swift */; };
+		50DCF8A02857BAD60053887C /* DiaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF89F2857BAD60053887C /* DiaryButtonView.swift */; };
 		50FE6AEE2851861B007F6073 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AED2851861B007F6073 /* HomeViewModel.swift */; };
 		50FE6AF5285186A0007F6073 /* HomeGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF4285186A0007F6073 /* HomeGridView.swift */; };
 		50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */; };
@@ -84,6 +89,11 @@
 		50BCEC58284EC02300C85359 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		50BCEC5A284EC02300C85359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50BCEC5B284EC02300C85359 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		50DCF8922857B0320053887C /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+ScreenMetrics.swift"; sourceTree = "<group>"; };
+		50DCF8982857BA340053887C /* View+AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AppColor.swift"; sourceTree = "<group>"; };
+		50DCF89C2857BA6F0053887C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		50DCF89F2857BAD60053887C /* DiaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryButtonView.swift; sourceTree = "<group>"; };
 		50FE6AED2851861B007F6073 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		50FE6AF4285186A0007F6073 /* HomeGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGridView.swift; sourceTree = "<group>"; };
 		50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSegmentView.swift; sourceTree = "<group>"; };
@@ -189,6 +199,7 @@
 		50BCEC3F284EC02100C85359 /* Mini06-watchOSApp WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				50DCF8942857B1EC0053887C /* Common */,
 				509E5D8D28511C9700393673 /* Resources */,
 			);
 			path = "Mini06-watchOSApp WatchKit App";
@@ -214,9 +225,53 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		50DCF8912857B0250053887C /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				50DCF89E2857BAC10053887C /* Components */,
+				50DCF8922857B0320053887C /* DiaryView.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		50DCF8942857B1EC0053887C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				50DCF89A2857BA410053887C /* Defaults */,
+				50DCF8952857B1F50053887C /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		50DCF8952857B1F50053887C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */,
+				50DCF8982857BA340053887C /* View+AppColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		50DCF89A2857BA410053887C /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				50DCF89C2857BA6F0053887C /* AppColors.swift */,
+			);
+			path = Defaults;
+			sourceTree = "<group>";
+		};
+		50DCF89E2857BAC10053887C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				50DCF89F2857BAD60053887C /* DiaryButtonView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		50FE6AEF2851863D007F6073 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				50DCF8912857B0250053887C /* Diary */,
 				509E5D8E28515CCC00393673 /* Home */,
 				509E5D8C28511BE000393673 /* Container */,
 			);
@@ -374,12 +429,17 @@
 				50FE6B0028528DB2007F6073 /* DashedProgressView.swift in Sources */,
 				50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */,
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
+				50DCF8A02857BAD60053887C /* DiaryButtonView.swift in Sources */,
+				50DCF8992857BA340053887C /* View+AppColor.swift in Sources */,
+				50DCF8972857B2130053887C /* CGFloat+ScreenMetrics.swift in Sources */,
 				50BCEC4E284EC02300C85359 /* ContainerView.swift in Sources */,
 				50FE6AFA285186F7007F6073 /* LinearProgressiveView.swift in Sources */,
 				50FE6AEE2851861B007F6073 /* HomeViewModel.swift in Sources */,
+				50DCF8932857B0320053887C /* DiaryView.swift in Sources */,
 				50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */,
 				509E5D9028515CFB00393673 /* HomeView.swift in Sources */,
 				50BCEC4C284EC02300C85359 /* Mini06_watchOSAppApp.swift in Sources */,
+				50DCF89D2857BA6F0053887C /* AppColors.swift in Sources */,
 				50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */,
 				50FE6AFC28528D56007F6073 /* RoundedTriangle.swift in Sources */,
 				50FE6AF5285186A0007F6073 /* HomeGridView.swift in Sources */,

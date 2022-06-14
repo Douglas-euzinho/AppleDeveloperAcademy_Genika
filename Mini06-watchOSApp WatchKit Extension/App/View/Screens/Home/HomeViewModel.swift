@@ -8,20 +8,18 @@
 import SwiftUI
 
 class HomeViewModel: ObservableObject {
-    typealias QauntityProgressValue = DashedProgressView.QuantityIndicator
-    
     @Published var foodQualityValue: CGFloat = 0
     @Published var activityQualityValue: CGFloat = 0
     @Published var sleepQualityValue: CGFloat = 0
     @Published var emotionalQualityValue: CGFloat = 0
     
-    @Published var foodQuantityValue: QauntityProgressValue = .none
-    @Published var activityQuantityValue: QauntityProgressValue = .none
-    @Published var sleepQuantityValue: QauntityProgressValue = .none
-    @Published var emotionalQuantityValue: QauntityProgressValue = .none
+    @Published var foodQuantityValue: QuantityIndicator? = .none
+    @Published var activityQuantityValue: QuantityIndicator? = .none
+    @Published var sleepQuantityValue: QuantityIndicator? = .none
+    @Published var emotionalQuantityValue: QuantityIndicator? = .none
     
     func randomizeValues() {
-        let quantityArray = QauntityProgressValue.allCases.filter({ $0 != .none })
+        let quantityArray = QuantityIndicator.allCases
 
         withAnimation(.easeInOut(duration: 0.5)) {
             foodQualityValue = CGFloat(Double.random(in: 0...100))

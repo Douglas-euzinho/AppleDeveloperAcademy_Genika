@@ -12,6 +12,8 @@
 		500ADCCF285807AF00E619CF /* EmotionalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ADCCE285807AF00E619CF /* EmotionalRowView.swift */; };
 		509E5D9028515CFB00393673 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509E5D8F28515CFB00393673 /* HomeView.swift */; };
 		50A3DEFB28580A59007952F8 /* EmotionalIntensiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DEFA28580A59007952F8 /* EmotionalIntensiveView.swift */; };
+		50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DEFD285920B3007952F8 /* View+CornerRadius.swift */; };
+		50A3DF0028592116007952F8 /* QuantityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DEFF28592116007952F8 /* QuantityIndicator.swift */; };
 		50BCEC3C284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		50BCEC41284EC02200C85359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC40284EC02200C85359 /* Assets.xcassets */; };
 		50BCEC47284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 50BCEC46284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -83,6 +85,8 @@
 		500ADCCE285807AF00E619CF /* EmotionalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalRowView.swift; sourceTree = "<group>"; };
 		509E5D8F28515CFB00393673 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		50A3DEFA28580A59007952F8 /* EmotionalIntensiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalIntensiveView.swift; sourceTree = "<group>"; };
+		50A3DEFD285920B3007952F8 /* View+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
+		50A3DEFF28592116007952F8 /* QuantityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityIndicator.swift; sourceTree = "<group>"; };
 		50BCEC37284EC02100C85359 /* Mini06-watchOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini06-watchOSApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini06-watchOSApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BCEC40284EC02200C85359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 			children = (
 				50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */,
 				50DCF8982857BA340053887C /* View+AppColor.swift */,
+				50A3DEFD285920B3007952F8 /* View+CornerRadius.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				50DCF89C2857BA6F0053887C /* AppColors.swift */,
+				50A3DEFF28592116007952F8 /* QuantityIndicator.swift */,
 			);
 			path = Defaults;
 			sourceTree = "<group>";
@@ -458,12 +464,14 @@
 				50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */,
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
 				50DCF8A02857BAD60053887C /* DiaryButtonView.swift in Sources */,
+				50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */,
 				50DCF8992857BA340053887C /* View+AppColor.swift in Sources */,
 				50DCF8972857B2130053887C /* CGFloat+ScreenMetrics.swift in Sources */,
 				50BCEC4E284EC02300C85359 /* ContainerView.swift in Sources */,
 				50FE6AFA285186F7007F6073 /* LinearProgressiveView.swift in Sources */,
 				500ADCCF285807AF00E619CF /* EmotionalRowView.swift in Sources */,
 				50FE6AEE2851861B007F6073 /* HomeViewModel.swift in Sources */,
+				50A3DF0028592116007952F8 /* QuantityIndicator.swift in Sources */,
 				50DCF8932857B0320053887C /* DiaryView.swift in Sources */,
 				50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */,
 				509E5D9028515CFB00393673 /* HomeView.swift in Sources */,

@@ -87,7 +87,7 @@
 		50A3DEFA28580A59007952F8 /* EmotionalIntensiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalIntensiveView.swift; sourceTree = "<group>"; };
 		50A3DEFD285920B3007952F8 /* View+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
 		50A3DEFF28592116007952F8 /* QuantityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityIndicator.swift; sourceTree = "<group>"; };
-		50BCEC37284EC02100C85359 /* Mini06-watchOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini06-watchOSApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50BCEC37284EC02100C85359 /* Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini06-watchOSApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BCEC40284EC02200C85359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50BCEC46284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mini06-watchOSApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,7 +216,7 @@
 		50BCEC38284EC02100C85359 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50BCEC37284EC02100C85359 /* Mini06-watchOSApp.app */,
+				50BCEC37284EC02100C85359 /* Watch App.app */,
 				50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */,
 				50BCEC46284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex */,
 			);
@@ -347,7 +347,7 @@
 			);
 			name = "Mini06-watchOSApp";
 			productName = "Mini06-watchOSApp";
-			productReference = 50BCEC37284EC02100C85359 /* Mini06-watchOSApp.app */;
+			productReference = 50BCEC37284EC02100C85359 /* Watch App.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
 		50BCEC3A284EC02100C85359 /* Mini06-watchOSApp WatchKit App */ = {
@@ -550,12 +550,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -603,12 +605,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -619,11 +623,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = KYA6AZPJP7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Mini06_watchOSApp_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -632,14 +637,14 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.oiti.app.Mini06-watchOSApp.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -650,11 +655,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = KYA6AZPJP7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Mini06_watchOSApp_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -663,14 +669,14 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.oiti.app.Mini06-watchOSApp.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -682,19 +688,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KYA6AZPJP7;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.oiti.app.Mini06-watchOSApp.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -706,19 +713,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KYA6AZPJP7;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.oiti.app.Mini06-watchOSApp.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -727,9 +735,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KYA6AZPJP7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.oiti.app.Mini06-watchOSApp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp";
+				PRODUCT_NAME = "Watch App";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -739,9 +748,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KYA6AZPJP7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.oiti.app.Mini06-watchOSApp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp";
+				PRODUCT_NAME = "Watch App";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

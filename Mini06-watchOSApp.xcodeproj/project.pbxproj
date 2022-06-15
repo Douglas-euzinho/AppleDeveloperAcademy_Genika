@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500ADCC92857ECAF00E619CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC40284EC02200C85359 /* Assets.xcassets */; };
+		500ADCCC2857EE3000E619CF /* FeelingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ADCCB2857EE3000E619CF /* FeelingModel.swift */; };
+		500ADCCF285807AF00E619CF /* EmotionalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ADCCE285807AF00E619CF /* EmotionalRowView.swift */; };
 		509E5D9028515CFB00393673 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509E5D8F28515CFB00393673 /* HomeView.swift */; };
+		50A3DEFB28580A59007952F8 /* EmotionalIntensiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DEFA28580A59007952F8 /* EmotionalIntensiveView.swift */; };
+		50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DEFD285920B3007952F8 /* View+CornerRadius.swift */; };
+		50A3DF0028592116007952F8 /* QuantityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DEFF28592116007952F8 /* QuantityIndicator.swift */; };
 		50BCEC3C284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		50BCEC41284EC02200C85359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC40284EC02200C85359 /* Assets.xcassets */; };
 		50BCEC47284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 50BCEC46284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -17,12 +23,12 @@
 		50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC51284EC02300C85359 /* NotificationView.swift */; };
 		50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC53284EC02300C85359 /* ComplicationController.swift */; };
 		50BCEC56284EC02300C85359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC55284EC02300C85359 /* Assets.xcassets */; };
-		50BCEC59284EC02300C85359 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC58284EC02300C85359 /* Preview Assets.xcassets */; };
 		50DCF8932857B0320053887C /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8922857B0320053887C /* DiaryView.swift */; };
 		50DCF8972857B2130053887C /* CGFloat+ScreenMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */; };
 		50DCF8992857BA340053887C /* View+AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8982857BA340053887C /* View+AppColor.swift */; };
 		50DCF89D2857BA6F0053887C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF89C2857BA6F0053887C /* AppColors.swift */; };
 		50DCF8A02857BAD60053887C /* DiaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF89F2857BAD60053887C /* DiaryButtonView.swift */; };
+		50DCF8A52857CAAC0053887C /* EmotionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8A42857CAAC0053887C /* EmotionalView.swift */; };
 		50FE6AEE2851861B007F6073 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AED2851861B007F6073 /* HomeViewModel.swift */; };
 		50FE6AF5285186A0007F6073 /* HomeGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF4285186A0007F6073 /* HomeGridView.swift */; };
 		50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */; };
@@ -75,8 +81,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		500ADCCB2857EE3000E619CF /* FeelingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingModel.swift; sourceTree = "<group>"; };
+		500ADCCE285807AF00E619CF /* EmotionalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalRowView.swift; sourceTree = "<group>"; };
 		509E5D8F28515CFB00393673 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		50BCEC37284EC02100C85359 /* Mini06-watchOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini06-watchOSApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50A3DEFA28580A59007952F8 /* EmotionalIntensiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalIntensiveView.swift; sourceTree = "<group>"; };
+		50A3DEFD285920B3007952F8 /* View+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
+		50A3DEFF28592116007952F8 /* QuantityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityIndicator.swift; sourceTree = "<group>"; };
+		50BCEC37284EC02100C85359 /* Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini06-watchOSApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BCEC40284EC02200C85359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50BCEC46284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mini06-watchOSApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +97,6 @@
 		50BCEC51284EC02300C85359 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		50BCEC53284EC02300C85359 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		50BCEC55284EC02300C85359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		50BCEC58284EC02300C85359 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		50BCEC5A284EC02300C85359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50BCEC5B284EC02300C85359 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		50DCF8922857B0320053887C /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
@@ -94,6 +104,7 @@
 		50DCF8982857BA340053887C /* View+AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AppColor.swift"; sourceTree = "<group>"; };
 		50DCF89C2857BA6F0053887C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		50DCF89F2857BAD60053887C /* DiaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryButtonView.swift; sourceTree = "<group>"; };
+		50DCF8A42857CAAC0053887C /* EmotionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalView.swift; sourceTree = "<group>"; };
 		50FE6AED2851861B007F6073 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		50FE6AF4285186A0007F6073 /* HomeGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGridView.swift; sourceTree = "<group>"; };
 		50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSegmentView.swift; sourceTree = "<group>"; };
@@ -114,6 +125,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		500ADCCA2857EE1C00E619CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				500ADCCB2857EE3000E619CF /* FeelingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		500ADCCD2858078F00E619CF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				500ADCCE285807AF00E619CF /* EmotionalRowView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		509E5D8728511B4C00393673 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +216,7 @@
 		50BCEC38284EC02100C85359 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50BCEC37284EC02100C85359 /* Mini06-watchOSApp.app */,
+				50BCEC37284EC02100C85359 /* Watch App.app */,
 				50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */,
 				50BCEC46284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex */,
 			);
@@ -199,8 +226,9 @@
 		50BCEC3F284EC02100C85359 /* Mini06-watchOSApp WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				50DCF8942857B1EC0053887C /* Common */,
+				500ADCCA2857EE1C00E619CF /* Model */,
 				509E5D8D28511C9700393673 /* Resources */,
+				50DCF8942857B1EC0053887C /* Common */,
 			);
 			path = "Mini06-watchOSApp WatchKit App";
 			sourceTree = "<group>";
@@ -212,17 +240,8 @@
 				509E5D8828511B5400393673 /* Notification */,
 				509E5D8728511B4C00393673 /* App */,
 				50BCEC5A284EC02300C85359 /* Info.plist */,
-				50BCEC57284EC02300C85359 /* Preview Content */,
 			);
 			path = "Mini06-watchOSApp WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		50BCEC57284EC02300C85359 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				50BCEC58284EC02300C85359 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		50DCF8912857B0250053887C /* Diary */ = {
@@ -248,6 +267,7 @@
 			children = (
 				50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */,
 				50DCF8982857BA340053887C /* View+AppColor.swift */,
+				50A3DEFD285920B3007952F8 /* View+CornerRadius.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				50DCF89C2857BA6F0053887C /* AppColors.swift */,
+				50A3DEFF28592116007952F8 /* QuantityIndicator.swift */,
 			);
 			path = Defaults;
 			sourceTree = "<group>";
@@ -268,9 +289,20 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		50DCF8A32857CA9D0053887C /* Emotional */ = {
+			isa = PBXGroup;
+			children = (
+				500ADCCD2858078F00E619CF /* Components */,
+				50DCF8A42857CAAC0053887C /* EmotionalView.swift */,
+				50A3DEFA28580A59007952F8 /* EmotionalIntensiveView.swift */,
+			);
+			path = Emotional;
+			sourceTree = "<group>";
+		};
 		50FE6AEF2851863D007F6073 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				50DCF8A32857CA9D0053887C /* Emotional */,
 				50DCF8912857B0250053887C /* Diary */,
 				509E5D8E28515CCC00393673 /* Home */,
 				509E5D8C28511BE000393673 /* Container */,
@@ -315,7 +347,7 @@
 			);
 			name = "Mini06-watchOSApp";
 			productName = "Mini06-watchOSApp";
-			productReference = 50BCEC37284EC02100C85359 /* Mini06-watchOSApp.app */;
+			productReference = 50BCEC37284EC02100C85359 /* Watch App.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
 		50BCEC3A284EC02100C85359 /* Mini06-watchOSApp WatchKit App */ = {
@@ -413,7 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50BCEC59284EC02300C85359 /* Preview Assets.xcassets in Resources */,
+				500ADCC92857ECAF00E619CF /* Assets.xcassets in Resources */,
 				50BCEC56284EC02300C85359 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,20 +458,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				50FE6AFE28528D95007F6073 /* CircularSegment.swift in Sources */,
+				50A3DEFB28580A59007952F8 /* EmotionalIntensiveView.swift in Sources */,
 				50FE6B0028528DB2007F6073 /* DashedProgressView.swift in Sources */,
+				50DCF8A52857CAAC0053887C /* EmotionalView.swift in Sources */,
 				50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */,
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
 				50DCF8A02857BAD60053887C /* DiaryButtonView.swift in Sources */,
+				50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */,
 				50DCF8992857BA340053887C /* View+AppColor.swift in Sources */,
 				50DCF8972857B2130053887C /* CGFloat+ScreenMetrics.swift in Sources */,
 				50BCEC4E284EC02300C85359 /* ContainerView.swift in Sources */,
 				50FE6AFA285186F7007F6073 /* LinearProgressiveView.swift in Sources */,
+				500ADCCF285807AF00E619CF /* EmotionalRowView.swift in Sources */,
 				50FE6AEE2851861B007F6073 /* HomeViewModel.swift in Sources */,
+				50A3DF0028592116007952F8 /* QuantityIndicator.swift in Sources */,
 				50DCF8932857B0320053887C /* DiaryView.swift in Sources */,
 				50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */,
 				509E5D9028515CFB00393673 /* HomeView.swift in Sources */,
 				50BCEC4C284EC02300C85359 /* Mini06_watchOSAppApp.swift in Sources */,
 				50DCF89D2857BA6F0053887C /* AppColors.swift in Sources */,
+				500ADCCC2857EE3000E619CF /* FeelingModel.swift in Sources */,
 				50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */,
 				50FE6AFC28528D56007F6073 /* RoundedTriangle.swift in Sources */,
 				50FE6AF5285186A0007F6073 /* HomeGridView.swift in Sources */,
@@ -512,12 +550,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -565,12 +605,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -580,12 +622,13 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Mini06-watchOSApp WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = KYA6AZPJP7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Mini06_watchOSApp_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -594,14 +637,14 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.oiti.app.Mini06-watchOSApp.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -611,12 +654,13 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Mini06-watchOSApp WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = KYA6AZPJP7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = Mini06_watchOSApp_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -625,14 +669,14 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.oiti.app.Mini06-watchOSApp.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -644,19 +688,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KYA6AZPJP7;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.oiti.app.Mini06-watchOSApp.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -668,19 +713,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KYA6AZPJP7;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.oiti.app.Mini06-watchOSApp.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -689,9 +735,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KYA6AZPJP7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.oiti.app.Mini06-watchOSApp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp";
+				PRODUCT_NAME = "Watch App";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -701,9 +748,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KYA6AZPJP7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.oiti.app.Mini06-watchOSApp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp";
+				PRODUCT_NAME = "Watch App";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

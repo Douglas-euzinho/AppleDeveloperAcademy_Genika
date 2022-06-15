@@ -8,10 +8,22 @@
 import SwiftUI
 
 struct ContainerView: View {
+    private enum Screens: Hashable {
+        case home, diary, emotional
+    }
+    
+    @State private var screenSelected: Screens? = .home
+    
     var body: some View {
-        TabView {
+        TabView(selection: $screenSelected) {
+            EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(feelingSelected: .none))
+                .tag(Screens.emotional)
+            
             HomeView()
+                .tag(Screens.home)
+            
             DiaryView()
+                .tag(Screens.diary)
         }
         .tabViewStyle(PageTabViewStyle())
     }

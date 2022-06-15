@@ -14,7 +14,7 @@ struct HomeSegmentView: View {
     let lowImagePath: String
     let highImagePath: String
     var qualityProgressValue: CGFloat
-    var quantityProgressValue: DashedProgressView.QuantityIndicator
+    var quantityProgressValue: QuantityIndicator?
     
     var body: some View {
         GeometryReader { metrics in

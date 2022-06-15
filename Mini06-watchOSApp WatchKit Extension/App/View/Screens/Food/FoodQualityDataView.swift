@@ -116,6 +116,7 @@ struct NextButton: View {
 struct FoodQualityRowView: View {
     var imageName: String
     var title: String
+    var sublabel: String? = nil
     var metrics: GeometryProxy
     var action: (Bool) -> Void
     @State var isSelected: Bool = false
@@ -150,6 +151,13 @@ struct FoodQualityRowView: View {
                     .foregroundColor(isSelected ? .black : .white)
                 
                 Spacer()
+                
+                if let sublabel = sublabel, isSelected {
+                    Text(sublabel)
+                        .font(.body)
+                        .fontWeight(.regular)
+                        .foregroundColor(Color(uiColor: UIColor(red: 0.74, green: 0.74, blue: 0.74, alpha: 1.0)))
+                }
             }
             .padding(.vertical, .width(7, from: metrics))
             .padding(.horizontal, .width(8, from: metrics))

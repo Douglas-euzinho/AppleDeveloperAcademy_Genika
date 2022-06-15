@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		504E2F57285A57250015F3D9 /* FoodAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E2F56285A57250015F3D9 /* FoodAlertView.swift */; };
+		504E2F59285A5A8A0015F3D9 /* FoodQualityDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E2F58285A5A8A0015F3D9 /* FoodQualityDataView.swift */; };
 		509E5D9028515CFB00393673 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509E5D8F28515CFB00393673 /* HomeView.swift */; };
 		50BCEC3C284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		50BCEC41284EC02200C85359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC40284EC02200C85359 /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 
 /* Begin PBXFileReference section */
 		504E2F56285A57250015F3D9 /* FoodAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAlertView.swift; sourceTree = "<group>"; };
+		504E2F58285A5A8A0015F3D9 /* FoodQualityDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQualityDataView.swift; sourceTree = "<group>"; };
 		509E5D8F28515CFB00393673 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		50BCEC37284EC02100C85359 /* Mini06-watchOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini06-watchOSApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini06-watchOSApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				504E2F56285A57250015F3D9 /* FoodAlertView.swift */,
+				504E2F58285A5A8A0015F3D9 /* FoodQualityDataView.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */,
 				509E5D9028515CFB00393673 /* HomeView.swift in Sources */,
 				50BCEC4C284EC02300C85359 /* Mini06_watchOSAppApp.swift in Sources */,
+				504E2F59285A5A8A0015F3D9 /* FoodQualityDataView.swift in Sources */,
 				50DCF89D2857BA6F0053887C /* AppColors.swift in Sources */,
 				50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */,
 				50FE6AFC28528D56007F6073 /* RoundedTriangle.swift in Sources */,

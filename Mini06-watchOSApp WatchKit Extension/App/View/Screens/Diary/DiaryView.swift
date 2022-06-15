@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct DiaryView: View {
+    @State private var showDataCollectingFlow: Bool = false
+    
     var body: some View {
         GeometryReader { metrics in
             VStack(spacing: .height(8, from: metrics)) {
                 DiaryButtonView(title: "Registrar",
                                 imageName: "square.and.pencil",
-                                theme: .light, metrics: metrics)
+                                theme: .light, metrics: metrics) {
+                    showDataCollectingFlow = true
+                }
                 
                 DiaryButtonView(title: "Relatórios",
                                 imageName: "doc.text",
@@ -26,6 +30,9 @@ struct DiaryView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Diário")
+        .fullScreenCover(isPresented: $showDataCollectingFlow) {
+            DataCollectingFlowView()
+        }
     }
 }
 

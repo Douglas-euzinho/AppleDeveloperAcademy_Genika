@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FoodAlertView: View {
+    @Environment(\.dismiss) var dismiss
+    @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
+    
     var body: some View {
         GeometryReader { metrics in
             VStack(spacing: 0) {
@@ -26,7 +29,13 @@ struct FoodAlertView: View {
                     .padding(.bottom, .height(40, from: metrics))
                 
                 Button {
-                    
+                    if let nextScreen = selectedScreen.next() {
+                        withAnimation(.easeInOut(duration: 0.6)) {
+                            selectedScreen = nextScreen
+                        }
+                    } else {
+                        dismiss()
+                    }
                 } label: {
                     Text("Continuar")
                         .font(.body)
@@ -41,6 +50,6 @@ struct FoodAlertView: View {
 
 struct FoodAlertView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodAlertView()
+        FoodAlertView(selectedScreen: .constant(.foodQuantity))
     }
 }

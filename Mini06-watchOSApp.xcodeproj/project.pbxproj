@@ -32,6 +32,7 @@
 		50DCF8A02857BAD60053887C /* DiaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF89F2857BAD60053887C /* DiaryButtonView.swift */; };
 		50DCF8A52857CAAC0053887C /* EmotionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8A42857CAAC0053887C /* EmotionalView.swift */; };
 		50F3D3F5285A7AF2007DE261 /* FoodQuantityDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F3D3F4285A7AF2007DE261 /* FoodQuantityDataView.swift */; };
+		50F3D3F7285A889F007DE261 /* DataCollectingFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F3D3F6285A889F007DE261 /* DataCollectingFlowView.swift */; };
 		50FE6AEE2851861B007F6073 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AED2851861B007F6073 /* HomeViewModel.swift */; };
 		50FE6AF5285186A0007F6073 /* HomeGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF4285186A0007F6073 /* HomeGridView.swift */; };
 		50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */; };
@@ -111,6 +112,7 @@
 		50DCF89F2857BAD60053887C /* DiaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryButtonView.swift; sourceTree = "<group>"; };
 		50DCF8A42857CAAC0053887C /* EmotionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalView.swift; sourceTree = "<group>"; };
 		50F3D3F4285A7AF2007DE261 /* FoodQuantityDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQuantityDataView.swift; sourceTree = "<group>"; };
+		50F3D3F6285A889F007DE261 /* DataCollectingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectingFlowView.swift; sourceTree = "<group>"; };
 		50FE6AED2851861B007F6073 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		50FE6AF4285186A0007F6073 /* HomeGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGridView.swift; sourceTree = "<group>"; };
 		50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSegmentView.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				50BCEC4D284EC02300C85359 /* ContainerView.swift */,
+				50F3D3F6285A889F007DE261 /* DataCollectingFlowView.swift */,
 			);
 			path = Container;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				509E5D9028515CFB00393673 /* HomeView.swift in Sources */,
 				50BCEC4C284EC02300C85359 /* Mini06_watchOSAppApp.swift in Sources */,
 				504E2F59285A5A8A0015F3D9 /* FoodQualityDataView.swift in Sources */,
+				50F3D3F7285A889F007DE261 /* DataCollectingFlowView.swift in Sources */,
 				50DCF89D2857BA6F0053887C /* AppColors.swift in Sources */,
 				500ADCCC2857EE3000E619CF /* FeelingModel.swift in Sources */,
 				50F3D3F5285A7AF2007DE261 /* FoodQuantityDataView.swift in Sources */,

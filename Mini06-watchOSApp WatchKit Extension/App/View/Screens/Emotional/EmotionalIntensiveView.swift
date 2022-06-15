@@ -51,7 +51,9 @@ class EmotionalIntensiveViewModel: ObservableObject {
 }
 
 struct EmotionalIntensiveView: View {
+    @Environment(\.dismiss) var dismiss
     @StateObject var viewModel: EmotionalIntensiveViewModel
+    @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
     
     var body: some View {
         GeometryReader { metrics in
@@ -107,7 +109,13 @@ struct EmotionalIntensiveView: View {
                     Spacer()
                     
                     Button {
-                        
+                        if let nextScreen = selectedScreen.next() {
+                            withAnimation(.easeInOut(duration: 0.6)) {
+                                selectedScreen = nextScreen
+                            }
+                        } else {
+                            dismiss()
+                        }
                     } label: {
                         RoundedRectangle(cornerRadius: 8.0)
                             .fill(AppColor.white.color)
@@ -121,14 +129,14 @@ struct EmotionalIntensiveView: View {
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Intensive")
+            .navigationTitle("Intensidade")
         }
     }
 }
 
 struct EmotionalIntensiveVIew_Previews: PreviewProvider {
     static var previews: some View {
-        EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(feelingSelected: .happy))
+        EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(feelingSelected: .happy), selectedScreen: .constant(.foodQuantity))
     }
 }
 

@@ -16,9 +16,6 @@ struct ContainerView: View {
     
     var body: some View {
         TabView(selection: $screenSelected) {
-            EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(feelingSelected: .none))
-                .tag(Screens.emotional)
-            
             HomeView()
                 .tag(Screens.home)
             

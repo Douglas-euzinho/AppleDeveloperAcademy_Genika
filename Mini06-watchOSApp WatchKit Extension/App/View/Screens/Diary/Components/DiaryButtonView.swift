@@ -16,10 +16,11 @@ struct DiaryButtonView: View {
     let imageName: String
     let theme: Theme
     var metrics: GeometryProxy
+    var action: () -> Void = { }
     
     var body: some View {
         Button {
-            
+            action()
         } label: {
             HStack(spacing: .width(8, from: metrics)) {
                 Image(systemName: imageName)

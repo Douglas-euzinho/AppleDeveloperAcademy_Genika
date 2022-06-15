@@ -26,6 +26,9 @@ struct FoodQualityDataView: View {
         DataModel(image: "🍫", name: "Processados"),
     ]
     
+    @Environment(\.dismiss) var dismiss
+    @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
+    
     var body: some View {
         GeometryReader { metrics in
             ZStack {
@@ -74,18 +77,25 @@ struct FoodQualityDataView: View {
                         Spacer()
                         
                         NextButton(metrics: metrics) {
-                            // TODO: Go to next page
+                            if let nextScreen = selectedScreen.next() {
+                                withAnimation(.easeInOut(duration: 0.6)) {
+                                    selectedScreen = nextScreen
+                                }
+                            } else {
+                                dismiss()
+                            }
                         }
                     }
                 }
             }
         }
+        .navigationTitle("Qualidade")
     }
 }
 
 struct FoodQualityDataView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodQualityDataView()
+        FoodQualityDataView(selectedScreen: .constant(.foodQuantity))
     }
 }
 

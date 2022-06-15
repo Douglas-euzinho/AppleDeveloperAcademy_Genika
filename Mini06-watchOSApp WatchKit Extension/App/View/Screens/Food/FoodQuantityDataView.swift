@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FoodQuantityDataView: View {
+    @Environment(\.dismiss) var dismiss
+    @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
     @State var value1: Int = 0
     @State var value2: Int = 0
     
@@ -45,7 +47,13 @@ struct FoodQuantityDataView: View {
                     .padding(.bottom, .width(16, from: metrics))
                     
                     Button {
-                        
+                        if let nextScreen = selectedScreen.next() {
+                            withAnimation(.easeInOut(duration: 0.6)) {
+                                selectedScreen = nextScreen
+                            }
+                        } else {
+                            dismiss()
+                        }
                     } label: {
                         HStack(spacing: 0) {
                             Text("Salvar")
@@ -67,12 +75,13 @@ struct FoodQuantityDataView: View {
                 }
             }
         }
+        .navigationTitle("Quantidade")
     }
 }
 
 struct FoodQuantityDataView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodQuantityDataView()
+        FoodQuantityDataView(selectedScreen: .constant(.foodQuantity))
     }
 }
 

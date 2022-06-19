@@ -41,8 +41,10 @@ struct FoodQuantityDataView: View {
                     .padding(.bottom, .width(16, from: metrics))
                     
                     HStack(spacing: .width(4, from: metrics)) {
-                        FoodQuantityStepper(image: "💧", sublabel: "Copos", metrics: metrics, value: $value1)
-                        FoodQuantityStepper(image: "🍌", sublabel: "Lanches", metrics: metrics, value: $value2)
+                        FoodQuantityStepper(viewModel: FoodQuantityStepperViewModel(image: "💧", sublabel: "Copos"),
+                                            metrics: metrics)
+                        FoodQuantityStepper(viewModel: FoodQuantityStepperViewModel(image: "🍌", sublabel: "Lanches"),
+                                            metrics: metrics)
                     }
                     .padding(.bottom, .width(16, from: metrics))
                     
@@ -82,78 +84,5 @@ struct FoodQuantityDataView: View {
 struct FoodQuantityDataView_Previews: PreviewProvider {
     static var previews: some View {
         FoodQuantityDataView(selectedScreen: .constant(.foodQuantity))
-    }
-}
-
-struct FoodQuantityStepper: View {
-    let image: String
-    let sublabel: String
-    var metrics: GeometryProxy
-    @Binding var value: Int
-    
-    var body: some View {
-        VStack(spacing: 1) {
-            VStack(spacing: 0) {
-                HStack(spacing: .width(4, from: metrics)) {
-                    Text("\(value)x")
-                    Text(image)
-                }
-                .font(.title2.weight(.light))
-                .foregroundColor(appColor: .white)
-                .frame(maxWidth: .infinity)
-                .padding(.top, .width(8, from: metrics))
-                
-                Text(sublabel)
-                    .font(.body)
-                    .fontWeight(.regular)
-                    .foregroundColor(Color(uiColor: UIColor(red: 0.74, green: 0.74, blue: 0.74, alpha: 1.0)))
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, .width(4, from: metrics))
-            }
-            .backgroundColor(appColor: .lightGray)
-            .cornerRadius(8, corners: [.topLeft, .topRight])
-            
-            HStack(spacing: 1) {
-                Button {
-                    decrease()
-                } label: {
-                    Rectangle()
-                        .fill(AppColor.lightGray.color)
-                        .frame(width: .width(44, from: metrics))
-                        .cornerRadius(8.0, corners: [.bottomLeft])
-                        .overlay {
-                            Image(systemName: "minus")
-                                .foregroundColor(AppColor.white.color)
-                        }
-                }
-                .buttonStyle(.borderless)
-                .frame(height: .width(44, from: metrics))
-                
-                Button {
-                    increase()
-                } label: {
-                    Rectangle()
-                        .fill(AppColor.lightGray.color)
-                        .frame(width: .width(44, from: metrics))
-                        .cornerRadius(8, corners: [.bottomRight])
-                        .overlay {
-                            Image(systemName: "plus")
-                                .foregroundColor(AppColor.white.color)
-                        }
-                }
-                .buttonStyle(.borderless)
-                .frame(height: .width(44, from: metrics))
-            }
-        }
-    }
-    
-    func increase() {
-        value += 1
-    }
-    
-    func decrease() {
-        if value > 0 {
-            value -= 1
-        }
     }
 }

@@ -7,49 +7,6 @@
 
 import SwiftUI
 
-class EmotionalIntensiveViewModel: ObservableObject {
-    let feelingSelected: FeelingModel.Feelings?
-    @Published var intensiveValue: QuantityIndicator = .lowest
-    
-    init(feelingSelected: FeelingModel.Feelings?) {
-        self.feelingSelected = feelingSelected
-    }
-    
-    func decrease() {
-        withAnimation(.linear(duration: 0.25)) {
-            switch intensiveValue {
-            case .lowest:
-                break
-            case .low:
-                intensiveValue = .lowest
-            case .medium:
-                intensiveValue = .low
-            case .high:
-                intensiveValue = .medium
-            case .highest:
-                intensiveValue = .high
-            }
-        }
-    }
-    
-    func increase() {
-        withAnimation(.linear(duration: 0.25)) {
-            switch intensiveValue {
-            case .lowest:
-                intensiveValue = .low
-            case .low:
-                intensiveValue = .medium
-            case .medium:
-                intensiveValue = .high
-            case .high:
-                intensiveValue = .highest
-            case .highest:
-                break
-            }
-        }
-    }
-}
-
 struct EmotionalIntensiveView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel: EmotionalIntensiveViewModel
@@ -108,7 +65,7 @@ struct EmotionalIntensiveView: View {
                 HStack {
                     Spacer()
                     
-                    Button {
+                    RoundedSquareButton(metrics: metrics) {
                         if let nextScreen = selectedScreen.next() {
                             withAnimation(.easeInOut(duration: 0.6)) {
                                 selectedScreen = nextScreen
@@ -116,16 +73,7 @@ struct EmotionalIntensiveView: View {
                         } else {
                             dismiss()
                         }
-                    } label: {
-                        RoundedRectangle(cornerRadius: 8.0)
-                            .fill(AppColor.white.color)
-                            .overlay {
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(appColor: .darkGray)
-                            }
                     }
-                    .buttonStyle(.borderless)
-                    .frame(width: .width(45, from: metrics), height: .width(45, from: metrics))
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -137,36 +85,5 @@ struct EmotionalIntensiveView: View {
 struct EmotionalIntensiveVIew_Previews: PreviewProvider {
     static var previews: some View {
         EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(feelingSelected: .happy), selectedScreen: .constant(.foodQuantity))
-    }
-}
-
-
-struct EmotionIntensiveValueView: View {
-    var value: QuantityIndicator
-    
-    var body: some View {
-        HStack(spacing: 1) {
-            Rectangle()
-                .fill(selectColor(of: value, from: QuantityIndicator.allCases))
-                .cornerRadius(8, corners: [.topLeft, .bottomLeft])
-            
-            Rectangle()
-                .fill(selectColor(of: value, from: [.low, .medium, .high, .highest]))
-            
-            Rectangle()
-                .fill(selectColor(of: value, from: [.medium, .high, .highest]))
-            
-            Rectangle()
-                .fill(selectColor(of: value, from: [.high, .highest]))
-            
-            Rectangle()
-                .fill(selectColor(of: value, from: [.highest]))
-                .cornerRadius(8, corners: [.topRight, .bottomRight])
-        }
-    }
-    
-    private func selectColor(of value: QuantityIndicator, from array: [QuantityIndicator]) -> Color {
-        let isSelected = array.contains(value)
-        return isSelected ? AppColor.white.color : AppColor.darkGray.color
     }
 }

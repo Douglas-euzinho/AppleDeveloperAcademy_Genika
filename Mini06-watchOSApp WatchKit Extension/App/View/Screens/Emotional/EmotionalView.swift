@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct EmotionalView: View {
     @Environment(\.dismiss) var dismiss
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
@@ -38,7 +37,6 @@ struct EmotionalView: View {
                     .listRowBackground(Color.clear)
                 }
                 .listStyle(.carousel)
-                
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Emocional")

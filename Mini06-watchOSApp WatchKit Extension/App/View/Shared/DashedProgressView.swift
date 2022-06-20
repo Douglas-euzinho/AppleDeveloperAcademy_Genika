@@ -20,5 +20,4 @@ struct DashedProgressView: View {
             CircularSegment(metrics: metrics, currentValue: value, indicator: .highest)
         }
     }
-    
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct EmotionalView: View {
+    @Environment(\.dismiss) var dismiss
+    @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
     let allFeelings = FeelingModel.all
     @State var feelingSelected: FeelingModel.Feelings? = .none
     
@@ -23,12 +25,18 @@ struct EmotionalView: View {
                     ForEach(allFeelings) { feeling in
                         EmotionalRowView(feeling: feeling, metrics: metrics) {
                             feelingSelected = feeling.tag
+                            if let nextScreen = selectedScreen.next() {
+                                withAnimation(.easeInOut(duration: 0.6)) {
+                                    selectedScreen = nextScreen
+                                }
+                            } else {
+                                dismiss()
+                            }
                         }
                     }
                     .listRowBackground(Color.clear)
                 }
                 .listStyle(.carousel)
-                
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Emocional")
@@ -38,6 +46,6 @@ struct EmotionalView: View {
 
 struct EmotionalView_Previews: PreviewProvider {
     static var previews: some View {
-        EmotionalView()
+        EmotionalView(selectedScreen: .constant(.foodQuantity))
     }
 }

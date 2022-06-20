@@ -87,5 +87,4 @@ struct CircularSegment: View {
         case .none: return Angle(degrees: 0)
         }
     }
-    
 }

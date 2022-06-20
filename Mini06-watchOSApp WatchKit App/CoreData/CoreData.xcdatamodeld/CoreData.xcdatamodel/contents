@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Alimentation" representedClassName="Alimentation" syncable="YES">
+        <attribute name="breakCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="point" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="waterCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="alimentationCategory" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AlimentationCategory" inverseName="alimentation" inverseEntity="AlimentationCategory"/>
+        <relationship name="dailyGeneral" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyGeneral" inverseName="alimentation" inverseEntity="DailyGeneral"/>
+        <relationship name="meal" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Meal" inverseName="alimentation" inverseEntity="Meal"/>
+    </entity>
+    <entity name="AlimentationCategory" representedClassName="AlimentationCategory" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="quantifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="alimentation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Alimentation" inverseName="alimentationCategory" inverseEntity="Alimentation"/>
+    </entity>
+    <entity name="Bpm" representedClassName="Bpm" syncable="YES">
+        <attribute name="average" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="inActivity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="inRest" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="exercice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercice" inverseName="bpm" inverseEntity="Exercice"/>
+    </entity>
+    <entity name="DailyGeneral" representedClassName="DailyGeneral" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="alimentation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Alimentation" inverseName="dailyGeneral" inverseEntity="Alimentation"/>
+        <relationship name="emotional" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Emotional" inverseName="dailyGeneral" inverseEntity="Emotional"/>
+        <relationship name="exercice" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercice" inverseName="dailyGeneral" inverseEntity="Exercice"/>
+        <relationship name="sleep" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sleep" inverseName="dailyGeneral" inverseEntity="Sleep"/>
+    </entity>
+    <entity name="EmojiCategory" representedClassName="EmojiCategory" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="quantifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="emotional" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Emotional" inverseName="emojiCategory" inverseEntity="Emotional"/>
+    </entity>
+    <entity name="Emotional" representedClassName="Emotional" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="intensity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="dailyGeneral" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyGeneral" inverseName="emotional" inverseEntity="DailyGeneral"/>
+        <relationship name="emojiCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EmojiCategory" inverseName="emotional" inverseEntity="EmojiCategory"/>
+    </entity>
+    <entity name="Exercice" representedClassName="Exercice" syncable="YES">
+        <attribute name="countSteps" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="didExercice" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="distanceWalked" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="kcalLost" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="bpm" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bpm" inverseName="exercice" inverseEntity="Bpm"/>
+        <relationship name="dailyGeneral" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyGeneral" inverseName="exercice" inverseEntity="DailyGeneral"/>
+    </entity>
+    <entity name="Meal" representedClassName="Meal" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="hourMeal" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="quantifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="alimentation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Alimentation" inverseName="meal" inverseEntity="Alimentation"/>
+    </entity>
+    <entity name="Sleep" representedClassName="Sleep" syncable="YES">
+        <attribute name="finalSleepHour" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="initialSleepHour" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="score" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timeInBed" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="timeSleeping" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="timesWakeUp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="dailyGeneral" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyGeneral" inverseName="sleep" inverseEntity="DailyGeneral"/>
+    </entity>
+    <elements>
+        <element name="Alimentation" positionX="-34.179443359375" positionY="230.5636596679688" width="128" height="148"/>
+        <element name="AlimentationCategory" positionX="8.88916015625" positionY="441.9443817138672" width="128" height="88"/>
+        <element name="Bpm" positionX="40.092529296875" positionY="-125.1066436767578" width="128" height="103"/>
+        <element name="DailyGeneral" positionX="204.7425537109375" positionY="92.7318115234375" width="128" height="133"/>
+        <element name="EmojiCategory" positionX="567.855224609375" positionY="425.833251953125" width="128" height="88"/>
+        <element name="Emotional" positionX="412.233642578125" positionY="276.7883911132812" width="128" height="118"/>
+        <element name="Exercice" positionX="294.675048828125" positionY="-130.4277496337891" width="128" height="148"/>
+        <element name="Meal" positionX="-178.15185546875" positionY="388.17822265625" width="128" height="103"/>
+        <element name="Sleep" positionX="-149.8770751953125" positionY="-14.95698547363281" width="128" height="163"/>
+    </elements>
+</model>

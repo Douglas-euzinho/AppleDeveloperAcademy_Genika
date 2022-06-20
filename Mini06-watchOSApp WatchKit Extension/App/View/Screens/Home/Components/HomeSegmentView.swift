@@ -24,10 +24,10 @@ struct HomeSegmentView: View {
                 
                 DashedProgressView(value: quantityProgressValue, metrics: metrics)
                 
-                Image(systemName: "doc.fill")
+                Image(mainImagePath)
                     .resizable()
-                    .frame(width: metrics.size.height * 0.275,
-                           height: metrics.size.height * 0.275)
+                    .frame(width: metrics.size.height * 0.4,
+                           height: metrics.size.height * 0.4)
                 
                 VStack {
                     HStack {

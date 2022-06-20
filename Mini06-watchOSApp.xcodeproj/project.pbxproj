@@ -47,6 +47,25 @@
 		50FE6AFC28528D56007F6073 /* RoundedTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AFB28528D56007F6073 /* RoundedTriangle.swift */; };
 		50FE6AFE28528D95007F6073 /* CircularSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AFD28528D95007F6073 /* CircularSegment.swift */; };
 		50FE6B0028528DB2007F6073 /* DashedProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AFF28528DB2007F6073 /* DashedProgressView.swift */; };
+		FBBAED462860F0DD00CFD86E /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED442860F0DD00CFD86E /* CoreData.xcdatamodeld */; };
+		FBBAED5B2860F5FD00CFD86E /* Emotional+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED492860F5FD00CFD86E /* Emotional+CoreDataClass.swift */; };
+		FBBAED5C2860F5FD00CFD86E /* Emotional+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED4A2860F5FD00CFD86E /* Emotional+CoreDataProperties.swift */; };
+		FBBAED5D2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED4B2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift */; };
+		FBBAED5E2860F5FD00CFD86E /* Alimentation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED4C2860F5FD00CFD86E /* Alimentation+CoreDataProperties.swift */; };
+		FBBAED5F2860F5FD00CFD86E /* Bpm+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED4D2860F5FD00CFD86E /* Bpm+CoreDataClass.swift */; };
+		FBBAED602860F5FD00CFD86E /* Bpm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED4E2860F5FD00CFD86E /* Bpm+CoreDataProperties.swift */; };
+		FBBAED612860F5FD00CFD86E /* Sleep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED4F2860F5FD00CFD86E /* Sleep+CoreDataClass.swift */; };
+		FBBAED622860F5FD00CFD86E /* Sleep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED502860F5FD00CFD86E /* Sleep+CoreDataProperties.swift */; };
+		FBBAED632860F5FD00CFD86E /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED512860F5FD00CFD86E /* Meal+CoreDataClass.swift */; };
+		FBBAED642860F5FD00CFD86E /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED522860F5FD00CFD86E /* Meal+CoreDataProperties.swift */; };
+		FBBAED652860F5FD00CFD86E /* AlimentationCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED532860F5FD00CFD86E /* AlimentationCategory+CoreDataClass.swift */; };
+		FBBAED662860F5FD00CFD86E /* AlimentationCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED542860F5FD00CFD86E /* AlimentationCategory+CoreDataProperties.swift */; };
+		FBBAED672860F5FD00CFD86E /* EmojiCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED552860F5FD00CFD86E /* EmojiCategory+CoreDataClass.swift */; };
+		FBBAED682860F5FD00CFD86E /* EmojiCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED562860F5FD00CFD86E /* EmojiCategory+CoreDataProperties.swift */; };
+		FBBAED692860F5FD00CFD86E /* Exercice+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED572860F5FD00CFD86E /* Exercice+CoreDataClass.swift */; };
+		FBBAED6A2860F5FD00CFD86E /* Exercice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED582860F5FD00CFD86E /* Exercice+CoreDataProperties.swift */; };
+		FBBAED6B2860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED592860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift */; };
+		FBBAED6C2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED5A2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +153,26 @@
 		50FE6AFB28528D56007F6073 /* RoundedTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTriangle.swift; sourceTree = "<group>"; };
 		50FE6AFD28528D95007F6073 /* CircularSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSegment.swift; sourceTree = "<group>"; };
 		50FE6AFF28528DB2007F6073 /* DashedProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedProgressView.swift; sourceTree = "<group>"; };
+		FBBAED452860F0DD00CFD86E /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		FBBAED482860F5FD00CFD86E /* Mini06-watchOSApp WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mini06-watchOSApp WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
+		FBBAED492860F5FD00CFD86E /* Emotional+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emotional+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FBBAED4A2860F5FD00CFD86E /* Emotional+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emotional+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBBAED4B2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alimentation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FBBAED4C2860F5FD00CFD86E /* Alimentation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alimentation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBBAED4D2860F5FD00CFD86E /* Bpm+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bpm+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FBBAED4E2860F5FD00CFD86E /* Bpm+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bpm+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBBAED4F2860F5FD00CFD86E /* Sleep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sleep+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FBBAED502860F5FD00CFD86E /* Sleep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sleep+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBBAED512860F5FD00CFD86E /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FBBAED522860F5FD00CFD86E /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBBAED532860F5FD00CFD86E /* AlimentationCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlimentationCategory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FBBAED542860F5FD00CFD86E /* AlimentationCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlimentationCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBBAED552860F5FD00CFD86E /* EmojiCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmojiCategory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FBBAED562860F5FD00CFD86E /* EmojiCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmojiCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBBAED572860F5FD00CFD86E /* Exercice+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercice+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FBBAED582860F5FD00CFD86E /* Exercice+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercice+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBBAED592860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyGeneral+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FBBAED5A2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyGeneral+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +189,7 @@
 		500ADCCA2857EE1C00E619CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FBBAED432860F0B100CFD86E /* CoreData */,
 				500ADCCB2857EE3000E619CF /* FeelingModel.swift */,
 				50957B14285F61C700C908BB /* FoodQualityDataModel.swift */,
 			);
@@ -264,6 +304,7 @@
 				50BCEC3F284EC02100C85359 /* Mini06-watchOSApp WatchKit App */,
 				50BCEC4A284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension */,
 				50BCEC38284EC02100C85359 /* Products */,
+				FBBAED482860F5FD00CFD86E /* Mini06-watchOSApp WatchKit App-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -387,6 +428,81 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		FBBAED432860F0B100CFD86E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FBBAED442860F0DD00CFD86E /* CoreData.xcdatamodeld */,
+				FBBAED472860F1C400CFD86E /* Models */,
+			);
+			name = CoreData;
+			path = ../CoreData;
+			sourceTree = "<group>";
+		};
+		FBBAED472860F1C400CFD86E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FBBAED712860F6C500CFD86E /* DailyGeneral */,
+				FBBAED702860F6B000CFD86E /* Food */,
+				FBBAED6F2860F68E00CFD86E /* Exercice */,
+				FBBAED6E2860F66F00CFD86E /* Sleep */,
+				FBBAED6D2860F64600CFD86E /* Emotional */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FBBAED6D2860F64600CFD86E /* Emotional */ = {
+			isa = PBXGroup;
+			children = (
+				FBBAED492860F5FD00CFD86E /* Emotional+CoreDataClass.swift */,
+				FBBAED4A2860F5FD00CFD86E /* Emotional+CoreDataProperties.swift */,
+				FBBAED552860F5FD00CFD86E /* EmojiCategory+CoreDataClass.swift */,
+				FBBAED562860F5FD00CFD86E /* EmojiCategory+CoreDataProperties.swift */,
+			);
+			path = Emotional;
+			sourceTree = "<group>";
+		};
+		FBBAED6E2860F66F00CFD86E /* Sleep */ = {
+			isa = PBXGroup;
+			children = (
+				FBBAED4F2860F5FD00CFD86E /* Sleep+CoreDataClass.swift */,
+				FBBAED502860F5FD00CFD86E /* Sleep+CoreDataProperties.swift */,
+			);
+			path = Sleep;
+			sourceTree = "<group>";
+		};
+		FBBAED6F2860F68E00CFD86E /* Exercice */ = {
+			isa = PBXGroup;
+			children = (
+				FBBAED4D2860F5FD00CFD86E /* Bpm+CoreDataClass.swift */,
+				FBBAED4E2860F5FD00CFD86E /* Bpm+CoreDataProperties.swift */,
+				FBBAED572860F5FD00CFD86E /* Exercice+CoreDataClass.swift */,
+				FBBAED582860F5FD00CFD86E /* Exercice+CoreDataProperties.swift */,
+			);
+			path = Exercice;
+			sourceTree = "<group>";
+		};
+		FBBAED702860F6B000CFD86E /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				FBBAED4B2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift */,
+				FBBAED4C2860F5FD00CFD86E /* Alimentation+CoreDataProperties.swift */,
+				FBBAED512860F5FD00CFD86E /* Meal+CoreDataClass.swift */,
+				FBBAED522860F5FD00CFD86E /* Meal+CoreDataProperties.swift */,
+				FBBAED532860F5FD00CFD86E /* AlimentationCategory+CoreDataClass.swift */,
+				FBBAED542860F5FD00CFD86E /* AlimentationCategory+CoreDataProperties.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		FBBAED712860F6C500CFD86E /* DailyGeneral */ = {
+			isa = PBXGroup;
+			children = (
+				FBBAED592860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift */,
+				FBBAED5A2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift */,
+			);
+			path = DailyGeneral;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -456,6 +572,7 @@
 					};
 					50BCEC3A284EC02100C85359 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					50BCEC45284EC02300C85359 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -516,34 +633,53 @@
 			files = (
 				50FE6AFE28528D95007F6073 /* CircularSegment.swift in Sources */,
 				50A3DEFB28580A59007952F8 /* EmotionalIntensiveView.swift in Sources */,
+				FBBAED612860F5FD00CFD86E /* Sleep+CoreDataClass.swift in Sources */,
 				50FE6B0028528DB2007F6073 /* DashedProgressView.swift in Sources */,
 				50DCF8A52857CAAC0053887C /* EmotionalView.swift in Sources */,
 				50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */,
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
 				50DCF8A02857BAD60053887C /* DiaryButtonView.swift in Sources */,
+				FBBAED5D2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift in Sources */,
+				FBBAED622860F5FD00CFD86E /* Sleep+CoreDataProperties.swift in Sources */,
 				50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */,
 				50DCF8992857BA340053887C /* View+AppColor.swift in Sources */,
+				FBBAED692860F5FD00CFD86E /* Exercice+CoreDataClass.swift in Sources */,
 				50DCF8972857B2130053887C /* CGFloat+ScreenMetrics.swift in Sources */,
+				FBBAED6C2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift in Sources */,
 				50957B1F285F6C8400C908BB /* FoodQuantityStepperViewModel.swift in Sources */,
 				50BCEC4E284EC02300C85359 /* ContainerView.swift in Sources */,
+				FBBAED602860F5FD00CFD86E /* Bpm+CoreDataProperties.swift in Sources */,
 				50FE6AFA285186F7007F6073 /* LinearProgressiveView.swift in Sources */,
 				500ADCCF285807AF00E619CF /* EmotionalRowView.swift in Sources */,
 				50FE6AEE2851861B007F6073 /* HomeViewModel.swift in Sources */,
+				FBBAED5E2860F5FD00CFD86E /* Alimentation+CoreDataProperties.swift in Sources */,
 				50A3DF0028592116007952F8 /* QuantityIndicator.swift in Sources */,
 				50957B17285F65F900C908BB /* EmotionalIntensiveViewModel.swift in Sources */,
 				50DCF8932857B0320053887C /* DiaryView.swift in Sources */,
+				FBBAED652860F5FD00CFD86E /* AlimentationCategory+CoreDataClass.swift in Sources */,
 				50957B15285F61C700C908BB /* FoodQualityDataModel.swift in Sources */,
 				50957B0F285F5DC000C908BB /* RoundedSquareButton.swift in Sources */,
+				FBBAED462860F0DD00CFD86E /* CoreData.xcdatamodeld in Sources */,
 				50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */,
 				509E5D9028515CFB00393673 /* HomeView.swift in Sources */,
 				50BCEC4C284EC02300C85359 /* Mini06_watchOSAppApp.swift in Sources */,
 				50957B19285F66B700C908BB /* EmotionIntensiveValueView.swift in Sources */,
 				504E2F59285A5A8A0015F3D9 /* FoodQualityDataView.swift in Sources */,
+				FBBAED682860F5FD00CFD86E /* EmojiCategory+CoreDataProperties.swift in Sources */,
 				50957B13285F5E2F00C908BB /* FoodQualityRowView.swift in Sources */,
 				50F3D3F7285A889F007DE261 /* DataCollectingFlowView.swift in Sources */,
 				50DCF89D2857BA6F0053887C /* AppColors.swift in Sources */,
+				FBBAED6B2860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift in Sources */,
+				FBBAED6A2860F5FD00CFD86E /* Exercice+CoreDataProperties.swift in Sources */,
 				500ADCCC2857EE3000E619CF /* FeelingModel.swift in Sources */,
+				FBBAED672860F5FD00CFD86E /* EmojiCategory+CoreDataClass.swift in Sources */,
+				FBBAED5F2860F5FD00CFD86E /* Bpm+CoreDataClass.swift in Sources */,
+				FBBAED642860F5FD00CFD86E /* Meal+CoreDataProperties.swift in Sources */,
+				FBBAED662860F5FD00CFD86E /* AlimentationCategory+CoreDataProperties.swift in Sources */,
+				FBBAED5B2860F5FD00CFD86E /* Emotional+CoreDataClass.swift in Sources */,
 				50957B1D285F6A6F00C908BB /* FoodQuantityStepper.swift in Sources */,
+				FBBAED5C2860F5FD00CFD86E /* Emotional+CoreDataProperties.swift in Sources */,
+				FBBAED632860F5FD00CFD86E /* Meal+CoreDataClass.swift in Sources */,
 				50F3D3F5285A7AF2007DE261 /* FoodQuantityDataView.swift in Sources */,
 				50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */,
 				50FE6AFC28528D56007F6073 /* RoundedTriangle.swift in Sources */,
@@ -754,6 +890,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -761,12 +898,19 @@
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Mini06-watchOSApp WatchKit App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 8.0;
@@ -779,6 +923,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -786,12 +931,18 @@
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Mini06-watchOSApp WatchKit App-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 8.0;
@@ -864,6 +1015,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FBBAED442860F0DD00CFD86E /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FBBAED452860F0DD00CFD86E /* CoreData.xcdatamodel */,
+			);
+			currentVersion = FBBAED452860F0DD00CFD86E /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 50BCEC31284EC02100C85359 /* Project object */;
 }

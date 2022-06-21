@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		364559F92861114A00368836 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559F82861114A00368836 /* Persistence.swift */; };
+		364559FB286166E100368836 /* EnumError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559FA286166E100368836 /* EnumError.swift */; };
 		500ADCC92857ECAF00E619CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC40284EC02200C85359 /* Assets.xcassets */; };
 		500ADCCC2857EE3000E619CF /* FeelingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ADCCB2857EE3000E619CF /* FeelingModel.swift */; };
 		500ADCCF285807AF00E619CF /* EmotionalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ADCCE285807AF00E619CF /* EmotionalRowView.swift */; };
@@ -111,6 +113,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		364559F82861114A00368836 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		364559FA286166E100368836 /* EnumError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumError.swift; sourceTree = "<group>"; };
 		500ADCCB2857EE3000E619CF /* FeelingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingModel.swift; sourceTree = "<group>"; };
 		500ADCCE285807AF00E619CF /* EmotionalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalRowView.swift; sourceTree = "<group>"; };
 		504E2F56285A57250015F3D9 /* FoodAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAlertView.swift; sourceTree = "<group>"; };
@@ -431,6 +435,8 @@
 		FBBAED432860F0B100CFD86E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				364559FA286166E100368836 /* EnumError.swift */,
+				364559F82861114A00368836 /* Persistence.swift */,
 				FBBAED442860F0DD00CFD86E /* CoreData.xcdatamodeld */,
 				FBBAED472860F1C400CFD86E /* Models */,
 			);
@@ -656,6 +662,7 @@
 				50A3DF0028592116007952F8 /* QuantityIndicator.swift in Sources */,
 				50957B17285F65F900C908BB /* EmotionalIntensiveViewModel.swift in Sources */,
 				50DCF8932857B0320053887C /* DiaryView.swift in Sources */,
+				364559FB286166E100368836 /* EnumError.swift in Sources */,
 				FBBAED652860F5FD00CFD86E /* AlimentationCategory+CoreDataClass.swift in Sources */,
 				50957B15285F61C700C908BB /* FoodQualityDataModel.swift in Sources */,
 				50957B0F285F5DC000C908BB /* RoundedSquareButton.swift in Sources */,
@@ -675,6 +682,7 @@
 				FBBAED672860F5FD00CFD86E /* EmojiCategory+CoreDataClass.swift in Sources */,
 				FBBAED5F2860F5FD00CFD86E /* Bpm+CoreDataClass.swift in Sources */,
 				FBBAED642860F5FD00CFD86E /* Meal+CoreDataProperties.swift in Sources */,
+				364559F92861114A00368836 /* Persistence.swift in Sources */,
 				FBBAED662860F5FD00CFD86E /* AlimentationCategory+CoreDataProperties.swift in Sources */,
 				FBBAED5B2860F5FD00CFD86E /* Emotional+CoreDataClass.swift in Sources */,
 				50957B1D285F6A6F00C908BB /* FoodQuantityStepper.swift in Sources */,
@@ -827,7 +835,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
@@ -859,7 +867,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
@@ -893,7 +901,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
@@ -926,7 +934,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
@@ -954,7 +962,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp";
 				PRODUCT_NAME = "Watch App";
@@ -967,7 +975,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MGFPJ5C76T;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp";
 				PRODUCT_NAME = "Watch App";

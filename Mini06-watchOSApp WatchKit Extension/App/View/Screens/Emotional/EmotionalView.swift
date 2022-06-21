@@ -11,7 +11,7 @@ struct EmotionalView: View {
     @Environment(\.dismiss) var dismiss
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
     let allFeelings = FeelingModel.all
-    @State var feelingSelected: FeelingModel.Feelings? = .none
+    @State var feelingSelected: FeelingModel.Feelings?
     
     var body: some View {
         GeometryReader { metrics in

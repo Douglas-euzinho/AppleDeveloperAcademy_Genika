@@ -10,10 +10,26 @@ import SwiftUI
 class EmotionalIntensiveViewModel: ObservableObject {
     let feelingSelected: FeelingModel.Feelings?
     @Published var intensiveValue: QuantityIndicator = .lowest
+    private var persistence = PersistenceController.shared
     
     init(feelingSelected: FeelingModel.Feelings?) {
         self.feelingSelected = feelingSelected
     }
+    
+    
+    
+    func save(){
+        do{
+            try persistence.saveContext()
+        } catch {
+            //TODO: TRATAR ERROR
+        }
+    }
+    
+//    func update(){
+//        self.intensiveValue =
+//    }
+    
     
     func decrease() {
         withAnimation(.linear(duration: 0.25)) {

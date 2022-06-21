@@ -32,7 +32,7 @@ struct RoundedSquareButton: View {
     }
 }
 
-struct NextButton_Previews: PreviewProvider {
+struct RoundedSquareButton_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { metrics in
             RoundedSquareButton(metrics: metrics)            

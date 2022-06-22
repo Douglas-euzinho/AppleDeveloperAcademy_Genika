@@ -29,7 +29,7 @@ struct EmotionalView: View {
                             feelingSelected = feeling.tag
                             if let nextScreen = selectedScreen.next() {
                                 withAnimation(.easeInOut(duration: 0.6)) {
-                                    data.dataEmotional.getFeeling(feeling: feelingSelected.rawValue)
+                                    data.dataEmotional.setFeeling(feeling: feelingSelected.rawValue)
                                     selectedScreen = nextScreen
                                 }
                             } else {

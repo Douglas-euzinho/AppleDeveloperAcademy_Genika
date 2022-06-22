@@ -70,7 +70,7 @@ struct EmotionalIntensiveView: View {
                     RoundedSquareButton(metrics: metrics) {
                         if let nextScreen = selectedScreen.next() {
                             withAnimation(.easeInOut(duration: 0.6)) {
-                                data.dataEmotional.getIntesity(value: viewModel.intensiveValue.rawValue)
+                                data.dataEmotional.setIntesity(value: viewModel.intensiveValue.rawValue)
                                 selectedScreen = nextScreen
                             }
                         } else {

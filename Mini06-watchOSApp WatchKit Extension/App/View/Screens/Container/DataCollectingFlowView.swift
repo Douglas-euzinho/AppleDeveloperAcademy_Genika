@@ -41,9 +41,9 @@ struct DataCollectingFlowView: View {
                 case .alert:
                     FoodAlertView(selectedScreen: $selectedScreen)
                 case .food:
-                    FoodQualityDataView(selectedScreen: $selectedScreen)
+                    FoodQualityDataView(selectedScreen: $selectedScreen, viewModel: FoodQualityDataViewModel())
                 case .foodQuantity:
-                    FoodQuantityDataView(selectedScreen: $selectedScreen)
+                    FoodQuantityDataView(selectedScreen: $selectedScreen, viewModel: FoodQuantityDataViewModel())
                 }
             }
             .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))

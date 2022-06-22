@@ -9,7 +9,7 @@ import Foundation
 
 struct DataCollectorAlimentationCategory {
     var alimentationCategory: String?
-    var quantifier: Int?
+    var quantifier: Int = 0
 }
 
 struct DataCollectorMealCategory {
@@ -20,10 +20,20 @@ struct DataCollectorMealCategory {
 
 struct DataCollectorAlimentation {
 
-    var alimentationCategory: [DataCollectorAlimentationCategory]?
-    var mealCategory: [DataCollectorMealCategory]?
+    var alimentationCategory: [DataCollectorAlimentationCategory] = []
+    var mealCategory: [DataCollectorMealCategory] = []
     var waterCount: Int?
     var breakCount: Int?
     var point: Int?
     
+    mutating func setAlimentationCategoryArray(types:[String]) {
+        for category in types{
+            alimentationCategory.append(DataCollectorAlimentationCategory(alimentationCategory: category))
+        }
+    }
+    mutating func setMealCategoryArray(types:[String]) {
+        for category in types{
+            mealCategory.append(DataCollectorMealCategory(category: category))
+        }
+    }
 }

@@ -81,6 +81,6 @@ struct FoodQualityDataView: View {
 
 struct FoodQualityDataView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodQualityDataView(selectedScreen: .constant(.foodQuantity))
+        FoodQualityDataView(selectedScreen: .constant(.foodQuantity), viewModel: FoodQualityDataViewModel())
     }
 }

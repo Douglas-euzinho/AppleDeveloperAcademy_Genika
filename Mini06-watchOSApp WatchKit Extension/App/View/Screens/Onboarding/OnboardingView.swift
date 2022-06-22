@@ -1,5 +1,5 @@
 //
-//  Onboarding.swift
+//  OnboardingView.swift
 //  Mini06-watchOSApp WatchKit Extension
 //
 //  Created by Vitor Souza on 21/06/22.
@@ -7,11 +7,13 @@
 
 import SwiftUI
 
-struct Onboarding<T: View>: View {
+struct OnboardingView<T: View>: View {
     let onboardingText: OnboardingText
     let hasSkipButton: Bool
     var metrics: GeometryProxy
     var headerView: () -> T
+    var onNext: () -> Void
+    var skipAction: () -> Void = {}
 
     var body: some View {
         VStack(spacing: 0) {
@@ -32,7 +34,7 @@ struct Onboarding<T: View>: View {
                         Spacer()
                         
                         Button {
-                            // TODO: redirect to main screen
+                           skipAction()
                         } label: {
                             Text("Pular")
                                 .foregroundColor(Color(uiColor: UIColor(red: 0.74, green: 0.74, blue: 0.74, alpha: 1.0)))
@@ -44,45 +46,51 @@ struct Onboarding<T: View>: View {
                 
                 Spacer()
                 RoundedSquareButton(metrics: metrics) {
-                    // TODO: redirect to next page
+                    onNext()
                 }
             }
         }
     }
 }
 
-struct Onboarding_Previews: PreviewProvider {
+struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { metrics in
-            Onboarding(
+            OnboardingView(
                 onboardingText: .one,
                 hasSkipButton: true,
-                metrics: metrics
-            ) {
-                HeaderOnboardingOne(metrics: metrics)
-            }
+                metrics: metrics,
+                headerView: {
+                    HeaderOnboardingOne(metrics: metrics)
+                },
+                onNext: { }
+            )
         }
         
         GeometryReader { metrics in
-            Onboarding(
+            OnboardingView(
                 onboardingText: .two,
                 hasSkipButton: true,
-                metrics: metrics
-            ) {
-                GeometryReader { dimension in
-                    HeaderOnboardingTwo(metrics: dimension)
-                }
-            }
+                metrics: metrics,
+                headerView: {
+                    GeometryReader { dimension in
+                        HeaderOnboardingTwo(metrics: dimension)
+                    }
+                },
+                onNext: { }
+            )
         }
         
         GeometryReader { metrics in
-            Onboarding(
+            OnboardingView(
                 onboardingText: .three,
                 hasSkipButton: false,
-                metrics: metrics
-            ) {
-                HeaderOnboardingThree(metrics: metrics)
-            }
+                metrics: metrics,
+                headerView: {
+                    HeaderOnboardingThree(metrics: metrics)
+                },
+                onNext: { }
+            )
         }
     }
 }

@@ -18,14 +18,12 @@ struct DataCollectorMealCategory {
     var quantifier: Int?
 }
 
-struct DataCollectorAlimentation: ProtocolDataCollector {
-    var alimentationCategory: [DataCollectorAlimentationCategory]
+struct DataCollectorAlimentation {
+
+    var alimentationCategory: [DataCollectorAlimentationCategory]?
     var mealCategory: [DataCollectorMealCategory]?
     var waterCount: Int?
     var breakCount: Int?
     var point: Int?
     
-    func sendToCoreData() {
-        <#code#>
-    }
 }

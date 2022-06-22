@@ -28,6 +28,7 @@ struct DataCollectingFlowView: View {
     }
     
     @State var selectedScreen: DataCollectingFlowScreens = .emotional
+    @StateObject var data:UserDataInput = UserDataInput()
     
     var body: some View {
         ZStack {
@@ -36,7 +37,7 @@ struct DataCollectingFlowView: View {
                 case .emotional:
                     EmotionalView(selectedScreen: $selectedScreen)
                 case .emotionalIntensive:
-                    EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(feelingSelected: nil), selectedScreen: $selectedScreen)
+                    EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(), selectedScreen: $selectedScreen)
                 case .alert:
                     FoodAlertView(selectedScreen: $selectedScreen)
                 case .food:
@@ -48,11 +49,8 @@ struct DataCollectingFlowView: View {
             .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
         }
         .navigationBarTitleDisplayMode(.inline)
+        .environmentObject(data)
     }
+    
 }
 
-struct DataCollectingFlowView_Previews: PreviewProvider {
-    static var previews: some View {
-        DataCollectingFlowView()
-    }
-}

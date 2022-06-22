@@ -20,7 +20,6 @@
 		50957B0F285F5DC000C908BB /* RoundedSquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B0E285F5DC000C908BB /* RoundedSquareButton.swift */; };
 		50957B13285F5E2F00C908BB /* FoodQualityRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B12285F5E2F00C908BB /* FoodQualityRowView.swift */; };
 		50957B15285F61C700C908BB /* FoodQualityDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B14285F61C700C908BB /* FoodQualityDataModel.swift */; };
-		50957B17285F65F900C908BB /* EmotionalIntensiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B16285F65F900C908BB /* EmotionalIntensiveViewModel.swift */; };
 		50957B19285F66B700C908BB /* EmotionIntensiveValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B18285F66B700C908BB /* EmotionIntensiveValueView.swift */; };
 		50957B1D285F6A6F00C908BB /* FoodQuantityStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B1C285F6A6F00C908BB /* FoodQuantityStepper.swift */; };
 		50957B1F285F6C8400C908BB /* FoodQuantityStepperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B1E285F6C8400C908BB /* FoodQuantityStepperViewModel.swift */; };
@@ -71,6 +70,8 @@
 		FBBAED6A2860F5FD00CFD86E /* Exercice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED582860F5FD00CFD86E /* Exercice+CoreDataProperties.swift */; };
 		FBBAED6B2860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED592860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift */; };
 		FBBAED6C2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED5A2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift */; };
+		FBBAED752862993100CFD86E /* UserDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED742862993100CFD86E /* UserDataInput.swift */; };
+		FBBAED7928639C6A00CFD86E /* EmotionalIntensiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED7828639C6A00CFD86E /* EmotionalIntensiveViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,7 +129,6 @@
 		50957B0E285F5DC000C908BB /* RoundedSquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSquareButton.swift; sourceTree = "<group>"; };
 		50957B12285F5E2F00C908BB /* FoodQualityRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQualityRowView.swift; sourceTree = "<group>"; };
 		50957B14285F61C700C908BB /* FoodQualityDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQualityDataModel.swift; sourceTree = "<group>"; };
-		50957B16285F65F900C908BB /* EmotionalIntensiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalIntensiveViewModel.swift; sourceTree = "<group>"; };
 		50957B18285F66B700C908BB /* EmotionIntensiveValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionIntensiveValueView.swift; sourceTree = "<group>"; };
 		50957B1C285F6A6F00C908BB /* FoodQuantityStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQuantityStepper.swift; sourceTree = "<group>"; };
 		50957B1E285F6C8400C908BB /* FoodQuantityStepperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQuantityStepperViewModel.swift; sourceTree = "<group>"; };
@@ -183,6 +183,8 @@
 		FBBAED582860F5FD00CFD86E /* Exercice+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercice+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FBBAED592860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyGeneral+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FBBAED5A2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyGeneral+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBBAED742862993100CFD86E /* UserDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataInput.swift; sourceTree = "<group>"; };
+		FBBAED7828639C6A00CFD86E /* EmotionalIntensiveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionalIntensiveViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				364559FC286259B200368836 /* DataAlimentationCollector.swift */,
 				364559FE28625BBB00368836 /* DataEmotionalCollector.swift */,
 				36455A0028625C5A00368836 /* ProtocolDataCollector.swift */,
+				FBBAED742862993100CFD86E /* UserDataInput.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -403,7 +406,7 @@
 				500ADCCD2858078F00E619CF /* Components */,
 				50DCF8A42857CAAC0053887C /* EmotionalView.swift */,
 				50A3DEFA28580A59007952F8 /* EmotionalIntensiveView.swift */,
-				50957B16285F65F900C908BB /* EmotionalIntensiveViewModel.swift */,
+				FBBAED7828639C6A00CFD86E /* EmotionalIntensiveViewModel.swift */,
 			);
 			path = Emotional;
 			sourceTree = "<group>";
@@ -671,7 +674,6 @@
 				50FE6AEE2851861B007F6073 /* HomeViewModel.swift in Sources */,
 				FBBAED5E2860F5FD00CFD86E /* Alimentation+CoreDataProperties.swift in Sources */,
 				50A3DF0028592116007952F8 /* QuantityIndicator.swift in Sources */,
-				50957B17285F65F900C908BB /* EmotionalIntensiveViewModel.swift in Sources */,
 				50DCF8932857B0320053887C /* DiaryView.swift in Sources */,
 				364559FB286166E100368836 /* EnumError.swift in Sources */,
 				FBBAED652860F5FD00CFD86E /* AlimentationCategory+CoreDataClass.swift in Sources */,
@@ -689,11 +691,13 @@
 				50F3D3F7285A889F007DE261 /* DataCollectingFlowView.swift in Sources */,
 				50DCF89D2857BA6F0053887C /* AppColors.swift in Sources */,
 				FBBAED6B2860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift in Sources */,
+				FBBAED7928639C6A00CFD86E /* EmotionalIntensiveViewModel.swift in Sources */,
 				FBBAED6A2860F5FD00CFD86E /* Exercice+CoreDataProperties.swift in Sources */,
 				500ADCCC2857EE3000E619CF /* FeelingModel.swift in Sources */,
 				FBBAED672860F5FD00CFD86E /* EmojiCategory+CoreDataClass.swift in Sources */,
 				FBBAED5F2860F5FD00CFD86E /* Bpm+CoreDataClass.swift in Sources */,
 				FBBAED642860F5FD00CFD86E /* Meal+CoreDataProperties.swift in Sources */,
+				FBBAED752862993100CFD86E /* UserDataInput.swift in Sources */,
 				364559F92861114A00368836 /* Persistence.swift in Sources */,
 				FBBAED662860F5FD00CFD86E /* AlimentationCategory+CoreDataProperties.swift in Sources */,
 				FBBAED5B2860F5FD00CFD86E /* Emotional+CoreDataClass.swift in Sources */,

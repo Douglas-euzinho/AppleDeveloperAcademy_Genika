@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Alimentation" representedClassName="Alimentation" syncable="YES">
         <attribute name="breakCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
@@ -31,14 +31,14 @@
     <entity name="EmojiCategory" representedClassName="EmojiCategory" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String"/>
         <attribute name="quantifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="emotional" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Emotional"/>
+        <relationship name="emotional" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Emotional" inverseName="emojiCategory" inverseEntity="Emotional"/>
     </entity>
     <entity name="Emotional" representedClassName="Emotional" syncable="YES">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="intensity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="score" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="dailyGeneral" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyGeneral" inverseName="emotional" inverseEntity="DailyGeneral"/>
-        <relationship name="emojiCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EmojiCategory"/>
+        <relationship name="emojiCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EmojiCategory" inverseName="emotional" inverseEntity="EmojiCategory"/>
     </entity>
     <entity name="Exercice" representedClassName="Exercice" syncable="YES">
         <attribute name="countSteps" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>

@@ -84,6 +84,6 @@ struct EmotionalIntensiveView: View {
 
 struct EmotionalIntensiveVIew_Previews: PreviewProvider {
     static var previews: some View {
-        EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(feelingSelected: .happy), selectedScreen: .constant(.foodQuantity))
+        EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(), selectedScreen: .constant(.foodQuantity))
     }
 }

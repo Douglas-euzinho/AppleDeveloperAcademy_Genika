@@ -12,7 +12,7 @@ struct EmotionalView: View {
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
     let allFeelings = FeelingModel.all
     @State var feelingSelected: FeelingModel.Feelings = .null
-    @EnvironmentObject var data:UserDataInput
+    @EnvironmentObject var data: UserDataInput
 
     
     var body: some View {

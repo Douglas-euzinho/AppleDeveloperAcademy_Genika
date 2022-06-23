@@ -7,19 +7,18 @@
 
 import CoreData
 
-class PersistenceController {
+struct PersistenceController {
     static var shared = PersistenceController()
-//
-////    lazy var persistentContainer: NSPersistentContainer = {
-////        let container = NSPersistentContainer(name: "General")
-////        container.loadPersistentStores { _, error in
-////            if let error = error as NSError? {
-////                //tratar o erro dps
-////            }
-////        }
-////        return container
-////    }()
-//
+
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "General")
+        container.loadPersistentStores { _, error in
+            if let error = error as NSError? {
+            }
+        }
+        return container
+    }()
+
     lazy var context: NSManagedObjectContext = {
         let viewContext = persistenceContainer.viewContext
         viewContext.automaticallyMergesChangesFromParent = true
@@ -35,88 +34,185 @@ class PersistenceController {
         }
         persistenceContainer.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
-                debugPrint(error)
+                print("deu ruim", error)
             }
         }
     }
-//
-//    //MARK: ALIMENTATION METHODS
-//     func alimentationCategory(category: String, quantifier: Int) throws -> AlimentationCategory {
-//        let alimentationCategory = AlimentationCategory(context: context)
+    
+    //MARK: DAILY GENERAL METHODS
+    mutating func dailyGeneral() {
+        let date = Date.now
+    }
+
+    //MARK: ALIMENTATION METHODS
+    //FUNC TO SAVE THE ALIMENTATION CATEGORY
+     mutating func alimentationCategory(category: [String], quantifier: [Int]) throws -> [AlimentationCategory] {
+        let alimentationCategory] = AlimentationCategory(context: context)
 //        alimentationCategory.category = category
 //        alimentationCategory.quantifier = Int64(quantifier)
-//
-//        try saveContext()
-//        return alimentationCategory
-//    }
-//
-//    mutating func fetchAlimentationCategory() -> [AlimentationCategory] {
-//        var alimentationCategorys: [AlimentationCategory] = []
-//
-//        do{
-//            alimentationCategorys = try
-//            context.fetch(AlimentationCategory.fetchRequest())
-//        } catch {
-//            //CoreDataError.fetchError(error.localizedDescription)
-//        }
-//
-//        return alimentationCategorys
-//    }
-//
-//    mutating func meal(category: String, hourMeal: Date, quantifier: Int) throws -> Meal{
-//        let meal = Meal(context: context)
-//        meal.category = category
-//        meal.hourMeal = hourMeal
-//        meal.quantifier = Int64(quantifier)
-//
-//        try saveContext()
-//        return meal
-//    }
-//
-//    mutating func fetchMeal() -> [Meal] {
-//        var meals: [Meal] = []
-//
-//        do{
-//            meals = try
-//            context.fetch(Meal.fetchRequest())
-//        } catch {
-//            debugPrint(FetchError.errorAlimentation)
-//        }
-//
-//        return meals
-//    }
-//
-//    mutating func alimentation(breakCount: Int, id: UUID, point: Int, waterCount: Int, alimentationCategory: AlimentationCategory, meal: Meal) throws -> Alimentation {
-//        let alimentation = Alimentation(context: context)
-//        alimentation.breakCount = Int64(breakCount)
-//        alimentation.id = id
-//        alimentation.point = Int64(point)
-//        alimentation.waterCount = Int64(waterCount)
-//
-//        alimentationCategory.alimentation = alimentation
-//        meal.alimentation = alimentation
-//
-//        try saveContext()
-//        return alimentation
-//    }
-//
-//
-//
-//
+
+        try saveContext()
+        return [alimentationCategory]
+    }
+    
+    //FUNC TO GET THE ALIMENTATION CATEGORY
+    mutating func getAlimentationCategory() -> [AlimentationCategory] {
+        let fetch: NSFetchRequest<AlimentationCategory> = AlimentationCategory.fetchRequest()
+        
+        do {
+            return try persistenceContainer.viewContext.fetch(fetch)
+        } catch {
+            return []
+        }
+    }
+
+    
+    //FUNC TO SAVE THE MEAL
+    mutating func meal(category: String, hourMeal: Date, quantifier: Int) throws -> Meal{
+        let meal = Meal(context: context)
+        meal.category = category
+        meal.hourMeal = hourMeal
+        meal.quantifier = Int64(quantifier)
+
+        try saveContext()
+        return meal
+    }
+    
+    //FUNC TO GET THE MEAL
+    mutating func getMeal() -> [Meal] {
+        let fetch: NSFetchRequest<Meal> = Meal.fetchRequest()
+        
+        do {
+            return try persistenceContainer.viewContext.fetch(fetch)
+        } catch {
+            return []
+        }
+    }
+
+    
+    //FUNC TO SAVE THE ALIMENTATION
+    mutating func alimentation(breakCount: Int, point: Int, waterCount: Int, alimentationCategory: AlimentationCategory, meal: Meal) throws -> Alimentation {
+        let alimentation = Alimentation(context: context)
+        alimentation.breakCount = Int64(breakCount)
+        alimentation.point = Int64(point)
+        alimentation.waterCount = Int64(waterCount)
+
+        alimentationCategory.alimentation = alimentation
+        meal.alimentation = alimentation
+
+        try saveContext()
+        return alimentation
+    }
+    
+    //FUNC TO GET THE ALIMENTATION
+    func getAlimentations() -> [Alimentation] {
+        let fetch: NSFetchRequest<Alimentation> = Alimentation.fetchRequest()
+        
+        do {
+            return try persistenceContainer.viewContext.fetch(fetch)
+        } catch {
+            return []
+        }
+    }
+
+
+
     //MARK: EMOTIONAL METHODS
-    func emojiCategory(category: String, quantifier: Int) -> EmojiCategory{
-        let emojiCategory = EmojiCategory(context: persistenceContainer.viewContext)
+    //FUNC TO SAVE THE EMOJI CATEGORY
+    mutating func emojiCategory(category: String, quantifier: Int) throws -> EmojiCategory{
+        let emojiCategory = EmojiCategory(context: context)
         emojiCategory.category = category
         emojiCategory.quantifier = Int64(quantifier)
-
-        do{
-//            try saveContext()
-            try persistenceContainer.viewContext.save()
-        } catch {
-            //TODO: TRATAR ERRO
-        }
+        
+        try saveContext()
         return emojiCategory
     }
+    
+    //FUNC TO GET THE EMOJI CATEGORY
+    func getEmojiCategory() -> [EmojiCategory] {
+        let fetch: NSFetchRequest<EmojiCategory> = EmojiCategory.fetchRequest()
+        
+        do {
+            return try persistenceContainer.viewContext.fetch(fetch)
+        } catch {
+            return []
+        }
+    }
+
+    //FUNC TO SAVE THE EMOTIONAL
+    mutating func emotional(intensity: Int, score: Int, emojiCategory: EmojiCategory) throws -> Emotional {
+        let emotional = Emotional(context: context)
+        emotional.intensity = Int64(intensity)
+        emotional.score = Int64(score)
+
+        emojiCategory.emotional = emotional
+
+        try saveContext()
+        return emotional
+    }
+    
+    //FUNC TO GET THE EMOTIONAL
+    func getEmotional() -> [Emotional] {
+        let fetch: NSFetchRequest<Emotional> = Emotional.fetchRequest()
+        
+        do {
+            return try persistenceContainer.viewContext.fetch(fetch)
+        } catch {
+            return []
+        }
+    }
+
+
+    //MARK: CORE DATA METHODS
+    mutating func saveContext() throws{
+        if context.hasChanges{
+            do{
+                try context.save()
+                debugPrint(SucessType.sucessSaving)
+            } catch {
+                debugPrint(ErrorType.notSaved)
+            }
+        }
+    }
+
+    mutating func deleteObjectIndex(object: NSManagedObject) -> Bool{
+        context.delete(object)
+        do{
+            try saveContext()
+            debugPrint(SucessType.sucessDeleting)
+            return true
+        } catch{
+            debugPrint(ErrorType.notDeleted)
+            return false
+        }
+    }
+}
+
+
+
+
+//    init(){
+//        persistenceContainer = NSPersistentContainer(name: "CoreData")
+//        persistenceContainer.loadPersistentStores { (storeDescription, error) in
+//            if let error = error as NSError? {
+//                print("deu ruim", error)
+//            }
+//            print("entrou aqui?")
+//        }
+//    }
+
+//func emojiCategory(category: String, quantifier: Int) -> EmojiCategory{
+//        let emojiCategory = EmojiCategory(context: persistenceContainer.viewContext)
+//        emojiCategory.category = category
+//        emojiCategory.quantifier = Int64(quantifier)
+//
+//        do{
+//            try persistenceContainer.viewContext.save()
+//        } catch {
+//            //TODO: TRATAR ERRO
+//        }
+//        return emojiCategory
+//    }
 //
 //    mutating func fetchEmojiCategory() -> [EmojiCategory]{
 //        var emojis: [EmojiCategory] = []
@@ -130,40 +226,3 @@ class PersistenceController {
 //
 //        return emojis
 //    }
-//
-//    mutating func emotional(intensity: Int, score: Int, emojiCategory: EmojiCategory) throws -> Emotional {
-//        let emotional = Emotional(context: context)
-//        emotional.intensity = Int64(intensity)
-//        emotional.score = Int64(score)
-//
-//        emojiCategory.emotional = emotional
-//
-//        try saveContext()
-//        return emotional
-//    }
-//
-//
-//    //MARK: CORE DATA METHODS
-//    mutating func saveContext() throws{
-//        if context.hasChanges{
-//            do{
-//                try context.save()
-//                debugPrint(SucessType.sucessSaving)
-//            } catch {
-//                debugPrint(ErrorType.notSaved)
-//            }
-//        }
-//    }
-//
-//    mutating func deleteObjectIndex(object: NSManagedObject) -> Bool{
-//        context.delete(object)
-//        do{
-//            try saveContext()
-//            debugPrint(SucessType.sucessDeleting)
-//            return true
-//        } catch{
-//            debugPrint(ErrorType.notDeleted)
-//            return false
-//        }
-//    }
-}

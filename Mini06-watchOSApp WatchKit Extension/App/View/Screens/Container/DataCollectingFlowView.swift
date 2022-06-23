@@ -29,20 +29,19 @@ struct DataCollectingFlowView: View {
     
     @State var selectedScreen: DataCollectingFlowScreens = .emotional
     @StateObject var data: UserDataInput = UserDataInput()
-    @StateObject var emoji: EmojiCategory = EmojiCategory()
     
     var body: some View {
         ZStack {
             Group {
                 switch selectedScreen {
                 case .emotional:
-                    EmotionalView(selectedScreen: $selectedScreen, emoji: emoji)
+                    EmotionalView(selectedScreen: $selectedScreen)
                 case .emotionalIntensive:
                     EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(), selectedScreen: $selectedScreen)
                 case .alert:
                     FoodAlertView(selectedScreen: $selectedScreen)
                 case .food:
-                    FoodQualityDataView(selectedScreen: $selectedScreen, viewModel: FoodQuantityDataViewModel())
+                    FoodQualityDataView(selectedScreen: $selectedScreen, viewModel: FoodQualityDataViewModel())
                 case .foodQuantity:
                     FoodQuantityDataView(selectedScreen: $selectedScreen, viewModel: FoodQuantityDataViewModel())
                 }
@@ -51,6 +50,10 @@ struct DataCollectingFlowView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .environmentObject(data)
+        .onDisappear() {
+            print("teste 1", data.dataEmotional.emojiCategory)
+            print("teste 2", data.dataAlimentation.alimentationCategory)
+        }
     }
     
 }

@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct EmotionalView: View {
+//    @Environment(\.managedObjectContext) var viewContext
+    
     @Environment(\.dismiss) var dismiss
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
     let allFeelings = FeelingModel.all
     @State var feelingSelected: FeelingModel.Feelings = .null
-    @State var emoji: EmojiCategory
-//    private var persistence: PersistenceController
+    @State var allEmojis: [EmojiCategory] = [EmojiCategory]()
     @EnvironmentObject var data:UserDataInput
 
     
@@ -32,9 +33,12 @@ struct EmotionalView: View {
                             if let nextScreen = selectedScreen.next() {
                                 withAnimation(.easeInOut(duration: 0.6)) {
                                     data.dataEmotional.setFeeling(feeling: feelingSelected.rawValue)
-                                    self.emoji = PersistenceController.shared.emojiCategory(category: feeling.name, quantifier: feeling.quantifier)
+//                                    do {
+//                                        try self.emoji = PersistenceController.shared.emojiCategory(category: feeling.name, quantifier: feeling.quantifier)
+//                                    } catch {
+//                                    }
                                     selectedScreen = nextScreen
-                                    
+                                    print("vamo v", PersistenceController.shared.getEmojiCategory())
                                 }
                             } else {
                                 dismiss()

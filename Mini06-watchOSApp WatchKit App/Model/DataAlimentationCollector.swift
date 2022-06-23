@@ -26,6 +26,7 @@ struct DataCollectorAlimentation {
     var breakCount: Int?
     var point: Int?
     
+    
     mutating func setAlimentationCategoryArray(types:[String]) {
         for category in types{
             alimentationCategory.append(DataCollectorAlimentationCategory(alimentationCategory: category))

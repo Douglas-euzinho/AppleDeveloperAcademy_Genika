@@ -8,6 +8,7 @@
 import SwiftUI
 
 class Quantity: ObservableObject{
+    
     @Published var value = 0
 }
 

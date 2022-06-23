@@ -28,7 +28,7 @@ struct DataCollectingFlowView: View {
     }
     
     @State var selectedScreen: DataCollectingFlowScreens = .emotional
-    @StateObject var data:UserDataInput = UserDataInput()
+    @StateObject var data: UserDataInput = UserDataInput()
     
     var body: some View {
         ZStack {

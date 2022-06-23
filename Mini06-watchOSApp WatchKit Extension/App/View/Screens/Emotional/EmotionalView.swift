@@ -14,7 +14,6 @@ struct EmotionalView: View {
     @State var feelingSelected: FeelingModel.Feelings = .null
     @EnvironmentObject var data: UserDataInput
 
-    
     var body: some View {
         GeometryReader { metrics in
             VStack {

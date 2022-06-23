@@ -31,6 +31,7 @@ struct DataCollectorAlimentation {
             alimentationCategory.append(DataCollectorAlimentationCategory(alimentationCategory: category))
         }
     }
+    
     mutating func setMealCategoryArray(types:[String]) {
         for category in types{
             mealCategory.append(DataCollectorMealCategory(category: category))

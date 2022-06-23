@@ -10,8 +10,8 @@ import SwiftUI
 struct FoodQualityDataView: View {
     @Environment(\.dismiss) var dismiss
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
-    @ObservedObject var viewModel:FoodQualityDataViewModel
-    @EnvironmentObject var data:UserDataInput
+    @ObservedObject var viewModel: FoodQualityDataViewModel
+    @EnvironmentObject var data: UserDataInput
     
     var body: some View {
         GeometryReader { metrics in

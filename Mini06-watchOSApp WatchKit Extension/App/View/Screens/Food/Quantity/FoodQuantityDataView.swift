@@ -14,8 +14,8 @@ class Quantity: ObservableObject{
 struct FoodQuantityDataView: View {
     @Environment(\.dismiss) var dismiss
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
-    @ObservedObject var viewModel:FoodQuantityDataViewModel
-    @EnvironmentObject var data:UserDataInput
+    @ObservedObject var viewModel: FoodQuantityDataViewModel
+    @EnvironmentObject var data: UserDataInput
     @State var waterQuatity: Quantity = Quantity()
     @State var breakQuatity: Quantity = Quantity()
     

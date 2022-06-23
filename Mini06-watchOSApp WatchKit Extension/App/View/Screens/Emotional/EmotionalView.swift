@@ -12,6 +12,8 @@ struct EmotionalView: View {
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
     let allFeelings = FeelingModel.all
     @State var feelingSelected: FeelingModel.Feelings = .null
+    @State var emoji: EmojiCategory
+//    private var persistence: PersistenceController
     @EnvironmentObject var data:UserDataInput
 
     
@@ -30,7 +32,9 @@ struct EmotionalView: View {
                             if let nextScreen = selectedScreen.next() {
                                 withAnimation(.easeInOut(duration: 0.6)) {
                                     data.dataEmotional.setFeeling(feeling: feelingSelected.rawValue)
+                                    self.emoji = PersistenceController.shared.emojiCategory(category: feeling.name, quantifier: feeling.quantifier)
                                     selectedScreen = nextScreen
+                                    
                                 }
                             } else {
                                 dismiss()
@@ -47,8 +51,8 @@ struct EmotionalView: View {
     }
 }
 
-struct EmotionalView_Previews: PreviewProvider {
-    static var previews: some View {
-        EmotionalView(selectedScreen: .constant(.foodQuantity))
-    }
-}
+//struct EmotionalView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EmotionalView(selectedScreen: .constant(.foodQuantity))
+//    }
+//}

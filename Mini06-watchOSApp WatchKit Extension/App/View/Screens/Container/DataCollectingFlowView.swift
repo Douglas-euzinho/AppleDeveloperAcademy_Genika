@@ -28,20 +28,21 @@ struct DataCollectingFlowView: View {
     }
     
     @State var selectedScreen: DataCollectingFlowScreens = .emotional
-    @StateObject var data:UserDataInput = UserDataInput()
+    @StateObject var data: UserDataInput = UserDataInput()
+    @StateObject var emoji: EmojiCategory = EmojiCategory()
     
     var body: some View {
         ZStack {
             Group {
                 switch selectedScreen {
                 case .emotional:
-                    EmotionalView(selectedScreen: $selectedScreen)
+                    EmotionalView(selectedScreen: $selectedScreen, emoji: emoji)
                 case .emotionalIntensive:
                     EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(), selectedScreen: $selectedScreen)
                 case .alert:
                     FoodAlertView(selectedScreen: $selectedScreen)
                 case .food:
-                    FoodQualityDataView(selectedScreen: $selectedScreen, viewModel: FoodQualityDataViewModel())
+                    FoodQualityDataView(selectedScreen: $selectedScreen, viewModel: FoodQuantityDataViewModel())
                 case .foodQuantity:
                     FoodQuantityDataView(selectedScreen: $selectedScreen, viewModel: FoodQuantityDataViewModel())
                 }

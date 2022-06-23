@@ -44,7 +44,6 @@ struct FoodAlertView: View {
                 }
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

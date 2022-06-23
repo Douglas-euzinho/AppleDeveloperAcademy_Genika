@@ -75,7 +75,6 @@ struct FoodQualityDataView: View {
                 }
             }
         }
-        .navigationTitle("Qualidade")
     }
 }
 

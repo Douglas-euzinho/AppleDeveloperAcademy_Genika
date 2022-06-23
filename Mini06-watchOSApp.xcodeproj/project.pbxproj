@@ -12,6 +12,7 @@
 		500ADCC92857ECAF00E619CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC40284EC02200C85359 /* Assets.xcassets */; };
 		500ADCCC2857EE3000E619CF /* FeelingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ADCCB2857EE3000E619CF /* FeelingModel.swift */; };
 		500ADCCF285807AF00E619CF /* EmotionalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ADCCE285807AF00E619CF /* EmotionalRowView.swift */; };
+		50188B6D2863A5180017AF2C /* EmptyHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50188B6C2863A5180017AF2C /* EmptyHomeView.swift */; };
 		504E2F57285A57250015F3D9 /* FoodAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E2F56285A57250015F3D9 /* FoodAlertView.swift */; };
 		504E2F59285A5A8A0015F3D9 /* FoodQualityDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E2F58285A5A8A0015F3D9 /* FoodQualityDataView.swift */; };
 		50957B0F285F5DC000C908BB /* RoundedSquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B0E285F5DC000C908BB /* RoundedSquareButton.swift */; };
@@ -38,7 +39,7 @@
 		50DCF8972857B2130053887C /* CGFloat+ScreenMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */; };
 		50DCF8992857BA340053887C /* View+AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8982857BA340053887C /* View+AppColor.swift */; };
 		50DCF89D2857BA6F0053887C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF89C2857BA6F0053887C /* AppColors.swift */; };
-		50DCF8A02857BAD60053887C /* DiaryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF89F2857BAD60053887C /* DiaryButtonView.swift */; };
+		50DCF8A02857BAD60053887C /* RoundedRectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF89F2857BAD60053887C /* RoundedRectangleButton.swift */; };
 		50DCF8A52857CAAC0053887C /* EmotionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8A42857CAAC0053887C /* EmotionalView.swift */; };
 		50F3D3F5285A7AF2007DE261 /* FoodQuantityDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F3D3F4285A7AF2007DE261 /* FoodQuantityDataView.swift */; };
 		50F3D3F7285A889F007DE261 /* DataCollectingFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F3D3F6285A889F007DE261 /* DataCollectingFlowView.swift */; };
@@ -117,6 +118,7 @@
 		364559FA286166E100368836 /* EnumError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumError.swift; sourceTree = "<group>"; };
 		500ADCCB2857EE3000E619CF /* FeelingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingModel.swift; sourceTree = "<group>"; };
 		500ADCCE285807AF00E619CF /* EmotionalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalRowView.swift; sourceTree = "<group>"; };
+		50188B6C2863A5180017AF2C /* EmptyHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyHomeView.swift; sourceTree = "<group>"; };
 		504E2F56285A57250015F3D9 /* FoodAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAlertView.swift; sourceTree = "<group>"; };
 		504E2F58285A5A8A0015F3D9 /* FoodQualityDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQualityDataView.swift; sourceTree = "<group>"; };
 		50957B0E285F5DC000C908BB /* RoundedSquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSquareButton.swift; sourceTree = "<group>"; };
@@ -146,7 +148,7 @@
 		50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+ScreenMetrics.swift"; sourceTree = "<group>"; };
 		50DCF8982857BA340053887C /* View+AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AppColor.swift"; sourceTree = "<group>"; };
 		50DCF89C2857BA6F0053887C /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
-		50DCF89F2857BAD60053887C /* DiaryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryButtonView.swift; sourceTree = "<group>"; };
+		50DCF89F2857BAD60053887C /* RoundedRectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButton.swift; sourceTree = "<group>"; };
 		50DCF8A42857CAAC0053887C /* EmotionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalView.swift; sourceTree = "<group>"; };
 		50F3D3F4285A7AF2007DE261 /* FoodQuantityDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQuantityDataView.swift; sourceTree = "<group>"; };
 		50F3D3F6285A889F007DE261 /* DataCollectingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectingFlowView.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				50FE6AF228518685007F6073 /* Components */,
 				509E5D8F28515CFB00393673 /* HomeView.swift */,
 				50FE6AED2851861B007F6073 /* HomeViewModel.swift */,
+				50188B6C2863A5180017AF2C /* EmptyHomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -383,7 +386,7 @@
 		50DCF89E2857BAC10053887C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				50DCF89F2857BAD60053887C /* DiaryButtonView.swift */,
+				50DCF89F2857BAD60053887C /* RoundedRectangleButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -644,7 +647,7 @@
 				50DCF8A52857CAAC0053887C /* EmotionalView.swift in Sources */,
 				50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */,
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
-				50DCF8A02857BAD60053887C /* DiaryButtonView.swift in Sources */,
+				50DCF8A02857BAD60053887C /* RoundedRectangleButton.swift in Sources */,
 				FBBAED5D2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift in Sources */,
 				FBBAED622860F5FD00CFD86E /* Sleep+CoreDataProperties.swift in Sources */,
 				50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */,
@@ -687,6 +690,7 @@
 				FBBAED5B2860F5FD00CFD86E /* Emotional+CoreDataClass.swift in Sources */,
 				50957B1D285F6A6F00C908BB /* FoodQuantityStepper.swift in Sources */,
 				FBBAED5C2860F5FD00CFD86E /* Emotional+CoreDataProperties.swift in Sources */,
+				50188B6D2863A5180017AF2C /* EmptyHomeView.swift in Sources */,
 				FBBAED632860F5FD00CFD86E /* Meal+CoreDataClass.swift in Sources */,
 				50F3D3F5285A7AF2007DE261 /* FoodQuantityDataView.swift in Sources */,
 				50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */,

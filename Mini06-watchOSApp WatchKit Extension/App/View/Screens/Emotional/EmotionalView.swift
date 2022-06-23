@@ -38,8 +38,6 @@ struct EmotionalView: View {
                 }
                 .listStyle(.carousel)
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Emocional")
         }
     }
 }

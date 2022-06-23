@@ -1,5 +1,5 @@
 //
-//  DiaryButtonView.swift
+//  RoundedRectangleButton.swift
 //  Mini06-watchOSApp WatchKit Extension
 //
 //  Created by Vitor Souza on 13/06/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DiaryButtonView: View {
+struct RoundedRectangleButton: View {
     enum Theme {
         case light, dark
     }
@@ -31,7 +31,7 @@ struct DiaryButtonView: View {
                     .fontWeight(.semibold)
                     .foregroundColor(appColor: theme == .dark ? .white : .black)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: .width(47, from: metrics))
         }
         .buttonStyle(.borderless)
         .backgroundColor(appColor: theme == .dark ? .darkGray : .white)
@@ -39,10 +39,10 @@ struct DiaryButtonView: View {
     }
 }
 
-struct DiaryButtonView_Previews: PreviewProvider {
+struct RoundedRectangleButton_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { metrics in
-            DiaryButtonView(title: "Registrar", imageName: "doc.fill", theme: .light, metrics: metrics)
+            RoundedRectangleButton(title: "Registrar", imageName: "doc.fill", theme: .light, metrics: metrics)
         }
     }
 }

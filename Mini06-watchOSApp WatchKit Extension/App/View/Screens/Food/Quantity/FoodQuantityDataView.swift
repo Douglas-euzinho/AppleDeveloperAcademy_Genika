@@ -77,7 +77,6 @@ struct FoodQuantityDataView: View {
                 }
             }
         }
-        .navigationTitle("Quantidade")
     }
 }
 

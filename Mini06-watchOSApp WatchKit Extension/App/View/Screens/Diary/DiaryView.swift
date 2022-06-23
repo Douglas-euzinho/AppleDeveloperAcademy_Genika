@@ -12,18 +12,20 @@ struct DiaryView: View {
     
     var body: some View {
         GeometryReader { metrics in
-            VStack(spacing: .height(8, from: metrics)) {
-                DiaryButtonView(title: "Registrar",
+            VStack(spacing: 0) {
+                RoundedRectangleButton(title: "Registrar",
                                 imageName: "square.and.pencil",
                                 theme: .light, metrics: metrics) {
                     showDataCollectingFlow = true
                 }
                 
-                DiaryButtonView(title: "Relatórios",
+                Spacer()
+                RoundedRectangleButton(title: "Relatórios",
                                 imageName: "doc.text",
                                 theme: .dark, metrics: metrics)
                 
-                DiaryButtonView(title: "Histórico",
+                Spacer()
+                RoundedRectangleButton(title: "Histórico",
                                 imageName: "calendar",
                                 theme: .dark, metrics: metrics)
             }

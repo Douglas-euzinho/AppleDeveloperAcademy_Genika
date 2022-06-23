@@ -17,6 +17,8 @@
 		500ADCCF285807AF00E619CF /* EmotionalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ADCCE285807AF00E619CF /* EmotionalRowView.swift */; };
 		50188B6D2863A5180017AF2C /* EmptyHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50188B6C2863A5180017AF2C /* EmptyHomeView.swift */; };
 		50350D022864F850003CD461 /* FoodQualityDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50350D012864F850003CD461 /* FoodQualityDataViewModel.swift */; };
+		50350D052864FDF3003CD461 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50350D042864FDF3003CD461 /* FocusView.swift */; };
+		50350D07286526F7003CD461 /* HomeGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50350D06286526F7003CD461 /* HomeGridView.swift */; };
 		504E2F57285A57250015F3D9 /* FoodAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E2F56285A57250015F3D9 /* FoodAlertView.swift */; };
 		504E2F59285A5A8A0015F3D9 /* FoodQualityDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E2F58285A5A8A0015F3D9 /* FoodQualityDataView.swift */; };
 		505F171C2862607D002D6BF5 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505F171B2862607D002D6BF5 /* OnboardingView.swift */; };
@@ -57,7 +59,6 @@
 		50F3D3F5285A7AF2007DE261 /* FoodQuantityDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F3D3F4285A7AF2007DE261 /* FoodQuantityDataView.swift */; };
 		50F3D3F7285A889F007DE261 /* DataCollectingFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F3D3F6285A889F007DE261 /* DataCollectingFlowView.swift */; };
 		50FE6AEE2851861B007F6073 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AED2851861B007F6073 /* HomeViewModel.swift */; };
-		50FE6AF5285186A0007F6073 /* HomeGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF4285186A0007F6073 /* HomeGridView.swift */; };
 		50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */; };
 		50FE6AFA285186F7007F6073 /* LinearProgressiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AF9285186F7007F6073 /* LinearProgressiveView.swift */; };
 		50FE6AFC28528D56007F6073 /* RoundedTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AFB28528D56007F6073 /* RoundedTriangle.swift */; };
@@ -139,6 +140,8 @@
 		500ADCCE285807AF00E619CF /* EmotionalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalRowView.swift; sourceTree = "<group>"; };
 		50188B6C2863A5180017AF2C /* EmptyHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyHomeView.swift; sourceTree = "<group>"; };
 		50350D012864F850003CD461 /* FoodQualityDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQualityDataViewModel.swift; sourceTree = "<group>"; };
+		50350D042864FDF3003CD461 /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
+		50350D06286526F7003CD461 /* HomeGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGridView.swift; sourceTree = "<group>"; };
 		504E2F56285A57250015F3D9 /* FoodAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAlertView.swift; sourceTree = "<group>"; };
 		504E2F58285A5A8A0015F3D9 /* FoodQualityDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQualityDataView.swift; sourceTree = "<group>"; };
 		505F171B2862607D002D6BF5 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -182,7 +185,6 @@
 		50F3D3F4285A7AF2007DE261 /* FoodQuantityDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQuantityDataView.swift; sourceTree = "<group>"; };
 		50F3D3F6285A889F007DE261 /* DataCollectingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectingFlowView.swift; sourceTree = "<group>"; };
 		50FE6AED2851861B007F6073 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		50FE6AF4285186A0007F6073 /* HomeGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGridView.swift; sourceTree = "<group>"; };
 		50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSegmentView.swift; sourceTree = "<group>"; };
 		50FE6AF9285186F7007F6073 /* LinearProgressiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressiveView.swift; sourceTree = "<group>"; };
 		50FE6AFB28528D56007F6073 /* RoundedTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTriangle.swift; sourceTree = "<group>"; };
@@ -246,6 +248,14 @@
 				50957B18285F66B700C908BB /* EmotionIntensiveValueView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		50350D032864FDE5003CD461 /* Focus */ = {
+			isa = PBXGroup;
+			children = (
+				50350D042864FDF3003CD461 /* FocusView.swift */,
+			);
+			path = Focus;
 			sourceTree = "<group>";
 		};
 		504E2F55285A57060015F3D9 /* Food */ = {
@@ -468,6 +478,7 @@
 		50FE6AEF2851863D007F6073 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				50350D032864FDE5003CD461 /* Focus */,
 				505F171A2862605F002D6BF5 /* Onboarding */,
 				504E2F55285A57060015F3D9 /* Food */,
 				50DCF8A32857CA9D0053887C /* Emotional */,
@@ -481,8 +492,8 @@
 		50FE6AF228518685007F6073 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				50FE6AF4285186A0007F6073 /* HomeGridView.swift */,
 				50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */,
+				50350D06286526F7003CD461 /* HomeGridView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -721,6 +732,7 @@
 				50DCF8992857BA340053887C /* View+AppColor.swift in Sources */,
 				FBBAED692860F5FD00CFD86E /* Exercice+CoreDataClass.swift in Sources */,
 				50DCF8972857B2130053887C /* CGFloat+ScreenMetrics.swift in Sources */,
+				50350D07286526F7003CD461 /* HomeGridView.swift in Sources */,
 				36455A0128625C5A00368836 /* ProtocolDataCollector.swift in Sources */,
 				509C889F28638D50004703D2 /* OnboardingFlowView.swift in Sources */,
 				FBBAED6C2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift in Sources */,
@@ -737,6 +749,7 @@
 				50DCF8932857B0320053887C /* DiaryView.swift in Sources */,
 				364559FB286166E100368836 /* EnumError.swift in Sources */,
 				FBBAED652860F5FD00CFD86E /* AlimentationCategory+CoreDataClass.swift in Sources */,
+				50350D052864FDF3003CD461 /* FocusView.swift in Sources */,
 				50957B15285F61C700C908BB /* FoodQualityDataModel.swift in Sources */,
 				50957B0F285F5DC000C908BB /* RoundedSquareButton.swift in Sources */,
 				FBBAED462860F0DD00CFD86E /* CoreData.xcdatamodeld in Sources */,
@@ -776,7 +789,6 @@
 				50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */,
 				50FE6AFC28528D56007F6073 /* RoundedTriangle.swift in Sources */,
 				504E2F57285A57250015F3D9 /* FoodAlertView.swift in Sources */,
-				50FE6AF5285186A0007F6073 /* HomeGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

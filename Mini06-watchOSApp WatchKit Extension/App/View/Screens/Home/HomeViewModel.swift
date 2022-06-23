@@ -18,7 +18,30 @@ class HomeViewModel: ObservableObject {
     @Published var sleepQuantityValue: QuantityIndicator? = .none
     @Published var emotionalQuantityValue: QuantityIndicator? = .none
     
-    @Published var homeDataIsEmpty: Bool = true
+    @Published var homeDataIsEmpty: Bool = false
+    
+    @Published var foodFocusDataModel: FocusDataModel
+    @Published var activityFocusDataModel: FocusDataModel
+    @Published var sleepFocusDataModel: FocusDataModel
+    @Published var emotionalFocusDataModel: FocusDataModel
+    
+    init() {
+        foodFocusDataModel = FocusDataModel(title: "Alimentação",
+                                            qualityLabel: "1 Refeição",
+                                            quantityLabel: "Ruim")
+        
+        activityFocusDataModel = FocusDataModel(title: "Atividades",
+                                                qualityLabel: "30min",
+                                                quantityLabel: "Pesado")
+        
+        sleepFocusDataModel = FocusDataModel(title: "Sono",
+                                             qualityLabel: "8 horas",
+                                             quantityLabel: "Muito bom")
+        
+        emotionalFocusDataModel = FocusDataModel(title: "Emoções",
+                                                 qualityLabel: "Intenso",
+                                                 quantityLabel: "Negativo")
+    }
     
     func randomizeValues() {
         let quantityArray = QuantityIndicator.allCases

@@ -24,7 +24,7 @@ struct OnboardingView<T: View>: View {
             
             Text(onboardingText.rawValue)
                 .font(.body)
-                .foregroundColor(Color(uiColor: UIColor(red: 0.74, green: 0.74, blue: 0.74, alpha: 1.0)))
+                .foregroundColor(appColor: .textColorGray)
             
             Spacer()
             

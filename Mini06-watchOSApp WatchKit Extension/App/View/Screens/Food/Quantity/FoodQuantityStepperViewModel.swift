@@ -18,13 +18,15 @@ class FoodQuantityStepperViewModel: ObservableObject {
         self.value = 0
     }
     
-    func increase() {
+    func increase() -> Int{
         value += 1
+        return value
     }
     
-    func decrease() {
+    func decrease() -> Int{
         if value > 0 {
             value -= 1
         }
+        return value
     }
 }

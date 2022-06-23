@@ -10,6 +10,8 @@ import SwiftUI
 struct FoodQualityDataView: View {
     @Environment(\.dismiss) var dismiss
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
+    @ObservedObject var viewModel: FoodQualityDataViewModel
+    @EnvironmentObject var data: UserDataInput
     
     var body: some View {
         GeometryReader { metrics in
@@ -44,7 +46,7 @@ struct FoodQualityDataView: View {
                                 title: dataModel.name,
                                 metrics: metrics
                             ) { selected in
-                                // TODO: put selected data model into a array for passing data to following view
+                                viewModel.setupFoodArray(food: dataModel.name, selected: selected)
                             }
                         }
                         
@@ -62,6 +64,7 @@ struct FoodQualityDataView: View {
                         RoundedSquareButton(metrics: metrics) {
                             if let nextScreen = selectedScreen.next() {
                                 withAnimation(.easeInOut(duration: 0.6)) {
+                                    data.dataAlimentation.setAlimentationCategoryArray(types: viewModel.foodArraySelected)
                                     selectedScreen = nextScreen
                                 }
                             } else {
@@ -78,6 +81,6 @@ struct FoodQualityDataView: View {
 
 struct FoodQualityDataView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodQualityDataView(selectedScreen: .constant(.foodQuantity))
+        FoodQualityDataView(selectedScreen: .constant(.foodQuantity), viewModel: FoodQualityDataViewModel())
     }
 }

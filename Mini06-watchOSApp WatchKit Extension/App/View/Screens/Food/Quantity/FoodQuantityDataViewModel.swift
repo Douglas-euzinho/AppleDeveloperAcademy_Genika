@@ -18,16 +18,15 @@ class FoodQuantityDataViewModel: ObservableObject{
         }else{
             deleteMeal(meal: meal)
         }
-        
     }
+    
     private func appendMeal(meal:String){
         
         if mealArray.contains(meal){
             return
         } else{
             mealArray.append(meal)
-        }
-        
+        }    
     }
 
     private func deleteMeal(meal:String){
@@ -39,5 +38,4 @@ class FoodQuantityDataViewModel: ObservableObject{
             }
         }
     }
-    
 }

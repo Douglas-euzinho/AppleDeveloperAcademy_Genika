@@ -11,6 +11,8 @@ struct EmotionalIntensiveView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel: EmotionalIntensiveViewModel
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
+    @EnvironmentObject var data: UserDataInput
+
     
     var body: some View {
         GeometryReader { metrics in
@@ -68,6 +70,7 @@ struct EmotionalIntensiveView: View {
                     RoundedSquareButton(metrics: metrics) {
                         if let nextScreen = selectedScreen.next() {
                             withAnimation(.easeInOut(duration: 0.6)) {
+                                data.dataEmotional.setIntesity(value: viewModel.intensiveValue.rawValue)
                                 selectedScreen = nextScreen
                             }
                         } else {
@@ -82,6 +85,6 @@ struct EmotionalIntensiveView: View {
 
 struct EmotionalIntensiveVIew_Previews: PreviewProvider {
     static var previews: some View {
-        EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(feelingSelected: .happy), selectedScreen: .constant(.foodQuantity))
+        EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(), selectedScreen: .constant(.foodQuantity))
     }
 }

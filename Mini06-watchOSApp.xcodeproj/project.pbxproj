@@ -9,19 +9,31 @@
 /* Begin PBXBuildFile section */
 		364559F92861114A00368836 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559F82861114A00368836 /* Persistence.swift */; };
 		364559FB286166E100368836 /* EnumError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559FA286166E100368836 /* EnumError.swift */; };
+		364559FD286259B200368836 /* DataAlimentationCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559FC286259B200368836 /* DataAlimentationCollector.swift */; };
+		364559FF28625BBB00368836 /* DataEmotionalCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559FE28625BBB00368836 /* DataEmotionalCollector.swift */; };
+		36455A0128625C5A00368836 /* ProtocolDataCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36455A0028625C5A00368836 /* ProtocolDataCollector.swift */; };
 		500ADCC92857ECAF00E619CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC40284EC02200C85359 /* Assets.xcassets */; };
 		500ADCCC2857EE3000E619CF /* FeelingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ADCCB2857EE3000E619CF /* FeelingModel.swift */; };
 		500ADCCF285807AF00E619CF /* EmotionalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ADCCE285807AF00E619CF /* EmotionalRowView.swift */; };
 		50188B6D2863A5180017AF2C /* EmptyHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50188B6C2863A5180017AF2C /* EmptyHomeView.swift */; };
 		504E2F57285A57250015F3D9 /* FoodAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E2F56285A57250015F3D9 /* FoodAlertView.swift */; };
 		504E2F59285A5A8A0015F3D9 /* FoodQualityDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E2F58285A5A8A0015F3D9 /* FoodQualityDataView.swift */; };
+		505F171C2862607D002D6BF5 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505F171B2862607D002D6BF5 /* OnboardingView.swift */; };
+		505F171E28626C93002D6BF5 /* OnboardingBarGraphicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505F171D28626C92002D6BF5 /* OnboardingBarGraphicModel.swift */; };
+		505F172128626CDE002D6BF5 /* HeaderOnboardingOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505F172028626CDE002D6BF5 /* HeaderOnboardingOne.swift */; };
+		505F172328626D26002D6BF5 /* HeaderOnboardingTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505F172228626D26002D6BF5 /* HeaderOnboardingTwo.swift */; };
+		505F172528626D96002D6BF5 /* HeaderOnboardingThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505F172428626D96002D6BF5 /* HeaderOnboardingThree.swift */; };
+		505F172828626EA8002D6BF5 /* OnboardingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505F172728626EA8002D6BF5 /* OnboardingText.swift */; };
 		50957B0F285F5DC000C908BB /* RoundedSquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B0E285F5DC000C908BB /* RoundedSquareButton.swift */; };
 		50957B13285F5E2F00C908BB /* FoodQualityRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B12285F5E2F00C908BB /* FoodQualityRowView.swift */; };
 		50957B15285F61C700C908BB /* FoodQualityDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B14285F61C700C908BB /* FoodQualityDataModel.swift */; };
-		50957B17285F65F900C908BB /* EmotionalIntensiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B16285F65F900C908BB /* EmotionalIntensiveViewModel.swift */; };
 		50957B19285F66B700C908BB /* EmotionIntensiveValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B18285F66B700C908BB /* EmotionIntensiveValueView.swift */; };
 		50957B1D285F6A6F00C908BB /* FoodQuantityStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B1C285F6A6F00C908BB /* FoodQuantityStepper.swift */; };
 		50957B1F285F6C8400C908BB /* FoodQuantityStepperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50957B1E285F6C8400C908BB /* FoodQuantityStepperViewModel.swift */; };
+		509C889F28638D50004703D2 /* OnboardingFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509C889E28638D50004703D2 /* OnboardingFlowView.swift */; };
+		509C88A12863A12D004703D2 /* UserDefaults+ManagingValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509C88A02863A12D004703D2 /* UserDefaults+ManagingValues.swift */; };
+		509C88A32863A159004703D2 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509C88A22863A158004703D2 /* UserDefaultsKeys.swift */; };
+		509C88A52863A201004703D2 /* PaginationIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509C88A42863A201004703D2 /* PaginationIndicator.swift */; };
 		509E5D9028515CFB00393673 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509E5D8F28515CFB00393673 /* HomeView.swift */; };
 		50A3DEFB28580A59007952F8 /* EmotionalIntensiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DEFA28580A59007952F8 /* EmotionalIntensiveView.swift */; };
 		50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DEFD285920B3007952F8 /* View+CornerRadius.swift */; };
@@ -69,6 +81,10 @@
 		FBBAED6A2860F5FD00CFD86E /* Exercice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED582860F5FD00CFD86E /* Exercice+CoreDataProperties.swift */; };
 		FBBAED6B2860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED592860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift */; };
 		FBBAED6C2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED5A2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift */; };
+		FBBAED752862993100CFD86E /* UserDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED742862993100CFD86E /* UserDataInput.swift */; };
+		FBBAED7928639C6A00CFD86E /* EmotionalIntensiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED7828639C6A00CFD86E /* EmotionalIntensiveViewModel.swift */; };
+		FBBAED7D2863A3A300CFD86E /* FoodQualityDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED7C2863A3A300CFD86E /* FoodQualityDataViewModel.swift */; };
+		FBBAED7F2863B3AF00CFD86E /* FoodQuantityDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED7E2863B3AF00CFD86E /* FoodQuantityDataViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,18 +132,30 @@
 /* Begin PBXFileReference section */
 		364559F82861114A00368836 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		364559FA286166E100368836 /* EnumError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumError.swift; sourceTree = "<group>"; };
+		364559FC286259B200368836 /* DataAlimentationCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlimentationCollector.swift; sourceTree = "<group>"; };
+		364559FE28625BBB00368836 /* DataEmotionalCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEmotionalCollector.swift; sourceTree = "<group>"; };
+		36455A0028625C5A00368836 /* ProtocolDataCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDataCollector.swift; sourceTree = "<group>"; };
 		500ADCCB2857EE3000E619CF /* FeelingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingModel.swift; sourceTree = "<group>"; };
 		500ADCCE285807AF00E619CF /* EmotionalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalRowView.swift; sourceTree = "<group>"; };
 		50188B6C2863A5180017AF2C /* EmptyHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyHomeView.swift; sourceTree = "<group>"; };
 		504E2F56285A57250015F3D9 /* FoodAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAlertView.swift; sourceTree = "<group>"; };
 		504E2F58285A5A8A0015F3D9 /* FoodQualityDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQualityDataView.swift; sourceTree = "<group>"; };
+		505F171B2862607D002D6BF5 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		505F171D28626C92002D6BF5 /* OnboardingBarGraphicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingBarGraphicModel.swift; sourceTree = "<group>"; };
+		505F172028626CDE002D6BF5 /* HeaderOnboardingOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOnboardingOne.swift; sourceTree = "<group>"; };
+		505F172228626D26002D6BF5 /* HeaderOnboardingTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOnboardingTwo.swift; sourceTree = "<group>"; };
+		505F172428626D96002D6BF5 /* HeaderOnboardingThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOnboardingThree.swift; sourceTree = "<group>"; };
+		505F172728626EA8002D6BF5 /* OnboardingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingText.swift; sourceTree = "<group>"; };
 		50957B0E285F5DC000C908BB /* RoundedSquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSquareButton.swift; sourceTree = "<group>"; };
 		50957B12285F5E2F00C908BB /* FoodQualityRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQualityRowView.swift; sourceTree = "<group>"; };
 		50957B14285F61C700C908BB /* FoodQualityDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQualityDataModel.swift; sourceTree = "<group>"; };
-		50957B16285F65F900C908BB /* EmotionalIntensiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalIntensiveViewModel.swift; sourceTree = "<group>"; };
 		50957B18285F66B700C908BB /* EmotionIntensiveValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionIntensiveValueView.swift; sourceTree = "<group>"; };
 		50957B1C285F6A6F00C908BB /* FoodQuantityStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQuantityStepper.swift; sourceTree = "<group>"; };
 		50957B1E285F6C8400C908BB /* FoodQuantityStepperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQuantityStepperViewModel.swift; sourceTree = "<group>"; };
+		509C889E28638D50004703D2 /* OnboardingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowView.swift; sourceTree = "<group>"; };
+		509C88A02863A12D004703D2 /* UserDefaults+ManagingValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+ManagingValues.swift"; sourceTree = "<group>"; };
+		509C88A22863A158004703D2 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		509C88A42863A201004703D2 /* PaginationIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationIndicator.swift; sourceTree = "<group>"; };
 		509E5D8F28515CFB00393673 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		50A3DEFA28580A59007952F8 /* EmotionalIntensiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalIntensiveView.swift; sourceTree = "<group>"; };
 		50A3DEFD285920B3007952F8 /* View+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
@@ -179,6 +207,10 @@
 		FBBAED582860F5FD00CFD86E /* Exercice+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercice+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FBBAED592860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyGeneral+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FBBAED5A2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyGeneral+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FBBAED742862993100CFD86E /* UserDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataInput.swift; sourceTree = "<group>"; };
+		FBBAED7828639C6A00CFD86E /* EmotionalIntensiveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionalIntensiveViewModel.swift; sourceTree = "<group>"; };
+		FBBAED7C2863A3A300CFD86E /* FoodQualityDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodQualityDataViewModel.swift; path = ../../../../../../../../../Desktop/FoodQualityDataViewModel.swift; sourceTree = "<group>"; };
+		FBBAED7E2863B3AF00CFD86E /* FoodQuantityDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQuantityDataViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +230,11 @@
 				FBBAED432860F0B100CFD86E /* CoreData */,
 				500ADCCB2857EE3000E619CF /* FeelingModel.swift */,
 				50957B14285F61C700C908BB /* FoodQualityDataModel.swift */,
+				364559FC286259B200368836 /* DataAlimentationCollector.swift */,
+				364559FE28625BBB00368836 /* DataEmotionalCollector.swift */,
+				36455A0028625C5A00368836 /* ProtocolDataCollector.swift */,
+				FBBAED742862993100CFD86E /* UserDataInput.swift */,
+				505F171D28626C92002D6BF5 /* OnboardingBarGraphicModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,11 +258,33 @@
 			path = Food;
 			sourceTree = "<group>";
 		};
+		505F171A2862605F002D6BF5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				505F171F28626CC0002D6BF5 /* Components */,
+				505F171B2862607D002D6BF5 /* OnboardingView.swift */,
+				509C889E28638D50004703D2 /* OnboardingFlowView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		505F171F28626CC0002D6BF5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				509C88A42863A201004703D2 /* PaginationIndicator.swift */,
+				505F172028626CDE002D6BF5 /* HeaderOnboardingOne.swift */,
+				505F172228626D26002D6BF5 /* HeaderOnboardingTwo.swift */,
+				505F172428626D96002D6BF5 /* HeaderOnboardingThree.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		50957B10285F5E1000C908BB /* Quality */ = {
 			isa = PBXGroup;
 			children = (
 				504E2F58285A5A8A0015F3D9 /* FoodQualityDataView.swift */,
 				50957B12285F5E2F00C908BB /* FoodQualityRowView.swift */,
+				FBBAED7C2863A3A300CFD86E /* FoodQualityDataViewModel.swift */,
 			);
 			path = Quality;
 			sourceTree = "<group>";
@@ -236,6 +295,7 @@
 				50F3D3F4285A7AF2007DE261 /* FoodQuantityDataView.swift */,
 				50957B1C285F6A6F00C908BB /* FoodQuantityStepper.swift */,
 				50957B1E285F6C8400C908BB /* FoodQuantityStepperViewModel.swift */,
+				FBBAED7E2863B3AF00CFD86E /* FoodQuantityDataViewModel.swift */,
 			);
 			path = Quantity;
 			sourceTree = "<group>";
@@ -370,6 +430,7 @@
 				50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */,
 				50DCF8982857BA340053887C /* View+AppColor.swift */,
 				50A3DEFD285920B3007952F8 /* View+CornerRadius.swift */,
+				509C88A02863A12D004703D2 /* UserDefaults+ManagingValues.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -379,6 +440,8 @@
 			children = (
 				50DCF89C2857BA6F0053887C /* AppColors.swift */,
 				50A3DEFF28592116007952F8 /* QuantityIndicator.swift */,
+				505F172728626EA8002D6BF5 /* OnboardingText.swift */,
+				509C88A22863A158004703D2 /* UserDefaultsKeys.swift */,
 			);
 			path = Defaults;
 			sourceTree = "<group>";
@@ -397,7 +460,7 @@
 				500ADCCD2858078F00E619CF /* Components */,
 				50DCF8A42857CAAC0053887C /* EmotionalView.swift */,
 				50A3DEFA28580A59007952F8 /* EmotionalIntensiveView.swift */,
-				50957B16285F65F900C908BB /* EmotionalIntensiveViewModel.swift */,
+				FBBAED7828639C6A00CFD86E /* EmotionalIntensiveViewModel.swift */,
 			);
 			path = Emotional;
 			sourceTree = "<group>";
@@ -405,6 +468,7 @@
 		50FE6AEF2851863D007F6073 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				505F171A2862605F002D6BF5 /* Onboarding */,
 				504E2F55285A57060015F3D9 /* Food */,
 				50DCF8A32857CA9D0053887C /* Emotional */,
 				50DCF8912857B0250053887C /* Diary */,
@@ -642,6 +706,7 @@
 			files = (
 				50FE6AFE28528D95007F6073 /* CircularSegment.swift in Sources */,
 				50A3DEFB28580A59007952F8 /* EmotionalIntensiveView.swift in Sources */,
+				509C88A32863A159004703D2 /* UserDefaultsKeys.swift in Sources */,
 				FBBAED612860F5FD00CFD86E /* Sleep+CoreDataClass.swift in Sources */,
 				50FE6B0028528DB2007F6073 /* DashedProgressView.swift in Sources */,
 				50DCF8A52857CAAC0053887C /* EmotionalView.swift in Sources */,
@@ -651,40 +716,54 @@
 				FBBAED5D2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift in Sources */,
 				FBBAED622860F5FD00CFD86E /* Sleep+CoreDataProperties.swift in Sources */,
 				50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */,
+				505F172828626EA8002D6BF5 /* OnboardingText.swift in Sources */,
 				50DCF8992857BA340053887C /* View+AppColor.swift in Sources */,
 				FBBAED692860F5FD00CFD86E /* Exercice+CoreDataClass.swift in Sources */,
 				50DCF8972857B2130053887C /* CGFloat+ScreenMetrics.swift in Sources */,
+				36455A0128625C5A00368836 /* ProtocolDataCollector.swift in Sources */,
+				509C889F28638D50004703D2 /* OnboardingFlowView.swift in Sources */,
 				FBBAED6C2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift in Sources */,
 				50957B1F285F6C8400C908BB /* FoodQuantityStepperViewModel.swift in Sources */,
 				50BCEC4E284EC02300C85359 /* ContainerView.swift in Sources */,
 				FBBAED602860F5FD00CFD86E /* Bpm+CoreDataProperties.swift in Sources */,
+				509C88A52863A201004703D2 /* PaginationIndicator.swift in Sources */,
 				50FE6AFA285186F7007F6073 /* LinearProgressiveView.swift in Sources */,
+				364559FD286259B200368836 /* DataAlimentationCollector.swift in Sources */,
 				500ADCCF285807AF00E619CF /* EmotionalRowView.swift in Sources */,
 				50FE6AEE2851861B007F6073 /* HomeViewModel.swift in Sources */,
 				FBBAED5E2860F5FD00CFD86E /* Alimentation+CoreDataProperties.swift in Sources */,
 				50A3DF0028592116007952F8 /* QuantityIndicator.swift in Sources */,
-				50957B17285F65F900C908BB /* EmotionalIntensiveViewModel.swift in Sources */,
 				50DCF8932857B0320053887C /* DiaryView.swift in Sources */,
 				364559FB286166E100368836 /* EnumError.swift in Sources */,
 				FBBAED652860F5FD00CFD86E /* AlimentationCategory+CoreDataClass.swift in Sources */,
 				50957B15285F61C700C908BB /* FoodQualityDataModel.swift in Sources */,
 				50957B0F285F5DC000C908BB /* RoundedSquareButton.swift in Sources */,
 				FBBAED462860F0DD00CFD86E /* CoreData.xcdatamodeld in Sources */,
+				FBBAED7F2863B3AF00CFD86E /* FoodQuantityDataViewModel.swift in Sources */,
 				50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */,
 				509E5D9028515CFB00393673 /* HomeView.swift in Sources */,
 				50BCEC4C284EC02300C85359 /* Mini06_watchOSAppApp.swift in Sources */,
+				FBBAED7D2863A3A300CFD86E /* FoodQualityDataViewModel.swift in Sources */,
+				364559FF28625BBB00368836 /* DataEmotionalCollector.swift in Sources */,
 				50957B19285F66B700C908BB /* EmotionIntensiveValueView.swift in Sources */,
+				505F172328626D26002D6BF5 /* HeaderOnboardingTwo.swift in Sources */,
 				504E2F59285A5A8A0015F3D9 /* FoodQualityDataView.swift in Sources */,
 				FBBAED682860F5FD00CFD86E /* EmojiCategory+CoreDataProperties.swift in Sources */,
 				50957B13285F5E2F00C908BB /* FoodQualityRowView.swift in Sources */,
 				50F3D3F7285A889F007DE261 /* DataCollectingFlowView.swift in Sources */,
 				50DCF89D2857BA6F0053887C /* AppColors.swift in Sources */,
 				FBBAED6B2860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift in Sources */,
+				FBBAED7928639C6A00CFD86E /* EmotionalIntensiveViewModel.swift in Sources */,
 				FBBAED6A2860F5FD00CFD86E /* Exercice+CoreDataProperties.swift in Sources */,
+				505F172528626D96002D6BF5 /* HeaderOnboardingThree.swift in Sources */,
 				500ADCCC2857EE3000E619CF /* FeelingModel.swift in Sources */,
 				FBBAED672860F5FD00CFD86E /* EmojiCategory+CoreDataClass.swift in Sources */,
 				FBBAED5F2860F5FD00CFD86E /* Bpm+CoreDataClass.swift in Sources */,
+				509C88A12863A12D004703D2 /* UserDefaults+ManagingValues.swift in Sources */,
+				505F172128626CDE002D6BF5 /* HeaderOnboardingOne.swift in Sources */,
 				FBBAED642860F5FD00CFD86E /* Meal+CoreDataProperties.swift in Sources */,
+				FBBAED752862993100CFD86E /* UserDataInput.swift in Sources */,
+				505F171E28626C93002D6BF5 /* OnboardingBarGraphicModel.swift in Sources */,
 				364559F92861114A00368836 /* Persistence.swift in Sources */,
 				FBBAED662860F5FD00CFD86E /* AlimentationCategory+CoreDataProperties.swift in Sources */,
 				FBBAED5B2860F5FD00CFD86E /* Emotional+CoreDataClass.swift in Sources */,
@@ -693,6 +772,7 @@
 				50188B6D2863A5180017AF2C /* EmptyHomeView.swift in Sources */,
 				FBBAED632860F5FD00CFD86E /* Meal+CoreDataClass.swift in Sources */,
 				50F3D3F5285A7AF2007DE261 /* FoodQuantityDataView.swift in Sources */,
+				505F171C2862607D002D6BF5 /* OnboardingView.swift in Sources */,
 				50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */,
 				50FE6AFC28528D56007F6073 /* RoundedTriangle.swift in Sources */,
 				504E2F57285A57250015F3D9 /* FoodAlertView.swift in Sources */,
@@ -839,7 +919,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = MGFPJ5C76T;
+				DEVELOPMENT_TEAM = 79MM5G543B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
@@ -871,7 +951,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = MGFPJ5C76T;
+				DEVELOPMENT_TEAM = 79MM5G543B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
@@ -905,7 +985,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MGFPJ5C76T;
+				DEVELOPMENT_TEAM = 79MM5G543B;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
@@ -915,7 +995,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -938,7 +1018,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MGFPJ5C76T;
+				DEVELOPMENT_TEAM = 79MM5G543B;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
@@ -948,7 +1028,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -967,7 +1047,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MGFPJ5C76T;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp";
 				PRODUCT_NAME = "Watch App";
 				SWIFT_VERSION = 5.0;
@@ -980,7 +1060,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MGFPJ5C76T;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp";
 				PRODUCT_NAME = "Watch App";
 				SWIFT_VERSION = 5.0;

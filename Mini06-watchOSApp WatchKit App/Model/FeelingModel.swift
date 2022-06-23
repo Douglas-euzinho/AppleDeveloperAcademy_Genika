@@ -16,6 +16,7 @@ struct FeelingModel: Identifiable {
         case anxious
         case sad
         case stressed
+        case null
         
         var name: String { rawValue }
     }

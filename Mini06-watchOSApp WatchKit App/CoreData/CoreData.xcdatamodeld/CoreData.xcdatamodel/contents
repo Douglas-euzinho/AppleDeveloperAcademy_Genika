@@ -70,8 +70,8 @@
         <element name="AlimentationCategory" positionX="8.88916015625" positionY="441.9443817138672" width="128" height="88"/>
         <element name="Bpm" positionX="40.092529296875" positionY="-125.1066436767578" width="128" height="103"/>
         <element name="DailyGeneral" positionX="204.7425537109375" positionY="92.7318115234375" width="128" height="133"/>
-        <element name="EmojiCategory" positionX="567.855224609375" positionY="425.833251953125" width="128" height="88"/>
-        <element name="Emotional" positionX="412.233642578125" positionY="276.7883911132812" width="128" height="118"/>
+        <element name="EmojiCategory" positionX="567.855224609375" positionY="425.833251953125" width="128" height="74"/>
+        <element name="Emotional" positionX="412.233642578125" positionY="276.7883911132812" width="128" height="104"/>
         <element name="Exercice" positionX="294.675048828125" positionY="-130.4277496337891" width="128" height="148"/>
         <element name="Meal" positionX="-178.15185546875" positionY="388.17822265625" width="128" height="103"/>
         <element name="Sleep" positionX="-149.8770751953125" positionY="-14.95698547363281" width="128" height="163"/>

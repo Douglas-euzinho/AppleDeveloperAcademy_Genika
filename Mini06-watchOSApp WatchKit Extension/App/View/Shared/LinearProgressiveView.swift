@@ -14,6 +14,7 @@ struct LinearProgressView: View {
     }
     
     var percentage: CGFloat
+    var lineWidth: CGFloat? = nil
     var metrics: GeometryProxy
     private let defaultScaleFactor = 0.004
     private var progressValue: CGFloat {
@@ -31,13 +32,13 @@ struct LinearProgressView: View {
     var body: some View {
         Circle()
             .trim(from: BaseValue.lowValue, to: BaseValue.highValue)
-            .stroke(style: StrokeStyle(lineWidth: metrics.size.height * 0.075, lineCap: .round))
+            .stroke(style: StrokeStyle(lineWidth: lineWidth ?? (metrics.size.height * 0.075), lineCap: .round))
             .frame(width: metrics.size.height * 0.75)
             .foregroundColor(Color(uiColor: .darkGray))
             .overlay {
                 Circle()
                     .trim(from: BaseValue.highValue - progressValue, to: BaseValue.highValue)
-                    .stroke(style: StrokeStyle(lineWidth: metrics.size.height * 0.075, lineCap: .round))
+                    .stroke(style: StrokeStyle(lineWidth: lineWidth ?? (metrics.size.height * 0.075), lineCap: .round))
                     .frame(width: metrics.size.height * 0.75)
                     .foregroundColor(Color.white)
             }

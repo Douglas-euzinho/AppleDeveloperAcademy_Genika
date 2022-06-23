@@ -11,8 +11,9 @@ struct EmotionalView: View {
     @Environment(\.dismiss) var dismiss
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
     let allFeelings = FeelingModel.all
-    @State var feelingSelected: FeelingModel.Feelings?
-    
+    @State var feelingSelected: FeelingModel.Feelings = .null
+    @EnvironmentObject var data: UserDataInput
+
     var body: some View {
         GeometryReader { metrics in
             VStack {
@@ -27,6 +28,7 @@ struct EmotionalView: View {
                             feelingSelected = feeling.tag
                             if let nextScreen = selectedScreen.next() {
                                 withAnimation(.easeInOut(duration: 0.6)) {
+                                    data.dataEmotional.setFeeling(feeling: feelingSelected.rawValue)
                                     selectedScreen = nextScreen
                                 }
                             } else {

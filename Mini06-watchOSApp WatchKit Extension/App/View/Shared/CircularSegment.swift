@@ -11,6 +11,7 @@ struct CircularSegment: View {
     var metrics: GeometryProxy
     var currentValue: QuantityIndicator?
     var indicator: QuantityIndicator
+    var hasTriangleIndicator: Bool
     
     var body: some View {
         let segmentUnselectedStyle = StrokeStyle(lineWidth: metrics.size.height * 0.075,
@@ -25,26 +26,28 @@ struct CircularSegment: View {
             .frame(width: metrics.size.height * 0.75)
             .foregroundColor(Color(uiColor: segmentSelected ? .white : .darkGray))
             .overlay {
-                VStack {
-                    let triangleWidth: CGFloat = metrics.size.height * 0.1693
-                    let triangleHeight: CGFloat = metrics.size.height * 0.1283
-                    
-                    if segmentSelected {
-                        RoundedTriangle(cornerRadius: 1.5)
-                            .fill(Color.white)
-                            .frame(width: triangleWidth, height: triangleHeight)
-                            .overlay {
-                                RoundedTriangle(cornerRadius: 1.5)
-                                    .stroke(lineWidth: metrics.size.height * 0.015)
-                                    .frame(width: triangleWidth, height: triangleHeight)
-                                    .foregroundColor(Color(uiColor: .black))
-                            }
+                if hasTriangleIndicator {
+                    VStack {
+                        let triangleWidth: CGFloat = metrics.size.height * 0.1693
+                        let triangleHeight: CGFloat = metrics.size.height * 0.1283
+                        
+                        if segmentSelected {
+                            RoundedTriangle(cornerRadius: 1.5)
+                                .fill(Color.white)
+                                .frame(width: triangleWidth, height: triangleHeight)
+                                .overlay {
+                                    RoundedTriangle(cornerRadius: 1.5)
+                                        .stroke(lineWidth: metrics.size.height * 0.015)
+                                        .frame(width: triangleWidth, height: triangleHeight)
+                                        .foregroundColor(Color(uiColor: .black))
+                                }
+                        }
+                        
+                        Spacer()
                     }
-                    
-                    Spacer()
+                    .padding(.vertical, metrics.size.height * 0.1125)
+                    .rotationEffect(angle(of: indicator))
                 }
-                .padding(.vertical, metrics.size.height * 0.1125)
-                .rotationEffect(angle(of: indicator))
             }
     }
     

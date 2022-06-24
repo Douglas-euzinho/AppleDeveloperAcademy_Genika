@@ -8,23 +8,31 @@
 import Foundation
 
 struct DataCollectorAlimentationCategory {
-    var alimentationCategory: String?
-    var quantifier: Int = 0
+    let alimentationCategory: String
+    private(set) var quantifier: Int = 0
+    
+    init(alimentationCategory: String){
+        self.alimentationCategory = alimentationCategory
+    }
 }
 
 struct DataCollectorMealCategory {
-    var category: String?
-    var hourMeal: Date?
-    var quantifier: Int?
+    let category: String
+    let hourMeal: Date = Date.now
+    var quantifier: Int = 0
+    
+    init(category: String){
+        self.category = category
+    }
 }
 
 struct DataCollectorAlimentation {
 
     var alimentationCategory: [DataCollectorAlimentationCategory] = []
     var mealCategory: [DataCollectorMealCategory] = []
-    var waterCount: Int?
-    var breakCount: Int?
-    var point: Int?
+    var waterCount: Int = 0
+    var breakCount: Int = 0
+    var point: Int = 0
     
     
     mutating func setAlimentationCategoryArray(types:[String]) {

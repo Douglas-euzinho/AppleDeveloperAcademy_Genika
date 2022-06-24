@@ -22,6 +22,7 @@ class UserDataInput: ObservableObject{
     }
     
     func saveDatas(){
-
+        dataEmotional.sendData()
+        PersistenceController.shared.getEmotional()
     }
 }

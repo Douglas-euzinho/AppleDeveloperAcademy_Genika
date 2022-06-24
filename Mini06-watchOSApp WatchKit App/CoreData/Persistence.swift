@@ -41,19 +41,19 @@ struct PersistenceController {
     
     //MARK: DAILY GENERAL METHODS
     mutating func dailyGeneral() {
-        let date = Date.now
+       // let date = Date.now
     }
 
     //MARK: ALIMENTATION METHODS
     //FUNC TO SAVE THE ALIMENTATION CATEGORY
-     mutating func alimentationCategory(category: [String], quantifier: [Int]) throws -> [AlimentationCategory] {
-        let alimentationCategory] = AlimentationCategory(context: context)
-//        alimentationCategory.category = category
-//        alimentationCategory.quantifier = Int64(quantifier)
-
-        try saveContext()
-        return [alimentationCategory]
-    }
+//     mutating func alimentationCategory(category: [String], quantifier: [Int]) throws -> [AlimentationCategory] {
+//        let alimentationCategory] = AlimentationCategory(context: context)
+////        alimentationCategory.category = category
+////        alimentationCategory.quantifier = Int64(quantifier)
+//
+//        try saveContext()
+//        return [alimentationCategory]
+//    }
     
     //FUNC TO GET THE ALIMENTATION CATEGORY
     mutating func getAlimentationCategory() -> [AlimentationCategory] {
@@ -161,7 +161,6 @@ struct PersistenceController {
             return []
         }
     }
-
 
     //MARK: CORE DATA METHODS
     mutating func saveContext() throws{

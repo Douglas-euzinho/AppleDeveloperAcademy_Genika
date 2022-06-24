@@ -29,4 +29,16 @@ struct DataCollectorEmotional {
     mutating func setIntesity(value:Int){
         intensity = value
     }
+    
+    internal func sendData() -> Emotional{
+        var persistence = PersistenceController.shared
+        
+        do{
+            let emotional = try persistence.emotional(intensity: intensity, score: score, emojiCategory: persistence.emojiCategory(category: emojiCategory.category, quantifier: emojiCategory.quantifier))
+            return emotional
+        } catch{
+            //TODO: tratar erro
+        }
+        return Emotional()
+    }
 }

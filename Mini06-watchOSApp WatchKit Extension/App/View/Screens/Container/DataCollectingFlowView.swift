@@ -51,8 +51,8 @@ struct DataCollectingFlowView: View {
         .navigationBarTitleDisplayMode(.inline)
         .environmentObject(data)
         .onDisappear() {
-            print("teste 1", data.dataEmotional.emojiCategory)
-            print("teste 2", data.dataAlimentation.alimentationCategory)
+            data.saveDatas()
+            print(PersistenceController.shared.getEmojiCategory())
         }
     }
     

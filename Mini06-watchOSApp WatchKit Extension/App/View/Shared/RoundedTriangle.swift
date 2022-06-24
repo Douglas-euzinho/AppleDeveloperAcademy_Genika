@@ -14,7 +14,6 @@ struct RoundedTriangle: Shape {
         var path = Path()
         
         let point0 = CGPoint(x: rect.midX / 2.0, y: rect.midY)
-        
         let point1 = CGPoint(x: rect.minX, y: rect.maxY)
         let point2 = CGPoint(x: rect.midX, y: rect.minY)
         let point3 = CGPoint(x: rect.maxX, y: rect.maxY)

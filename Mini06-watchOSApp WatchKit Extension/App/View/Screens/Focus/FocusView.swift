@@ -16,8 +16,9 @@ struct FocusDataModel {
 struct FocusView: View {
     let model: FocusDataModel
     @Binding var showFocusView: Bool
-    var homeSegmentView: HomeSegmentView
-    @State private var opacity: CGFloat = 0.25
+    @Binding var showFocusBackground: Bool
+    @State var homeSegmentView: HomeSegmentView
+    @State private var opacity: CGFloat = 0.15
     @State private var showContent: Bool = true
     
     var body: some View {
@@ -27,7 +28,7 @@ struct FocusView: View {
                     .opacity(opacity)
                     .onAppear(perform: {
                         withAnimation(.easeInOut(duration: 0.2)) {
-                            opacity = 0.95
+                            opacity = 0.45
                         }
                     })
                 
@@ -41,17 +42,20 @@ struct FocusView: View {
                         Spacer()
                         
                         RoundedRectangle(cornerRadius: 6.0)
-                            .fill(AppColor.darkGray.color)
+                            .fill(AppColor.darkGray.color.opacity(0.4))
                             .frame(width: .width(85, from: metrics))
                             .overlay {
                                 GeometryReader { vstackDimension in
-                                    VStack(spacing: 0){
+                                    VStack(spacing: 0) {
                                         Text(model.qualityLabel)
                                             .font(.caption2)
                                             .frame(maxWidth: .infinity)
                                         Spacer()
                                         
                                         homeSegmentView
+                                            .onAppear {
+                                                homeSegmentView.hasBackground = true
+                                            }
                                         
                                         Spacer()
                                         
@@ -79,9 +83,12 @@ struct FocusView: View {
                     showContent = false
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         showFocusView = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                            showFocusBackground = false
+                        }
                     }
                     withAnimation(.easeInOut(duration: 0.3)) {
-                        opacity = 0.25
+                        opacity = 0.15
                     }
                 }
             }
@@ -104,6 +111,7 @@ struct FocusView_Previews: PreviewProvider {
                                    quantityLabel: "Ruim")
         FocusView(model: model,
                   showFocusView: .constant(true),
+                  showFocusBackground: .constant(true),
                   homeSegmentView: homeSegmentView)
     }
 }

@@ -14,6 +14,7 @@ struct HomeView: View {
     
     @ObservedObject var homeViewModel: HomeViewModel
     @State var showFocusView: Bool = false
+    @State var showFocusBackground: Bool = false
     @State var focusScreenSelected: FocusScreens = .first
     
     var body: some View {
@@ -23,7 +24,8 @@ struct HomeView: View {
                 lowLabel: "0r", highLabel: "9r",
                 lowImagePath: "book", highImagePath: "star",
                 qualityProgressValue: homeViewModel.foodQualityValue,
-                quantityProgressValue: homeViewModel.foodQuantityValue
+                quantityProgressValue: homeViewModel.foodQuantityValue,
+                hasBackground: showBackground(for: .first)
             )
             
             let SecondView = HomeSegmentView(
@@ -31,7 +33,8 @@ struct HomeView: View {
                 lowLabel: "0d", highLabel: "7d",
                 lowImagePath: "book", highImagePath: "star",
                 qualityProgressValue: homeViewModel.activityQualityValue,
-                quantityProgressValue: homeViewModel.activityQuantityValue
+                quantityProgressValue: homeViewModel.activityQuantityValue,
+                hasBackground: showBackground(for: .second)
             )
             
             let ThirdView = HomeSegmentView(
@@ -39,7 +42,8 @@ struct HomeView: View {
                 lowLabel: "0h", highLabel: "11h",
                 lowImagePath: "book", highImagePath: "star",
                 qualityProgressValue: homeViewModel.sleepQualityValue,
-                quantityProgressValue: homeViewModel.sleepQuantityValue
+                quantityProgressValue: homeViewModel.sleepQuantityValue,
+                hasBackground: showBackground(for: .third)
             )
             
             let FourthView = HomeSegmentView(
@@ -47,14 +51,15 @@ struct HomeView: View {
                 lowLabel: "fra", highLabel: "int",
                 lowImagePath: "book", highImagePath: "star",
                 qualityProgressValue: homeViewModel.emotionalQualityValue,
-                quantityProgressValue: homeViewModel.emotionalQuantityValue
+                quantityProgressValue: homeViewModel.emotionalQuantityValue,
+                hasBackground: showBackground(for: .fourth)
             )
             
             ZStack {
-                
                 HomeGridView(
                     showFocusView: $showFocusView,
                     focusScreenSelected: $focusScreenSelected,
+                    showFocusBackground: $showFocusBackground,
                     FirstView: FirstView,
                     SecondView: SecondView,
                     ThirdView: ThirdView,
@@ -64,6 +69,7 @@ struct HomeView: View {
                     .onTapGesture {
                         homeViewModel.randomizeValues()
                     }
+                    .blur(radius: showFocusView ? 4.0 : 0.0)
                 
                 if showFocusView {
                     Group {
@@ -71,18 +77,22 @@ struct HomeView: View {
                         case .first:
                             FocusView(model: homeViewModel.foodFocusDataModel,
                                       showFocusView: $showFocusView,
+                                      showFocusBackground: $showFocusBackground,
                                       homeSegmentView: FirstView)
                         case .second:
                             FocusView(model: homeViewModel.activityFocusDataModel,
                                       showFocusView: $showFocusView,
+                                      showFocusBackground: $showFocusBackground,
                                       homeSegmentView: SecondView)
                         case .third:
                             FocusView(model: homeViewModel.sleepFocusDataModel,
                                       showFocusView: $showFocusView,
+                                      showFocusBackground: $showFocusBackground,
                                       homeSegmentView: ThirdView)
                         case .fourth:
                             FocusView(model: homeViewModel.emotionalFocusDataModel,
                                       showFocusView: $showFocusView,
+                                      showFocusBackground: $showFocusBackground,
                                       homeSegmentView: FourthView)
                         }
                     }
@@ -92,6 +102,10 @@ struct HomeView: View {
         }
         .navigationTitle("Health")
         .navigationBarTitleDisplayMode(.inline)
+    }
+    
+    private func showBackground(for screen: FocusScreens) -> Bool {
+        return showFocusBackground && focusScreenSelected == screen
     }
 }
 

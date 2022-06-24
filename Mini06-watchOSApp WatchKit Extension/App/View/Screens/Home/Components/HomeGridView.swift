@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeGridView: View {
     @Binding var showFocusView: Bool
     @Binding var focusScreenSelected: HomeView.FocusScreens
+    @Binding var showFocusBackground: Bool
     var FirstView: HomeSegmentView
     var SecondView: HomeSegmentView
     var ThirdView: HomeSegmentView
@@ -70,6 +71,12 @@ struct HomeGridView: View {
     
     private func showFocusView(_ screenSelected: HomeView.FocusScreens) {
         focusScreenSelected = screenSelected
-        showFocusView = true
+        showFocusBackground = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            showFocusBackground = false
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            showFocusView = true
+        }
     }
 }

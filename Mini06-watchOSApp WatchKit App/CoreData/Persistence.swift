@@ -46,14 +46,14 @@ struct PersistenceController {
 
     //MARK: ALIMENTATION METHODS
     //FUNC TO SAVE THE ALIMENTATION CATEGORY
-//     mutating func alimentationCategory(category: [String], quantifier: [Int]) throws -> [AlimentationCategory] {
-//        let alimentationCategory] = AlimentationCategory(context: context)
-////        alimentationCategory.category = category
-////        alimentationCategory.quantifier = Int64(quantifier)
-//
-//        try saveContext()
-//        return [alimentationCategory]
-//    }
+     mutating func alimentationCategory(category: String, quantifier: Int) throws -> AlimentationCategory {
+        let alimentationCategory = AlimentationCategory(context: context)
+        alimentationCategory.category = category
+        alimentationCategory.quantifier = Int64(quantifier)
+
+        try saveContext()
+        return alimentationCategory
+    }
     
     //FUNC TO GET THE ALIMENTATION CATEGORY
     mutating func getAlimentationCategory() -> [AlimentationCategory] {
@@ -91,14 +91,16 @@ struct PersistenceController {
 
     
     //FUNC TO SAVE THE ALIMENTATION
-    mutating func alimentation(breakCount: Int, point: Int, waterCount: Int, alimentationCategory: AlimentationCategory, meal: Meal) throws -> Alimentation {
+    mutating func alimentation(breakCount: Int, point: Int, waterCount: Int, alimentationCategory: AlimentationCategory/*, meal: Meal*/) throws -> Alimentation {
         let alimentation = Alimentation(context: context)
         alimentation.breakCount = Int64(breakCount)
         alimentation.point = Int64(point)
         alimentation.waterCount = Int64(waterCount)
+        
+        //let alimentationCategory = getAlimentationCategory()
 
-        alimentationCategory.alimentation = alimentation
-        meal.alimentation = alimentation
+        alimentation.alimentationCategory = [alimentationCategory]
+        //meal.alimentation = alimentation
 
         try saveContext()
         return alimentation

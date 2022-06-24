@@ -72,6 +72,10 @@ struct EmotionalIntensiveView: View {
                             withAnimation(.easeInOut(duration: 0.6)) {
                                 data.dataEmotional.setIntesity(value: viewModel.intensiveValue.rawValue)
                                 selectedScreen = nextScreen
+                                print("Teste quantifier(emoji):", data.dataEmotional.emojiCategory.quantifier)
+                                print("Teste category(emoji):", data.dataEmotional.emojiCategory.category)
+                                print("Teste score:", data.dataEmotional.score)
+                                print("Teste intensity:", data.dataEmotional.intensity)
                             }
                         } else {
                             dismiss()

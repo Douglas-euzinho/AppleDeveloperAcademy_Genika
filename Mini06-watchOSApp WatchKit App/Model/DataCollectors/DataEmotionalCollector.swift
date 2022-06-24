@@ -9,10 +9,11 @@ import Foundation
 
 struct DataCollectorEmojiCategory {
     let category: String
-    private(set) var quantifier: Int = 0
+    let quantifier: Int
 
-    init(category: String){
+    init(category: String, quantifier: Int){
         self.category = category
+        self.quantifier = quantifier
     }
 }
 
@@ -22,8 +23,8 @@ struct DataCollectorEmotional {
     var intensity: Int = 0
     var score: Int = 0
     
-    mutating func setFeeling(feeling:String){
-        emojiCategory = DataCollectorEmojiCategory(category: feeling)
+    mutating func setFeeling(feeling: String, quantifier: Int){
+        emojiCategory = DataCollectorEmojiCategory(category: feeling, quantifier: quantifier)
     }
     
     mutating func setIntesity(value:Int){

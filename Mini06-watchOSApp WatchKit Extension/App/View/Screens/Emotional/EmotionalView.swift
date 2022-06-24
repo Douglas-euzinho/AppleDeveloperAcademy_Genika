@@ -32,13 +32,13 @@ struct EmotionalView: View {
                             feelingSelected = feeling.tag
                             if let nextScreen = selectedScreen.next() {
                                 withAnimation(.easeInOut(duration: 0.6)) {
-                                    data.dataEmotional.setFeeling(feeling: feelingSelected.rawValue)
+                                    data.dataEmotional.setFeeling(feeling: feelingSelected.rawValue, quantifier: feeling.quantifier)
 //                                    do {
 //                                        try self.emoji = PersistenceController.shared.emojiCategory(category: feeling.name, quantifier: feeling.quantifier)
 //                                    } catch {
 //                                    }
                                     selectedScreen = nextScreen
-                                    print("vamo v", PersistenceController.shared.getEmojiCategory())
+                                    //print("vamo v", PersistenceController.shared.getEmojiCategory())
                                 }
                             } else {
                                 dismiss()

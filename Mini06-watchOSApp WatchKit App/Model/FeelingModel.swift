@@ -36,12 +36,12 @@ struct FeelingModel: Identifiable {
     }
     
     static let all = [
-        FeelingModel(tag: .passionate, imageName: "feeling_passionate", name: "Apaixonado", quantifier: 6),
-        FeelingModel(tag: .happy, imageName: "feeling_happy", name: "Alegre", quantifier: 5),
-        FeelingModel(tag: .excited, imageName: "feeling_excited", name: "Empolgado", quantifier: 4),
-        FeelingModel(tag: .neutral, imageName: "feeling_neutral", name: "Neutro", quantifier: 3),
-        FeelingModel(tag: .anxious, imageName: "feeling_anxious", name: "Ansioso", quantifier: 2),
-        FeelingModel(tag: .sad, imageName: "feeling_sad", name: "Triste", quantifier: 1),
-        FeelingModel(tag: .stressed, imageName: "feeling_stressed", name: "Estressado", quantifier: 0),
+        FeelingModel(tag: .passionate, imageName: "feeling_passionate", name: "Apaixonado", quantifier: 3),
+        FeelingModel(tag: .happy, imageName: "feeling_happy", name: "Alegre", quantifier: 2),
+        FeelingModel(tag: .excited, imageName: "feeling_excited", name: "Empolgado", quantifier: 1),
+        FeelingModel(tag: .neutral, imageName: "feeling_neutral", name: "Neutro", quantifier: 0),
+        FeelingModel(tag: .anxious, imageName: "feeling_anxious", name: "Ansioso", quantifier: -1),
+        FeelingModel(tag: .sad, imageName: "feeling_sad", name: "Triste", quantifier: -2),
+        FeelingModel(tag: .stressed, imageName: "feeling_stressed", name: "Estressado", quantifier: -3),
     ]
 }

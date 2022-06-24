@@ -79,8 +79,6 @@ struct EmotionalIntensiveView: View {
                     }
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Intensidade")
         }
     }
 }

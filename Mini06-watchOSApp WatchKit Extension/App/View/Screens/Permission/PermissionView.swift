@@ -35,7 +35,7 @@ struct PermissionView: View{
                     .multilineTextAlignment(.center)
                     .fixedSize()
                 PermissionButtonView(metrics: metrics){
-                    
+                    HealthKitFunctions.autorizeHealthKit()
                 }
             }
         }

@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>Update</string>
+	<string>Permission for update healthData</string>
 	<key>NSHealthShareUsageDescription</key>
-	<string>Share</string>
+	<string>Permission for share healthData</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>

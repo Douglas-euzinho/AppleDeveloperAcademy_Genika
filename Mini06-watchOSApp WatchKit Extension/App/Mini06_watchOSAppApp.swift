@@ -22,7 +22,7 @@ struct Mini06_watchOSAppApp: App {
                 if !onboardingPassed {
                     OnboardingFlowView()
                 } else {
-                    ContainerView()                    
+                    PermissionView()                    
                 }
             }
         }

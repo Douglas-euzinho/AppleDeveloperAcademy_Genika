@@ -87,6 +87,7 @@
 		FBBAED8C2866298D00CFD86E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBAED8B2866298D00CFD86E /* HealthKit.framework */; };
 		FBBAED8F28662B2100CFD86E /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED8E28662B2100CFD86E /* PermissionView.swift */; };
 		FBBAED9228662D4700CFD86E /* PermissionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED9128662D4700CFD86E /* PermissionButtonView.swift */; };
+		FBBAED942866367500CFD86E /* HealthKitFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED932866367500CFD86E /* HealthKitFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +217,7 @@
 		FBBAED8B2866298D00CFD86E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		FBBAED8E28662B2100CFD86E /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
 		FBBAED9128662D4700CFD86E /* PermissionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionButtonView.swift; sourceTree = "<group>"; };
+		FBBAED932866367500CFD86E /* HealthKitFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -514,6 +516,7 @@
 				364559F82861114A00368836 /* Persistence.swift */,
 				FBBAED442860F0DD00CFD86E /* CoreData.xcdatamodeld */,
 				FBBAED472860F1C400CFD86E /* Models */,
+				FBBAED932866367500CFD86E /* HealthKitFunctions.swift */,
 			);
 			name = CoreData;
 			path = ../CoreData;
@@ -744,6 +747,7 @@
 				50FE6B0028528DB2007F6073 /* DashedProgressView.swift in Sources */,
 				50DCF8A52857CAAC0053887C /* EmotionalView.swift in Sources */,
 				50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */,
+				FBBAED942866367500CFD86E /* HealthKitFunctions.swift in Sources */,
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
 				50DCF8A02857BAD60053887C /* DiaryButtonView.swift in Sources */,
 				FBBAED5D2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift in Sources */,

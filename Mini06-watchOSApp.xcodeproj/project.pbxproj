@@ -19,6 +19,8 @@
 		50350D022864F850003CD461 /* FoodQualityDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50350D012864F850003CD461 /* FoodQualityDataViewModel.swift */; };
 		50350D052864FDF3003CD461 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50350D042864FDF3003CD461 /* FocusView.swift */; };
 		50350D07286526F7003CD461 /* HomeGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50350D06286526F7003CD461 /* HomeGridView.swift */; };
+		50350D1728664B27003CD461 /* HomePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50350D1628664B27003CD461 /* HomePlaceholderView.swift */; };
+		50350D1928664E2A003CD461 /* HomePlaceholderSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50350D1828664E2A003CD461 /* HomePlaceholderSegmentView.swift */; };
 		504E2F57285A57250015F3D9 /* FoodAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E2F56285A57250015F3D9 /* FoodAlertView.swift */; };
 		504E2F59285A5A8A0015F3D9 /* FoodQualityDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E2F58285A5A8A0015F3D9 /* FoodQualityDataView.swift */; };
 		505F171C2862607D002D6BF5 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505F171B2862607D002D6BF5 /* OnboardingView.swift */; };
@@ -142,6 +144,8 @@
 		50350D012864F850003CD461 /* FoodQualityDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQualityDataViewModel.swift; sourceTree = "<group>"; };
 		50350D042864FDF3003CD461 /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
 		50350D06286526F7003CD461 /* HomeGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGridView.swift; sourceTree = "<group>"; };
+		50350D1628664B27003CD461 /* HomePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlaceholderView.swift; sourceTree = "<group>"; };
+		50350D1828664E2A003CD461 /* HomePlaceholderSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlaceholderSegmentView.swift; sourceTree = "<group>"; };
 		504E2F56285A57250015F3D9 /* FoodAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAlertView.swift; sourceTree = "<group>"; };
 		504E2F58285A5A8A0015F3D9 /* FoodQualityDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQualityDataView.swift; sourceTree = "<group>"; };
 		505F171B2862607D002D6BF5 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -494,6 +498,8 @@
 			children = (
 				50FE6AF6285186C8007F6073 /* HomeSegmentView.swift */,
 				50350D06286526F7003CD461 /* HomeGridView.swift */,
+				50350D1628664B27003CD461 /* HomePlaceholderView.swift */,
+				50350D1828664E2A003CD461 /* HomePlaceholderSegmentView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -726,6 +732,7 @@
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
 				50DCF8A02857BAD60053887C /* RoundedRectangleButton.swift in Sources */,
 				FBBAED5D2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift in Sources */,
+				50350D1728664B27003CD461 /* HomePlaceholderView.swift in Sources */,
 				FBBAED622860F5FD00CFD86E /* Sleep+CoreDataProperties.swift in Sources */,
 				50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */,
 				505F172828626EA8002D6BF5 /* OnboardingText.swift in Sources */,
@@ -736,6 +743,7 @@
 				36455A0128625C5A00368836 /* ProtocolDataCollector.swift in Sources */,
 				509C889F28638D50004703D2 /* OnboardingFlowView.swift in Sources */,
 				FBBAED6C2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift in Sources */,
+				50350D1928664E2A003CD461 /* HomePlaceholderSegmentView.swift in Sources */,
 				50957B1F285F6C8400C908BB /* FoodQuantityStepperViewModel.swift in Sources */,
 				50BCEC4E284EC02300C85359 /* ContainerView.swift in Sources */,
 				FBBAED602860F5FD00CFD86E /* Bpm+CoreDataProperties.swift in Sources */,

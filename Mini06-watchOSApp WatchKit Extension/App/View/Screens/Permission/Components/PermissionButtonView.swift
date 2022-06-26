@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PermissionButtonView: View {
     
+    let text: String
     var metrics: GeometryProxy
     var action: () -> Void = { }
     
@@ -17,9 +18,10 @@ struct PermissionButtonView: View {
             action()
         } label: {
             HStack(spacing: .width(8, from: metrics)) {
-                Text("Permitir")
+                Text(text)
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
+                    .padding()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }

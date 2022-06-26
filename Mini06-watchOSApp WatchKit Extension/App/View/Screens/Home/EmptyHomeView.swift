@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct EmptyHomeView: View {
-    @State var showDataCollectionFlowView: Bool = false
+    
+    @State var showPermissionScreen: Bool = false
     
     var body: some View {
         GeometryReader { metrics in
@@ -30,16 +32,21 @@ struct EmptyHomeView: View {
                     theme: .light,
                     metrics: metrics,
                     action: {
-                        showDataCollectionFlowView = true
+                        let statusHealthStore = HealthKitFunctions.shared.checkHealthStore()
+                        if statusHealthStore == 2{
+                            print("Tudo OK")
+                        } else{
+                            showPermissionScreen = true
+                        }
                     }
                 )
             }
         }
+        .sheet(isPresented: $showPermissionScreen, content: {
+            PermissionFlowView()
+        })
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Health")
-        .sheet(isPresented: $showDataCollectionFlowView) {
-            DataCollectingFlowView()
-        }
     }
 }
 

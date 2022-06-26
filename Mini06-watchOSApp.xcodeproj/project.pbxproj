@@ -89,6 +89,8 @@
 		FBBAED8F28662B2100CFD86E /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED8E28662B2100CFD86E /* PermissionView.swift */; };
 		FBBAED9228662D4700CFD86E /* PermissionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED9128662D4700CFD86E /* PermissionButtonView.swift */; };
 		FBBAED942866367500CFD86E /* HealthKitFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED932866367500CFD86E /* HealthKitFunctions.swift */; };
+		FBBAED972866415600CFD86E /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED962866415600CFD86E /* WarningView.swift */; };
+		FBBAEDD728690D7200CFD86E /* PermissionFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAEDD628690D7100CFD86E /* PermissionFlowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,6 +222,8 @@
 		FBBAED8E28662B2100CFD86E /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
 		FBBAED9128662D4700CFD86E /* PermissionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionButtonView.swift; sourceTree = "<group>"; };
 		FBBAED932866367500CFD86E /* HealthKitFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitFunctions.swift; sourceTree = "<group>"; };
+		FBBAED962866415600CFD86E /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
+		FBBAEDD628690D7100CFD86E /* PermissionFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionFlowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +241,7 @@
 		500ADCCA2857EE1C00E619CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FBBAED932866367500CFD86E /* HealthKitFunctions.swift */,
 				FBBAED432860F0B100CFD86E /* CoreData */,
 				500ADCCB2857EE3000E619CF /* FeelingModel.swift */,
 				50957B14285F61C700C908BB /* FoodQualityDataModel.swift */,
@@ -519,7 +524,6 @@
 				364559F82861114A00368836 /* Persistence.swift */,
 				FBBAED442860F0DD00CFD86E /* CoreData.xcdatamodeld */,
 				FBBAED472860F1C400CFD86E /* Models */,
-				FBBAED932866367500CFD86E /* HealthKitFunctions.swift */,
 			);
 			name = CoreData;
 			path = ../CoreData;
@@ -603,6 +607,8 @@
 			children = (
 				FBBAED9028662CCD00CFD86E /* Components */,
 				FBBAED8E28662B2100CFD86E /* PermissionView.swift */,
+				FBBAED962866415600CFD86E /* WarningView.swift */,
+				FBBAEDD628690D7100CFD86E /* PermissionFlowView.swift */,
 			);
 			path = Permission;
 			sourceTree = "<group>";
@@ -744,9 +750,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				50FE6AFE28528D95007F6073 /* CircularSegment.swift in Sources */,
+				FBBAEDD728690D7200CFD86E /* PermissionFlowView.swift in Sources */,
 				50A3DEFB28580A59007952F8 /* EmotionalIntensiveView.swift in Sources */,
 				509C88A32863A159004703D2 /* UserDefaultsKeys.swift in Sources */,
 				FBBAED612860F5FD00CFD86E /* Sleep+CoreDataClass.swift in Sources */,
+				FBBAED972866415600CFD86E /* WarningView.swift in Sources */,
 				50350D022864F850003CD461 /* FoodQualityDataViewModel.swift in Sources */,
 				50FE6B0028528DB2007F6073 /* DashedProgressView.swift in Sources */,
 				50DCF8A52857CAAC0053887C /* EmotionalView.swift in Sources */,
@@ -786,7 +794,6 @@
 				509E5D9028515CFB00393673 /* HomeView.swift in Sources */,
 				50BCEC4C284EC02300C85359 /* Mini06_watchOSAppApp.swift in Sources */,
 				FBBAED8F28662B2100CFD86E /* PermissionView.swift in Sources */,
-				FBBAED7D2863A3A300CFD86E /* FoodQualityDataViewModel.swift in Sources */,
 				364559FF28625BBB00368836 /* DataEmotionalCollector.swift in Sources */,
 				50957B19285F66B700C908BB /* EmotionIntensiveValueView.swift in Sources */,
 				505F172328626D26002D6BF5 /* HeaderOnboardingTwo.swift in Sources */,
@@ -969,6 +976,8 @@
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = Mini06_watchOSApp_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Permission for share healthData";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Permission for update healthData";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1002,6 +1011,8 @@
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = Mini06_watchOSApp_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Permission for share healthData";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Permission for update healthData";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (

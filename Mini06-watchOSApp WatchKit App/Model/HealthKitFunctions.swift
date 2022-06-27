@@ -37,12 +37,9 @@ struct HealthKitFunctions{
     }
     
     func checkAutorizationStatus(){
-//        healthStore.getRequestStatusForAuthorization(toShare: healthKitTypesToShare, read: healthKitTypesToRead) { status, error in
-//            print("Status: ", status.rawValue)
-//            print("Error", error)
-//        }
-        let status = healthStore.authorizationStatus(for: HKObjectType.workoutType())
-        print(status)
-    
+        healthStore.getRequestStatusForAuthorization(toShare: healthKitTypesToShare, read: healthKitTypesToRead) { status, error in
+            print("Status: ", status.rawValue)
+            print("Error", error)
+        }
     }
 }

@@ -8,9 +8,10 @@
 import Foundation
 import HealthKit
 
-struct HealthKitFunctions{
+struct HealthKitFunctions {
     
     static var shared = HealthKitFunctions()
+    
     private let healthStore = HKHealthStore()
     private let healthKitTypesToRead: Set = [
         HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
@@ -32,14 +33,14 @@ struct HealthKitFunctions{
         HKObjectType.workoutType(),
     ]
             
-    func autorizeHealthKit(){
+    func autorizeHealthKit() {
         healthStore.requestAuthorization(toShare: nil, read: healthKitTypesToRead){ (_,_) in}
     }
     
-    func checkAutorizationStatus(){
+    func checkAutorizationStatus() {
         healthStore.getRequestStatusForAuthorization(toShare: healthKitTypesToShare, read: healthKitTypesToRead) { status, error in
             print("Status: ", status.rawValue)
-            print("Error", error)
+            print("Error: ", error ?? "no error")
         }
     }
 }

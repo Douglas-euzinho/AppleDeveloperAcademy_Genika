@@ -49,6 +49,12 @@ struct DataCollectingFlowView: View {
             .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
         }
         .environmentObject(data)
+        .onDisappear() {
+            data.saveData()
+            print(PersistenceController.shared.getEmojiCategory())
+            print(PersistenceController.shared.getAlimentations())
+            
+        }
     }
     
 }

@@ -8,7 +8,6 @@
 import Foundation
 
 class FoodQualityDataViewModel: ObservableObject {
-    
     @Published var foodArraySelected: [String] = []
     
     private func appendFoodSelected(food: String) {
@@ -20,7 +19,7 @@ class FoodQualityDataViewModel: ObservableObject {
     }
     
     func setupFoodArray(food: String, selected: Bool) {
-        if selected {
+        if selected{
             appendFoodSelected(food: food)
         } else {
             deleteFoodSelected(food: food)
@@ -28,7 +27,7 @@ class FoodQualityDataViewModel: ObservableObject {
     }
     
     private func deleteFoodSelected(food: String) {
-        for index in 0...foodArraySelected.count {
+        for index in 0..<foodArraySelected.count {
             if foodArraySelected[index] == food {
                 foodArraySelected.remove(at: index)
                 return

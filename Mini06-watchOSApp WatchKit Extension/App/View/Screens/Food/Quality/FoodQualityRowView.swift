@@ -10,6 +10,7 @@ import SwiftUI
 struct FoodQualityRowView: View {
     var imageName: String
     var title: String
+    var quantifier: Int?
     var sublabel: String? = nil
     var metrics: GeometryProxy
     var action: (Bool) -> Void

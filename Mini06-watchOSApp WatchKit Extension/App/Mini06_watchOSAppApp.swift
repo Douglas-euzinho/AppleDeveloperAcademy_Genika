@@ -19,10 +19,12 @@ struct Mini06_watchOSAppApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                if !onboardingPassed {
-                    OnboardingFlowView()
-                } else {
-                    ContainerView()                    
+                Group {
+                    if !onboardingPassed {
+                        OnboardingFlowView()
+                    } else {
+                        ContainerView()                    
+                    }
                 }
             }
         }

@@ -12,6 +12,7 @@ struct EmotionalView: View {
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
     let allFeelings = FeelingModel.all
     @State var feelingSelected: FeelingModel.Feelings = .null
+    @State var allEmojis: [EmojiCategory] = [EmojiCategory]()
     @EnvironmentObject var data: UserDataInput
 
     var body: some View {
@@ -28,7 +29,7 @@ struct EmotionalView: View {
                             feelingSelected = feeling.tag
                             if let nextScreen = selectedScreen.next() {
                                 withAnimation(.easeInOut(duration: 0.6)) {
-                                    data.dataEmotional.setFeeling(feeling: feelingSelected.rawValue)
+                                    data.dataEmotional.setFeeling(feeling: feelingSelected.rawValue, quantifier: feeling.quantifier)
                                     selectedScreen = nextScreen
                                 }
                             } else {

@@ -9,16 +9,13 @@ import SwiftUI
 import HealthKit
 
 struct PermissionView: View{
-    
     @Environment(\.dismiss) var dismiss
     @Binding var selectedScreen: PermissionFlowView.PermissionFlowScreens
+    
     var body: some View{
         GeometryReader{ metrics in
-            
             VStack{
-                
                 HStack(alignment:.top){
-                    
                     RoundedRectangle(cornerRadius: .width(8, from: metrics))
                         .frame(width: .width(40, from: metrics),
                                height: .width(40, from: metrics))
@@ -35,6 +32,7 @@ struct PermissionView: View{
                     }
                     .buttonStyle(.borderless)
                 }
+                
                 ScrollView{
                     VStack{
                         Text("Para fornecer relatórios precisos, precisamos ter acesso aos dados do App saúde.")
@@ -67,6 +65,8 @@ struct PermissionView: View{
 
 struct PermissionPreviewView: PreviewProvider {
    static var previews: some View {
-       PermissionView()
+       ZStack {
+           PermissionView(selectedScreen: .constant(.dataFlow))
+       }
    }
 }

@@ -19,66 +19,56 @@ struct DataCollectorAlimentationCategory {
 
 struct DataCollectorMealCategory {
     let category: String
-    let hourMeal: Date = Date.now
-    var quantifier: Int = 0
+    let hourMeal: Date
+    let quantifier: Int
     
-    init(category: String){
+    init(category: String, hourMeal: Date, quantifier: Int){
         self.category = category
+        self.hourMeal = hourMeal
+        self.quantifier = quantifier
     }
 }
 
 struct DataCollectorAlimentation {
 
     var alimentationCategory: [DataCollectorAlimentationCategory] = []
-    //var teste: DataCollectorAlimentationCategory
     var mealCategory: [DataCollectorMealCategory] = []
     var waterCount: Int = 0
     var breakCount: Int = 0
     var point: Int = 0
     
     
-    mutating func setAlimentationCategoryArray(types:[String]) {
-        for category in types{
-            alimentationCategory.append(DataCollectorAlimentationCategory(alimentationCategory: category, quantifier: 2))
-        }
-    }
-    
-//    mutating func setAlimentationCategory(category: String, quantifier: Int) {
-//        alimentationCategory.append(DataCollectorAlimentationCategory(alimentationCategory: category, quantifier: quantifier))
-//    }
-    
-    mutating func setMealCategoryArray(types:[String]) {
-        for category in types{
-            mealCategory.append(DataCollectorMealCategory(category: category))
-        }
-    }
-    
-    internal func sendAlimentationCategory() -> AlimentationCategory {
-        var persistence = PersistenceController.shared
-        
-        do {
-            for i in 0...alimentationCategory.count {
-                print("ENTROU")
-                let alimentationCategory = try persistence.alimentationCategory(category: alimentationCategory[i].alimentationCategory, quantifier: alimentationCategory[i].quantifier)
-                return alimentationCategory
-            }
-        } catch {
-            //TODO: tratar erro
-        }
-        return AlimentationCategory()
-    }
-    
-//    internal func sendData() -> Alimentation {
-//        var persistence = PersistenceController.shared
-//
-//        do {
-//            let alimentation: Alimentation
-//            for i in 0...alimentationCategory.count {
-//                alimentation = try persistence.alimentation(breakCount: breakCount, point: point, waterCount: waterCount, alimentationCategory: persistence.alimentationCategory(category: alimentationCategory[i].alimentationCategory, quantifier: alimentationCategory[i].quantifier))
-//            }
-//        } catch {
-//            return Alimentation()
+//    mutating func setAlimentationCategoryArray(types:[String]) {
+//        for category in types{
+//            alimentationCategory.append(DataCollectorAlimentationCategory(alimentationCategory: category, quantifier: 2))
 //        }
-//        return
 //    }
+    
+    mutating func setAlimentationCategoryArray(category: String, quantifier: Int) {
+        alimentationCategory.append(DataCollectorAlimentationCategory(alimentationCategory: category, quantifier: quantifier))
+        print("$$$$$$$$$$$", alimentationCategory)
+    }
+    
+    mutating func setMealCategoryArray(category: String, quantifier: Int) {
+        mealCategory.append(DataCollectorMealCategory(category: category, hourMeal: Date.now, quantifier: quantifier))
+        print("##########", mealCategory)
+    }
+    
+//    mutating func setMealCategoryArray(types:[String]) {
+//        for category in types{
+//            mealCategory.append(DataCollectorMealCategory(category: category))
+//        }
+//    }
+    
+    
+    internal func sendData() -> Alimentation {
+        var persistence = PersistenceController.shared
+
+        do {
+            let alimentation = try persistence.alimentation(breakCount: breakCount, point: point, waterCount: waterCount, alimentationCategory: alimentationCategory, meal: mealCategory)
+            return alimentation
+        } catch {
+            return Alimentation()
+        }
+    }
 }

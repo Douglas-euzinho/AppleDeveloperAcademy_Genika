@@ -23,11 +23,16 @@ class UserDataInput: ObservableObject{
     
     func saveDatas(){
         dataEmotional.sendData()
-        dataAlimentation.sendAlimentationCategory()
-        PersistenceController.shared.getAlimentationCategory()
-        PersistenceController.shared.getEmotional()
+        dataAlimentation.sendData()
+//        PersistenceController.shared.getAlimentationCategory()
+        PersistenceController.shared.getAlimentations()
+//        PersistenceController.shared.getEmotional()
+        var a = DataDailyGeneralCollector()
+        a.setAlimentationArray(data: dataAlimentation)
+        a.setEmotionalArray(data: dataEmotional)
+        a.sendData()
+        
+        PersistenceController.shared.getDailyGeneral()
     }
     
-    func saveAlimentation(){
-    }
 }

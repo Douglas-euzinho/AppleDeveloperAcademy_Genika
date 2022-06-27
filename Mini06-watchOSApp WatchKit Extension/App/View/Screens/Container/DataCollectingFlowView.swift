@@ -53,6 +53,8 @@ struct DataCollectingFlowView: View {
         .onDisappear() {
             data.saveDatas()
             print(PersistenceController.shared.getEmojiCategory())
+            print(PersistenceController.shared.getAlimentations())
+            
         }
     }
     

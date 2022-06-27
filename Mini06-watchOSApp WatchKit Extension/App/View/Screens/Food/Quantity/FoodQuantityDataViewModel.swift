@@ -11,7 +11,7 @@ class FoodQuantityDataViewModel: ObservableObject{
     
     @Published var mealArray:[String] = []
     
-    func setupMealArray(meal:String,selected:Bool){
+    func setupMealArray(meal:String, quantifier: Int, selected:Bool){
         
         if selected{
             appendMeal(meal: meal)

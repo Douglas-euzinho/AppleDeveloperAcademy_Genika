@@ -11,13 +11,13 @@ import SwiftUI
 struct Mini06_watchOSAppApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
-            var dailyGeneral = DailyGeneral()
+//            var dailyGeneral = DailyGeneral()
             
             NavigationView {
                 ContainerView()
                     .onAppear() {
 //                        let viewContext = PersistenceController.shared.persistenceContainer.viewContext
-                        PersistenceController.shared.dailyGeneral()
+//                        PersistenceController.shared.dailyGeneral()
                         
                     }
             }

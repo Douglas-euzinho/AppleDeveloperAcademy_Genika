@@ -11,6 +11,7 @@
 		364559FB286166E100368836 /* EnumError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559FA286166E100368836 /* EnumError.swift */; };
 		364559FD286259B200368836 /* DataAlimentationCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559FC286259B200368836 /* DataAlimentationCollector.swift */; };
 		364559FF28625BBB00368836 /* DataEmotionalCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559FE28625BBB00368836 /* DataEmotionalCollector.swift */; };
+		36455A0E2868DCDA00368836 /* DataDailyGeneralCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36455A0D2868DCDA00368836 /* DataDailyGeneralCollector.swift */; };
 		500ADCC92857ECAF00E619CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC40284EC02200C85359 /* Assets.xcassets */; };
 		500ADCCC2857EE3000E619CF /* FeelingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ADCCB2857EE3000E619CF /* FeelingModel.swift */; };
 		500ADCCF285807AF00E619CF /* EmotionalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ADCCE285807AF00E619CF /* EmotionalRowView.swift */; };
@@ -122,6 +123,7 @@
 		364559FA286166E100368836 /* EnumError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumError.swift; sourceTree = "<group>"; };
 		364559FC286259B200368836 /* DataAlimentationCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAlimentationCollector.swift; sourceTree = "<group>"; };
 		364559FE28625BBB00368836 /* DataEmotionalCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEmotionalCollector.swift; sourceTree = "<group>"; };
+		36455A0D2868DCDA00368836 /* DataDailyGeneralCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDailyGeneralCollector.swift; sourceTree = "<group>"; };
 		500ADCCB2857EE3000E619CF /* FeelingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingModel.swift; sourceTree = "<group>"; };
 		500ADCCE285807AF00E619CF /* EmotionalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalRowView.swift; sourceTree = "<group>"; };
 		504E2F56285A57250015F3D9 /* FoodAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAlertView.swift; sourceTree = "<group>"; };
@@ -518,6 +520,7 @@
 			children = (
 				FBBAED592860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift */,
 				FBBAED5A2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift */,
+				36455A0D2868DCDA00368836 /* DataDailyGeneralCollector.swift */,
 			);
 			path = DailyGeneral;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				500ADCCC2857EE3000E619CF /* FeelingModel.swift in Sources */,
 				FBBAED672860F5FD00CFD86E /* EmojiCategory+CoreDataClass.swift in Sources */,
 				FBBAED5F2860F5FD00CFD86E /* Bpm+CoreDataClass.swift in Sources */,
+				36455A0E2868DCDA00368836 /* DataDailyGeneralCollector.swift in Sources */,
 				FBBAED642860F5FD00CFD86E /* Meal+CoreDataProperties.swift in Sources */,
 				FBBAED752862993100CFD86E /* UserDataInput.swift in Sources */,
 				364559F92861114A00368836 /* Persistence.swift in Sources */,

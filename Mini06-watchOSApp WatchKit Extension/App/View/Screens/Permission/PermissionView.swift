@@ -65,9 +65,8 @@ struct PermissionView: View{
     }
 }
 
-
-//struct MyPreviewProvider_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PermissionView()
-//    }
-//}
+struct PermissionPreviewView: PreviewProvider {
+   static var previews: some View {
+       PermissionView()
+   }
+}

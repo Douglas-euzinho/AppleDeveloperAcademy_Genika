@@ -29,7 +29,7 @@ struct HealthKitFunctions{
         HKObjectType.quantityType(forIdentifier: .walkingStepLength)!,
         HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!,
         HKObjectType.categoryType(forIdentifier: .sleepChanges)!,
-        HKObjectType.workoutType()
+        HKObjectType.workoutType(),
     ]
             
     func autorizeHealthKit(){

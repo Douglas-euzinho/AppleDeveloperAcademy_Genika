@@ -16,15 +16,19 @@ struct ContainerView: View {
     @State private var screenSelected: Screens? = .home
     
     var body: some View {
-
-        TabView(selection: $screenSelected) {
-            HomeView(homeViewModel: homeViewModel)
-                .tag(Screens.home)
-            
-            DiaryView()
-                .tag(Screens.diary)
+        
+        if homeViewModel.homeDataIsEmpty{
+            EmptyHomeView()
+        } else{
+            TabView(selection: $screenSelected) {
+                HomeView(homeViewModel: homeViewModel)
+                    .tag(Screens.home)
+                
+                DiaryView()
+                    .tag(Screens.diary)
+            }
+            .tabViewStyle(PageTabViewStyle())
         }
-        .tabViewStyle(PageTabViewStyle())
     }
 }
 

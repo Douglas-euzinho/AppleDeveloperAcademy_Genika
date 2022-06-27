@@ -35,5 +35,4 @@ class HomeViewModel: ObservableObject {
             emotionalQuantityValue = quantityArray.randomElement()!
         }
     }
-
 }

@@ -125,7 +125,7 @@ struct PersistenceController {
             return []
         }
     }
-
+    
     
     //FUNC TO SAVE THE ALIMENTATION
     mutating func alimentation(breakCount: Int, point: Int, waterCount: Int, alimentationCategory: [DataCollectorAlimentationCategory], meal: [DataCollectorMealCategory]) throws -> Alimentation {
@@ -133,8 +133,6 @@ struct PersistenceController {
         alimentation.breakCount = Int64(breakCount)
         alimentation.point = Int64(point)
         alimentation.waterCount = Int64(waterCount)
-        
-        
         
         alimentationCategory.forEach { ali in
             let category = AlimentationCategory(context: context)

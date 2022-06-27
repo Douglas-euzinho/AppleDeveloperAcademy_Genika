@@ -16,26 +16,11 @@ struct HealthKitFunctions{
         HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
         HKObjectType.quantityType(forIdentifier: .heartRate)!,
         HKObjectType.categoryType(forIdentifier: .sleepAnalysis)!,
-        HKObjectType.categoryType(forIdentifier: .sleepChanges)!
+        HKObjectType.categoryType(forIdentifier: .sleepChanges)!,
+        HKObjectType.workoutType()
     ]
             
     func autorizeHealthKit(){
-
-        healthStore.requestAuthorization(toShare: healthKitTypes, read: healthKitTypes){ (success, error) in
-        
-            if !success{
-                print(error as Any)
-            }
-        }
-    }
-    
-    func checkHealthStore() -> Int{
-        var result = 0
-        healthStore.getRequestStatusForAuthorization(toShare: healthKitTypes, read: healthKitTypes) { request, error in
-            
-            result = request.rawValue
-        }
-        
-        return result
+        healthStore.requestAuthorization(toShare: healthKitTypes, read: healthKitTypes){ (_,_) in}
     }
 }

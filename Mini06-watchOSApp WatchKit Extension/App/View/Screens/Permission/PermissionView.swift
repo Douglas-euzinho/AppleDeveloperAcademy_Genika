@@ -59,7 +59,9 @@ struct PermissionView: View{
             }
         }
         .navigationBarHidden(true)
-
+        .onAppear{
+            UserDefaults.standard.setValue(true, withKey: .permissionPassed)
+        }
     }
 }
 

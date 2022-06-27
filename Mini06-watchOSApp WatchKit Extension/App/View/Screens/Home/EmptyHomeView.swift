@@ -32,12 +32,7 @@ struct EmptyHomeView: View {
                     theme: .light,
                     metrics: metrics,
                     action: {
-                        let statusHealthStore = HealthKitFunctions.shared.checkHealthStore()
-                        if statusHealthStore == 2{
-                            print("Tudo OK")
-                        } else{
-                            showPermissionScreen = true
-                        }
+                        showPermissionScreen = true
                     }
                 )
             }

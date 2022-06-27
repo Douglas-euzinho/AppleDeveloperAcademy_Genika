@@ -9,4 +9,5 @@ import Foundation
 
 enum UserDefaultsKeys: String {
     case onboardingPassed = "onboarding_passed"
+    case permissionPassed = "permission_passed"
 }

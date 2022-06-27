@@ -15,6 +15,7 @@ import SwiftUI
 //
 
 import SwiftUI
+import HealthKit
 
 struct PermissionFlowView: View {
     enum PermissionFlowScreens: Hashable {
@@ -33,13 +34,18 @@ struct PermissionFlowView: View {
     }
     
     @State var selectedScreen: PermissionFlowScreens = .permission
+    @State var permissionPassed: Bool = UserDefaults.standard.bool(withKey: .permissionPassed)
     
     var body: some View {
         ZStack {
             Group {
                 switch selectedScreen {
                 case .permission:
-                    PermissionView(selectedScreen: $selectedScreen)
+                    if permissionPassed{
+                        DataCollectingFlowView()
+                    }else{
+                        PermissionView(selectedScreen: $selectedScreen)
+                    }
                 case .warning:
                     WarningView(selectedScreen: $selectedScreen)
                 case .dataFlow:

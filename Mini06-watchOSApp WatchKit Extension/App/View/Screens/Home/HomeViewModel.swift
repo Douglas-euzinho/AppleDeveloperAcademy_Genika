@@ -18,7 +18,7 @@ class HomeViewModel: ObservableObject {
     @Published var sleepQuantityValue: QuantityIndicator? = .none
     @Published var emotionalQuantityValue: QuantityIndicator? = .none
     
-    @Published var homeDataIsEmpty: Bool = false
+    @Published var homeDataIsEmpty: Bool = true
     
     func randomizeValues() {
         let quantityArray = QuantityIndicator.allCases
@@ -35,4 +35,5 @@ class HomeViewModel: ObservableObject {
             emotionalQuantityValue = quantityArray.randomElement()!
         }
     }
+
 }

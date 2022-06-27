@@ -6,15 +6,6 @@
 //
 
 import SwiftUI
-
-//
-//  DataCollectingFlowView.swift
-//  Mini06-watchOSApp WatchKit Extension
-//
-//  Created by Vitor Souza on 15/06/22.
-//
-
-import SwiftUI
 import HealthKit
 
 struct PermissionFlowView: View {

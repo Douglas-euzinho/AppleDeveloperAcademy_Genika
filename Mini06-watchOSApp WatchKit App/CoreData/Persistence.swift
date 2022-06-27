@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import SwiftUI
 
 struct PersistenceController {
     static var shared = PersistenceController()
@@ -38,8 +39,34 @@ struct PersistenceController {
             }
         }
     }
+    
+    // MARK: - DAILY GENERAL METHODS
 
-    //MARK: - ALIMENTATION METHODS
+    //FUNC TO SAVE THE DAILY GENERAL
+    mutating func dailyGeneral(alimentation: Alimentation, emotional: Emotional) throws -> DailyGeneral {
+       let dailyGeneral = DailyGeneral(context: context)
+        dailyGeneral.date = Date.now
+        
+        dailyGeneral.alimentation = alimentation
+        dailyGeneral.emotional = emotional
+        
+        try saveContext()
+
+        return dailyGeneral
+    }
+    
+    //FUNC TO GET THE DAILY GENERAL
+    mutating func getDailyGeneral() -> [DailyGeneral] {
+        let fetch: NSFetchRequest<DailyGeneral> = DailyGeneral.fetchRequest()
+        
+        do {
+            return try persistentContainer.viewContext.fetch(fetch)
+        } catch {
+            return []
+        }
+    }
+
+    // MARK: - ALIMENTATION METHODS
     
     //FUNC TO SAVE THE ALIMENTATION CATEGORY
      mutating func alimentationCategory(category: String, quantifier: Int) throws -> AlimentationCategory {
@@ -85,13 +112,29 @@ struct PersistenceController {
     }
     
     //FUNC TO SAVE THE ALIMENTATION
-    mutating func alimentation(breakCount: Int, point: Int, waterCount: Int, alimentationCategory: AlimentationCategory) throws -> Alimentation {
+    mutating func alimentation(breakCount: Int, point: Int, waterCount: Int, alimentationCategory: [DataCollectorAlimentationCategory], meal: [DataCollectorMealCategory]) throws -> Alimentation {
         let alimentation = Alimentation(context: context)
         alimentation.breakCount = Int64(breakCount)
         alimentation.point = Int64(point)
         alimentation.waterCount = Int64(waterCount)
-        alimentation.alimentationCategory = [alimentationCategory]
         
+        alimentationCategory.forEach { ali in
+            let category = AlimentationCategory(context: context)
+            category.alimentation = alimentation
+            category.category = ali.alimentationCategory
+            category.quantifier = Int64(ali.quantifier)
+            alimentation.alimentationCategory?.adding(category)
+        }
+        
+        meal.forEach { ml in
+            let category = Meal(context: context)
+            category.alimentation = alimentation
+            category.category = ml.category
+            category.quantifier = Int64(ml.quantifier)
+            category.hourMeal = ml.hourMeal
+            alimentation.meal?.adding(category)
+        }
+
         try saveContext()
         return alimentation
     }

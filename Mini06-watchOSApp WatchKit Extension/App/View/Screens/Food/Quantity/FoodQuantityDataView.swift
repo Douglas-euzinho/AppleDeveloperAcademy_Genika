@@ -34,18 +34,19 @@ struct FoodQuantityDataView: View {
                 .padding(.bottom, .width(10, from: metrics))
                 
                 ScrollView {
-                    FoodQualityRowView(imageName: "☕️", title: "Café", sublabel: "9:00", metrics: metrics) { selected in
-                        viewModel.setupMealArray(meal: "Café", selected: selected)
+                    FoodQualityRowView(imageName: "☕️", title: "Café", quantifier: 3, sublabel: "9:00", metrics: metrics) { selected in
+                        viewModel.setupMealArray(meal: "Café", quantifier: 3, selected: selected)
+                        setUpMealCategory(category: "Café", quantifier: 3)
                     }
 
-                    FoodQualityRowView(imageName: "🍽", title: "Almoço", sublabel: "13:00", metrics: metrics) { selected in
-                        viewModel.setupMealArray(meal: "Almoço", selected: selected)
-
+                    FoodQualityRowView(imageName: "🍽", title: "Almoço", quantifier: 2, sublabel: "13:00", metrics: metrics) { selected in
+                        viewModel.setupMealArray(meal: "Almoço", quantifier: 2, selected: selected)
+                        setUpMealCategory(category: "Almoço", quantifier: 2)
                     }
 
-                    FoodQualityRowView(imageName: "🛎", title: "Janta", sublabel: "20:00", metrics: metrics) { selected in
-                        viewModel.setupMealArray(meal: "Janta", selected: selected)
-
+                    FoodQualityRowView(imageName: "🛎", title: "Janta", quantifier: 1, sublabel: "20:00", metrics: metrics) { selected in
+                        viewModel.setupMealArray(meal: "Janta", quantifier: 1, selected: selected)
+                        setUpMealCategory(category: "Janta", quantifier: 1)
                     }
                     .padding(.bottom, .width(16, from: metrics))
                     
@@ -63,8 +64,15 @@ struct FoodQuantityDataView: View {
                                 selectedScreen = nextScreen
                             }
                         } else {
+//                            data.dataAlimentation.mealCategory.forEach { m in
+//                                setUpMealCategory(category: m.category, quantifier: m.quantifier)
+//                                print("************* CATEGORY",m.category )
+//                                print("************* QUANTIFIER",m.quantifier )
+//                            }
                             dismiss()
-                            data.dataAlimentation.setMealCategoryArray(types: viewModel.mealArray)
+//                            data.dataAlimentation.setMealCategoryArray(types: viewModel.mealArray)
+//                            setUpFoodCategory(category: dataModel.name, quantifier: dataModel.quantifier)
+                            
                             data.dataAlimentation.waterCount = waterQuatity.value
                             data.dataAlimentation.breakCount = breakQuatity.value
                         }
@@ -89,6 +97,11 @@ struct FoodQuantityDataView: View {
                 }
             }
         }
+    }
+    
+    func setUpMealCategory(category: String, quantifier: Int) {
+        print("ENTROU???????&ˆ%$#")
+        data.dataAlimentation.setMealCategoryArray(category: category, quantifier: quantifier)
     }
 }
 

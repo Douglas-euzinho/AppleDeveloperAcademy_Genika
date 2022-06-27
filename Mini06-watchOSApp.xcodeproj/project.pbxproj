@@ -602,6 +602,7 @@
 			children = (
 				FBBAED592860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift */,
 				FBBAED5A2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift */,
+				36455A0D2868DCDA00368836 /* DataDailyGeneralCollector.swift */,
 			);
 			path = DailyGeneral;
 			sourceTree = "<group>";

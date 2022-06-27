@@ -11,7 +11,7 @@ struct FoodQualityDataView: View {
     @Environment(\.dismiss) var dismiss
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
     @ObservedObject var viewModel: FoodQualityDataViewModel
-    @EnvironmentObject var data: UserDataInput
+    var data = UserDataInput()
     
     var body: some View {
         GeometryReader { metrics in
@@ -44,9 +44,11 @@ struct FoodQualityDataView: View {
                             FoodQualityRowView(
                                 imageName: dataModel.image,
                                 title: dataModel.name,
+                                quantifier: dataModel.quantifier,
                                 metrics: metrics
                             ) { selected in
                                 viewModel.setupFoodArray(food: dataModel.name, selected: selected)
+                                setUpFoodCategory(category: dataModel.name, quantifier: dataModel.quantifier)
                             }
                         }
                         
@@ -62,7 +64,6 @@ struct FoodQualityDataView: View {
                         Spacer()
                         
                         RoundedSquareButton(metrics: metrics) {
-                            viewModel.setUpFoodCategory()
                             if let nextScreen = selectedScreen.next() {
                                 withAnimation(.easeInOut(duration: 0.6)) {
                                     selectedScreen = nextScreen
@@ -76,6 +77,10 @@ struct FoodQualityDataView: View {
                 }
             }
         }
+    }
+    
+    func setUpFoodCategory(category: String, quantifier: Int) {
+        data.dataAlimentation.setAlimentationCategoryArray(category: category, quantifier: quantifier)
     }
 }
 

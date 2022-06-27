@@ -52,6 +52,8 @@ struct DataCollectingFlowView: View {
         .onDisappear() {
             data.saveData()
             print(PersistenceController.shared.getEmojiCategory())
+            print(PersistenceController.shared.getAlimentations())
+            
         }
     }
     

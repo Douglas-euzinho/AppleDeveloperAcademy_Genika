@@ -19,11 +19,13 @@ struct DataCollectorAlimentationCategory {
 
 struct DataCollectorMealCategory {
     let category: String
-    let hourMeal: Date = Date.now
-    var quantifier: Int = 0
+    let hourMeal: Date
+    let quantifier: Int
     
-    init(category: String) {
+    init(category: String, hourMeal: Date, quantifier: Int) {
         self.category = category
+        self.hourMeal = hourMeal
+        self.quantifier = quantifier
     }
 }
 
@@ -35,31 +37,22 @@ struct DataCollectorAlimentation {
     var breakCount: Int = 0
     var point: Int = 0
     
-    
-    mutating func setAlimentationCategoryArray(types:[String]) {
-        for category in types{
-            alimentationCategory.append(DataCollectorAlimentationCategory(alimentationCategory: category, quantifier: 2))
-        }
+    mutating func setAlimentationCategoryArray(category: String, quantifier: Int) {
+        alimentationCategory.append(DataCollectorAlimentationCategory(alimentationCategory: category, quantifier: quantifier))
     }
     
-    mutating func setMealCategoryArray(types:[String]) {
-        for category in types{
-            mealCategory.append(DataCollectorMealCategory(category: category))
-        }
+    mutating func setMealCategoryArray(category: String, quantifier: Int) {
+        mealCategory.append(DataCollectorMealCategory(category: category, hourMeal: Date.now, quantifier: quantifier))
     }
     
-    internal func sendAlimentationCategory() -> AlimentationCategory {
+    internal func sendData() -> Alimentation {
         var persistence = PersistenceController.shared
-        
+
         do {
-            for i in 0..<alimentationCategory.count {
-                let alimentationCategory = try persistence.alimentationCategory(category: alimentationCategory[i].alimentationCategory,
-                                                                                quantifier: alimentationCategory[i].quantifier)
-                return alimentationCategory
-            }
+            let alimentation = try persistence.alimentation(breakCount: breakCount, point: point, waterCount: waterCount, alimentationCategory: alimentationCategory, meal: mealCategory)
+            return alimentation
         } catch {
-            //TODO: tratar erro
+            return Alimentation()
         }
-        return AlimentationCategory()
     }
 }

@@ -24,8 +24,5 @@ class UserDataInput: ObservableObject {
     
     func saveData() {
         let _ = dataEmotional.sendData()
-        let _ = dataAlimentation.sendAlimentationCategory()
     }
-    
-    func saveAlimentation() { }
 }

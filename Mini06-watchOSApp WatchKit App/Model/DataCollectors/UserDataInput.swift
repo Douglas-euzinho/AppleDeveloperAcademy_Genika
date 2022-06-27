@@ -7,27 +7,25 @@
 
 import Foundation
 
-class UserDataInput: ObservableObject{
+class UserDataInput: ObservableObject {
     
-    @Published var dataAlimentation:DataCollectorAlimentation
-    @Published var dataEmotional:DataCollectorEmotional
+    @Published var dataAlimentation: DataCollectorAlimentation
+    @Published var dataEmotional: DataCollectorEmotional
     
-    init(dataAlimentation:DataCollectorAlimentation,dataEmotional:DataCollectorEmotional){
+    init(dataAlimentation: DataCollectorAlimentation, dataEmotional: DataCollectorEmotional) {
         self.dataAlimentation = dataAlimentation
         self.dataEmotional = dataEmotional
     }
     
     convenience init() {
-        self.init(dataAlimentation: DataCollectorAlimentation(), dataEmotional:DataCollectorEmotional(emojiCategory: DataCollectorEmojiCategory(category: "nil", quantifier: 0)))
+        self.init(dataAlimentation: DataCollectorAlimentation(),
+                  dataEmotional: DataCollectorEmotional(emojiCategory: DataCollectorEmojiCategory(category: "nil", quantifier: 0)))
     }
     
-    func saveDatas(){
-        dataEmotional.sendData()
-        dataAlimentation.sendAlimentationCategory()
-        PersistenceController.shared.getAlimentationCategory()
-        PersistenceController.shared.getEmotional()
+    func saveData() {
+        let _ = dataEmotional.sendData()
+        let _ = dataAlimentation.sendAlimentationCategory()
     }
     
-    func saveAlimentation(){
-    }
+    func saveAlimentation() { }
 }

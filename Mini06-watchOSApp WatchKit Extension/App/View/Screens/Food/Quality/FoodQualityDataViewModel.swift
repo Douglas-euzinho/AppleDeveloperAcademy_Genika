@@ -7,16 +7,15 @@
 
 import Foundation
 
-class FoodQualityDataViewModel: ObservableObject{
-    
+class FoodQualityDataViewModel: ObservableObject {
     @Published var foodArraySelected: [String] = []
     var data = UserDataInput()
     
-    private func appendFoodSelected(food:String){
+    private func appendFoodSelected(food: String) {
         
-        if foodArraySelected.contains(food){
+        if foodArraySelected.contains(food) {
             return
-        } else{
+        } else {
             foodArraySelected.append(food)
         }
     }
@@ -30,23 +29,20 @@ class FoodQualityDataViewModel: ObservableObject{
         print("Teste core data (alimentation)", PersistenceController.shared.getAlimentations())
     }
     
-    func setupFoodArray(food:String,selected:Bool){
-        
-        if selected{
+    func setupFoodArray(food: String, selected: Bool) {
+        if selected {
             appendFoodSelected(food: food)
-        }else{
+        } else {
             deleteFoodSelected(food: food)
         }
     }
     
-    private func deleteFoodSelected(food:String){
-        
-        for index in 0...foodArraySelected.count{
-            if foodArraySelected[index] == food{
+    private func deleteFoodSelected(food: String) {
+        for index in 0..<foodArraySelected.count {
+            if foodArraySelected[index] == food {
                 foodArraySelected.remove(at: index)
                 return
             }
         }
     }
-    
 }

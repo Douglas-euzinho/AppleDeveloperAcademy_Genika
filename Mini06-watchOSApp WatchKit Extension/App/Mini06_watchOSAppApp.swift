@@ -9,17 +9,23 @@ import SwiftUI
 
 @main
 struct Mini06_watchOSAppApp: App {
+    
+    let onboardingPassed: Bool
+    
+    init() {
+        onboardingPassed = UserDefaults.standard.bool(withKey: .onboardingPassed)
+    }
+    
     @SceneBuilder var body: some Scene {
         WindowGroup {
-            var dailyGeneral = DailyGeneral()
-            
             NavigationView {
-                ContainerView()
-                    .onAppear() {
-//                        let viewContext = PersistenceController.shared.persistenceContainer.viewContext
-                        PersistenceController.shared.dailyGeneral()
-                        
+                Group {
+                    if !onboardingPassed {
+                        OnboardingFlowView()
+                    } else {
+                        ContainerView()                    
                     }
+                }
             }
         }
 

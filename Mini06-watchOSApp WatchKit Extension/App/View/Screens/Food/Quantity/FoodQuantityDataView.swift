@@ -8,14 +8,15 @@
 import SwiftUI
 
 class Quantity: ObservableObject{
+    
     @Published var value = 0
 }
 
 struct FoodQuantityDataView: View {
     @Environment(\.dismiss) var dismiss
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
-    @ObservedObject var viewModel:FoodQuantityDataViewModel
-    @EnvironmentObject var data:UserDataInput
+    @ObservedObject var viewModel: FoodQuantityDataViewModel
+    @EnvironmentObject var data: UserDataInput
     @State var waterQuatity: Quantity = Quantity()
     @State var breakQuatity: Quantity = Quantity()
     
@@ -88,7 +89,6 @@ struct FoodQuantityDataView: View {
                 }
             }
         }
-        .navigationTitle("Quantidade")
     }
 }
 

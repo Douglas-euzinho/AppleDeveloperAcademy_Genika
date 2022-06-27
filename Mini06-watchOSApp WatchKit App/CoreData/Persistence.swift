@@ -38,13 +38,9 @@ struct PersistenceController {
             }
         }
     }
-    
-    //MARK: DAILY GENERAL METHODS
-    mutating func dailyGeneral() {
-       // let date = Date.now
-    }
 
-    //MARK: ALIMENTATION METHODS
+    //MARK: - ALIMENTATION METHODS
+    
     //FUNC TO SAVE THE ALIMENTATION CATEGORY
      mutating func alimentationCategory(category: String, quantifier: Int) throws -> AlimentationCategory {
         let alimentationCategory = AlimentationCategory(context: context)
@@ -65,7 +61,6 @@ struct PersistenceController {
             return []
         }
     }
-
     
     //FUNC TO SAVE THE MEAL
     mutating func meal(category: String, hourMeal: Date, quantifier: Int) throws -> Meal{
@@ -88,20 +83,15 @@ struct PersistenceController {
             return []
         }
     }
-
     
     //FUNC TO SAVE THE ALIMENTATION
-    mutating func alimentation(breakCount: Int, point: Int, waterCount: Int, alimentationCategory: AlimentationCategory/*, meal: Meal*/) throws -> Alimentation {
+    mutating func alimentation(breakCount: Int, point: Int, waterCount: Int, alimentationCategory: AlimentationCategory) throws -> Alimentation {
         let alimentation = Alimentation(context: context)
         alimentation.breakCount = Int64(breakCount)
         alimentation.point = Int64(point)
         alimentation.waterCount = Int64(waterCount)
-        
-        //let alimentationCategory = getAlimentationCategory()
-
         alimentation.alimentationCategory = [alimentationCategory]
-        //meal.alimentation = alimentation
-
+        
         try saveContext()
         return alimentation
     }
@@ -117,9 +107,8 @@ struct PersistenceController {
         }
     }
 
-
-
-    //MARK: EMOTIONAL METHODS
+    // MARK: - EMOTIONAL METHODS
+    
     //FUNC TO SAVE THE EMOJI CATEGORY
     mutating func emojiCategory(category: String, quantifier: Int) throws -> EmojiCategory{
         let emojiCategory = EmojiCategory(context: context)
@@ -164,7 +153,7 @@ struct PersistenceController {
         }
     }
 
-    //MARK: CORE DATA METHODS
+    // MARK: - CORE DATA METHODS
     mutating func saveContext() throws{
         if context.hasChanges{
             do{
@@ -188,42 +177,3 @@ struct PersistenceController {
         }
     }
 }
-
-
-
-
-//    init(){
-//        persistenceContainer = NSPersistentContainer(name: "CoreData")
-//        persistenceContainer.loadPersistentStores { (storeDescription, error) in
-//            if let error = error as NSError? {
-//                print("deu ruim", error)
-//            }
-//            print("entrou aqui?")
-//        }
-//    }
-
-//func emojiCategory(category: String, quantifier: Int) -> EmojiCategory{
-//        let emojiCategory = EmojiCategory(context: persistenceContainer.viewContext)
-//        emojiCategory.category = category
-//        emojiCategory.quantifier = Int64(quantifier)
-//
-//        do{
-//            try persistenceContainer.viewContext.save()
-//        } catch {
-//            //TODO: TRATAR ERRO
-//        }
-//        return emojiCategory
-//    }
-//
-//    mutating func fetchEmojiCategory() -> [EmojiCategory]{
-//        var emojis: [EmojiCategory] = []
-//
-//        do {
-//            emojis = try
-//            context.fetch(EmojiCategory.fetchRequest())
-//        } catch{
-//            debugPrint(FetchError.errorEmoji)
-//        }
-//
-//        return emojis
-//    }

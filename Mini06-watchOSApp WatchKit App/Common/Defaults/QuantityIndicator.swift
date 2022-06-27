@@ -13,5 +13,4 @@ enum QuantityIndicator: Int, CaseIterable {
     case medium = 3
     case high = 4
     case highest = 5
-    
 }

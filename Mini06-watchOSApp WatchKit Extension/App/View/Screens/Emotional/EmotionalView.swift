@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct EmotionalView: View {
-//    @Environment(\.managedObjectContext) var viewContext
-    
     @Environment(\.dismiss) var dismiss
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
     let allFeelings = FeelingModel.all
     @State var feelingSelected: FeelingModel.Feelings = .null
     @State var allEmojis: [EmojiCategory] = [EmojiCategory]()
-    @EnvironmentObject var data:UserDataInput
+    @EnvironmentObject var data: UserDataInput
 
-    
     var body: some View {
         GeometryReader { metrics in
             VStack {
@@ -33,12 +30,7 @@ struct EmotionalView: View {
                             if let nextScreen = selectedScreen.next() {
                                 withAnimation(.easeInOut(duration: 0.6)) {
                                     data.dataEmotional.setFeeling(feeling: feelingSelected.rawValue, quantifier: feeling.quantifier)
-//                                    do {
-//                                        try self.emoji = PersistenceController.shared.emojiCategory(category: feeling.name, quantifier: feeling.quantifier)
-//                                    } catch {
-//                                    }
                                     selectedScreen = nextScreen
-                                    //print("vamo v", PersistenceController.shared.getEmojiCategory())
                                 }
                             } else {
                                 dismiss()
@@ -49,8 +41,6 @@ struct EmotionalView: View {
                 }
                 .listStyle(.carousel)
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Emocional")
         }
     }
 }

@@ -11,7 +11,7 @@ struct EmotionalIntensiveView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel: EmotionalIntensiveViewModel
     @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
-    @EnvironmentObject var data:UserDataInput
+    @EnvironmentObject var data: UserDataInput
 
     
     var body: some View {
@@ -83,8 +83,6 @@ struct EmotionalIntensiveView: View {
                     }
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Intensidade")
         }
     }
 }

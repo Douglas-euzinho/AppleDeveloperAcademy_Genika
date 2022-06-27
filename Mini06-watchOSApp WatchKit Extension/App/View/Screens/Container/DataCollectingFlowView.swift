@@ -48,10 +48,9 @@ struct DataCollectingFlowView: View {
             }
             .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
         }
-        .navigationBarTitleDisplayMode(.inline)
         .environmentObject(data)
         .onDisappear() {
-            data.saveDatas()
+            data.saveData()
             print(PersistenceController.shared.getEmojiCategory())
         }
     }

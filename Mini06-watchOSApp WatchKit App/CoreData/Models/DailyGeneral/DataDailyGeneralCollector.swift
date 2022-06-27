@@ -8,25 +8,23 @@
 import Foundation
 
 struct DataDailyGeneralCollector {
-    var alimentationArray: DataCollectorAlimentation
-    var emotionalArray: DataCollectorEmotional
+    var alimentation: Alimentation
+    var emotional: Emotional
     var date: Date?
     
-    mutating func setAlimentationArray(data: DataCollectorAlimentation){
-//        alimentationArray.append(data.sendData())
-        self.alimentationArray = data
+    mutating func setAlimentation(data: Alimentation){
+        self.alimentation = data
     }
     
-    mutating func setEmotionalArray(data: DataCollectorEmotional){
-//        emotionalArray.append(data.sendData())
-        self.emotionalArray = data
+    mutating func setEmotional(data: Emotional){
+        self.emotional = data
     }
     
     internal func sendData() -> DailyGeneral {
         var persistence = PersistenceController.shared
         
         do {
-            let dailyGeneral = try persistence.dailyGeneral(alimentationArray: alimentationArray, emotionalArray: emotionalArray)
+            let dailyGeneral = try persistence.dailyGeneral(alimentation: alimentation, emotional: emotional)
             return dailyGeneral
         } catch {
             return DailyGeneral()

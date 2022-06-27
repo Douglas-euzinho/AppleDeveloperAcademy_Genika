@@ -42,19 +42,28 @@ struct PersistenceController {
     
     //MARK: DAILY GENERAL METHODS
     //FUNC TO SAVE THE DAILY GENERAL
-    mutating func dailyGeneral(alimentationArray: DataCollectorAlimentation, emotionalArray: DataCollectorEmotional) throws -> DailyGeneral {
+    mutating func dailyGeneral(alimentation: Alimentation, emotional: Emotional) throws -> DailyGeneral {
        let dailyGeneral = DailyGeneral(context: context)
         dailyGeneral.date = Date.now
         
+        dailyGeneral.alimentation = alimentation
+        dailyGeneral.emotional = emotional
+        
 //        alimentationArray.forEach { alimentation in
-//            dailyGeneral.alimentation = alimentation
-        dailyGeneral.alimentation = alimentationArray
+//            dailyGeneral.alimentation =
 //        }
         
 //        emotionalArray.forEach { emotional in
 //            dailyGeneral.emotional = emotional
 //        }
-        dailyGeneral.emotional = emotionalArray
+        
+//        alimentationArray.forEach { ali in
+//            let category = Alimentation(context: context)
+//
+//            category.dailyGeneral = dailyGeneral
+//        }
+        
+
 
         
         try saveContext()

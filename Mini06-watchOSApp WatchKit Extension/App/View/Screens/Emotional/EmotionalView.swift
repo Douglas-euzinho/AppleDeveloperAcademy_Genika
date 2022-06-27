@@ -45,8 +45,8 @@ struct EmotionalView: View {
     }
 }
 
-//struct EmotionalView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EmotionalView(selectedScreen: .constant(.foodQuantity))
-//    }
-//}
+struct EmotionalView_Previews: PreviewProvider {
+    static var previews: some View {
+        EmotionalView(selectedScreen: .constant(.foodQuantity))
+    }
+}

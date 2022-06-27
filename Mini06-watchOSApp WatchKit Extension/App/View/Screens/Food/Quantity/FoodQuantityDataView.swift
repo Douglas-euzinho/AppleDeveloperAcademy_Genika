@@ -64,14 +64,7 @@ struct FoodQuantityDataView: View {
                                 selectedScreen = nextScreen
                             }
                         } else {
-//                            data.dataAlimentation.mealCategory.forEach { m in
-//                                setUpMealCategory(category: m.category, quantifier: m.quantifier)
-//                                print("************* CATEGORY",m.category )
-//                                print("************* QUANTIFIER",m.quantifier )
-//                            }
                             dismiss()
-//                            data.dataAlimentation.setMealCategoryArray(types: viewModel.mealArray)
-//                            setUpFoodCategory(category: dataModel.name, quantifier: dataModel.quantifier)
                             
                             data.dataAlimentation.waterCount = waterQuatity.value
                             data.dataAlimentation.breakCount = breakQuatity.value
@@ -100,7 +93,6 @@ struct FoodQuantityDataView: View {
     }
     
     func setUpMealCategory(category: String, quantifier: Int) {
-        print("ENTROU???????&ˆ%$#")
         data.dataAlimentation.setMealCategoryArray(category: category, quantifier: quantifier)
     }
 }

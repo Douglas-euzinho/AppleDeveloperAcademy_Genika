@@ -52,6 +52,7 @@
 		50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC51284EC02300C85359 /* NotificationView.swift */; };
 		50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC53284EC02300C85359 /* ComplicationController.swift */; };
 		50BCEC56284EC02300C85359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC55284EC02300C85359 /* Assets.xcassets */; };
+		50BFDB95286B900200706E55 /* HealthStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDB94286B900200706E55 /* HealthStoreManager.swift */; };
 		50DCF8932857B0320053887C /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8922857B0320053887C /* DiaryView.swift */; };
 		50DCF8972857B2130053887C /* CGFloat+ScreenMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */; };
 		50DCF8992857BA340053887C /* View+AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8982857BA340053887C /* View+AppColor.swift */; };
@@ -185,6 +186,7 @@
 		50BCEC55284EC02300C85359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50BCEC5A284EC02300C85359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50BCEC5B284EC02300C85359 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		50BFDB94286B900200706E55 /* HealthStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreManager.swift; sourceTree = "<group>"; };
 		50DCF8922857B0320053887C /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+ScreenMetrics.swift"; sourceTree = "<group>"; };
 		50DCF8982857BA340053887C /* View+AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AppColor.swift"; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 			children = (
 				50DCF89A2857BA410053887C /* Defaults */,
 				50DCF8952857B1F50053887C /* Extensions */,
+				50BFDB94286B900200706E55 /* HealthStoreManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -602,7 +605,6 @@
 			children = (
 				FBBAED592860F5FD00CFD86E /* DailyGeneral+CoreDataClass.swift */,
 				FBBAED5A2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift */,
-				36455A0D2868DCDA00368836 /* DataDailyGeneralCollector.swift */,
 			);
 			path = DailyGeneral;
 			sourceTree = "<group>";
@@ -848,6 +850,7 @@
 				50188B6D2863A5180017AF2C /* EmptyHomeView.swift in Sources */,
 				FBBAED632860F5FD00CFD86E /* Meal+CoreDataClass.swift in Sources */,
 				50F3D3F5285A7AF2007DE261 /* FoodQuantityDataView.swift in Sources */,
+				50BFDB95286B900200706E55 /* HealthStoreManager.swift in Sources */,
 				505F171C2862607D002D6BF5 /* OnboardingView.swift in Sources */,
 				50BCEC52284EC02300C85359 /* NotificationView.swift in Sources */,
 				50FE6AFC28528D56007F6073 /* RoundedTriangle.swift in Sources */,
@@ -1001,7 +1004,7 @@
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = Mini06_watchOSApp_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Permission for share healthData";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Queremos utilizar seus dados do HealthKit";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Permission for update healthData";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
@@ -1036,7 +1039,7 @@
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = Mini06_watchOSApp_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Permission for share healthData";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Queremos utilizar seus dados do HealthKit";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Permission for update healthData";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;

@@ -18,7 +18,10 @@ struct HealthStoreManager {
     var healthStore: HKHealthStore?
     
     let sleepAnalysis = HKCategoryType(.sleepAnalysis)
+    
     let stepCount = HKQuantityType(.stepCount)
+    let kcalLost = HKQuantityType(.activeEnergyBurned)
+    let distanceWalked = HKQuantityType(.distanceWalkingRunning)
     
     private init() {
         if HKHealthStore.isHealthDataAvailable() {
@@ -81,7 +84,97 @@ struct HealthStoreManager {
                 healthStore.execute(query)
             }
         }
-        
+        throw HealthStoreManager.Errors.CannotFetchData
+    }
+    
+    func getStepCount() async throws -> Int {
+        if await requestAuthorization(forRead: [stepCount], forShare: []){
+            let descriptors = [NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)]
+            return try await withCheckedThrowingContinuation{(continuation: CheckedContinuation<Int,Error>) in
+                guard let healthStore = healthStore else {
+                    continuation.resume(throwing: HealthStoreManager.Errors.NoHaveHealthStore)
+                    return
+                }
+                let query = HKSampleQuery(sampleType: HKQuantityType(.stepCount), predicate: nil, limit: 1, sortDescriptors: descriptors) { query, samples, error in
+                    if let error = error {
+                        debugPrint("[Error - Fetch Step Count Data]: \(error.localizedDescription)")
+                        continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
+                    }
+                    
+                    guard let sample = samples?.first as? HKCategorySample else {
+                        return
+                    }
+                    
+                    let stepCountDay = Double(sample.endDate.timeIntervalSince(sample.startDate))
+                    continuation.resume(returning: Int(stepCountDay))
+                }
+                healthStore.execute(query)
+            }
+        }
+        throw HealthStoreManager.Errors.CannotFetchData
+    }
+    
+    
+    func getKcalLost() async throws -> Int {
+        if await requestAuthorization(forRead: [kcalLost], forShare: []) {
+            let descriptors = [NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)]
+            
+            return try await withCheckedThrowingContinuation{ (continuation: CheckedContinuation<Int,Error>) in
+                guard let healthStore = healthStore else {
+                    continuation.resume(throwing: HealthStoreManager.Errors.NoHaveHealthStore)
+                    return
+                }
+                
+                let query = HKSampleQuery(sampleType: HKQuantityType(.activeEnergyBurned), predicate: nil, limit: 2, sortDescriptors: descriptors) { query, samples, error in
+                    if let error = error {
+                        debugPrint("[Error - Fetch Kcal Lost Data]: \(error.localizedDescription)")
+                        continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
+                    }
+                    
+                    guard let sample = samples?.first as? HKCategorySample else {
+                        return
+                    }
+                    
+                    let kcalLost = Int(sample.endDate.timeIntervalSince(sample.startDate))
+                    
+                    continuation.resume(returning: kcalLost)
+                }
+                
+                healthStore.execute(query)
+            }
+            
+        }
+        throw HealthStoreManager.Errors.CannotFetchData
+    }
+    
+    
+    func getDistanceWalked() async throws -> Double {
+        if await requestAuthorization(forRead: [distanceWalked], forShare: []) {
+            let descriptors = [NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)]
+            
+            return try await withCheckedThrowingContinuation{ (continuation: CheckedContinuation<Double,Error>) in
+                guard let healthStore = healthStore else {
+                    continuation.resume(throwing: HealthStoreManager.Errors.NoHaveHealthStore)
+                    return
+                }
+                
+                let query = HKSampleQuery(sampleType: HKQuantityType(.distanceWalkingRunning), predicate: nil, limit: 2, sortDescriptors: descriptors) { query, samples, error in
+                    if let error = error {
+                        debugPrint("[Error - Fetch Kcal Lost Data]: \(error.localizedDescription)")
+                        continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
+                    }
+                    
+                    guard let sample = samples?.first as? HKCategorySample else {
+                        return
+                    }
+                    
+                    let distanceWalked = Double(sample.endDate.timeIntervalSince(sample.startDate))
+                    
+                    continuation.resume(returning: distanceWalked)
+                }
+                healthStore.execute(query)
+            }
+        }
         throw HealthStoreManager.Errors.CannotFetchData
     }
 }

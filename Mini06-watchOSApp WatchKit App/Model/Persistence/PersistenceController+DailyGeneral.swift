@@ -15,7 +15,8 @@ extension PersistenceController {
     mutating func createDailyGeneral(
         alimentation: Alimentation,
         emotional: Emotional,
-        sleep: Sleep
+        sleep: Sleep,
+        exercice: Exercice
     ) throws -> DailyGeneral {
         let dailyGeneral = DailyGeneral(context: context)
         dailyGeneral.date = Date.now
@@ -23,6 +24,7 @@ extension PersistenceController {
         dailyGeneral.alimentation = alimentation
         dailyGeneral.emotional = emotional
         dailyGeneral.sleep = sleep
+        dailyGeneral.exercice = exercice
         
         try saveContext()
         

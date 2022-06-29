@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36135565286CCB88001A6452 /* PersistenceController+Exercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36135564286CCB88001A6452 /* PersistenceController+Exercice.swift */; };
 		364559F92861114A00368836 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559F82861114A00368836 /* PersistenceController.swift */; };
 		364559FB286166E100368836 /* EnumError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559FA286166E100368836 /* EnumError.swift */; };
 		500ADCC92857ECAF00E619CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC40284EC02200C85359 /* Assets.xcassets */; };
@@ -147,6 +148,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		36135564286CCB88001A6452 /* PersistenceController+Exercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceController+Exercice.swift"; sourceTree = "<group>"; };
 		364559F82861114A00368836 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		364559FA286166E100368836 /* EnumError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumError.swift; sourceTree = "<group>"; };
 		500ADCCB2857EE3000E619CF /* FeelingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingModel.swift; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 				50BFDBA0286BD94C00706E55 /* PersistenceController+DailyGeneral.swift */,
 				50BFDBA2286BD9A900706E55 /* PersistenceController+Sleep.swift */,
 				50BFDBA4286BD9B300706E55 /* PersistenceController+Alimentation.swift */,
+				36135564286CCB88001A6452 /* PersistenceController+Exercice.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -823,6 +826,7 @@
 				FBBAED5D2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift in Sources */,
 				50BFDBA3286BD9A900706E55 /* PersistenceController+Sleep.swift in Sources */,
 				50350D1728664B27003CD461 /* HomePlaceholderView.swift in Sources */,
+				36135565286CCB88001A6452 /* PersistenceController+Exercice.swift in Sources */,
 				FBBAED622860F5FD00CFD86E /* Sleep+CoreDataProperties.swift in Sources */,
 				50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */,
 				507BE86C286A3FE500B0B46A /* DataEmotionalCollector.swift in Sources */,

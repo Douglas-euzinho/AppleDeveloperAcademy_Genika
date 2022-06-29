@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DataCollectorAlimentationCategory {
+struct DataCollectorAlimentationCategory: Equatable {
     let alimentationCategory: String
     let quantifier: Int
     
@@ -15,9 +15,13 @@ struct DataCollectorAlimentationCategory {
         self.alimentationCategory = alimentationCategory
         self.quantifier = quantifier
     }
+    
+    static func ==(lhs: DataCollectorAlimentationCategory, rhs: DataCollectorAlimentationCategory) -> Bool {
+        return lhs.alimentationCategory == rhs.alimentationCategory
+    }
 }
 
-struct DataCollectorMealCategory {
+struct DataCollectorMealCategory: Equatable {
     let category: String
     let hourMeal: Date
     let quantifier: Int
@@ -27,32 +31,42 @@ struct DataCollectorMealCategory {
         self.hourMeal = hourMeal
         self.quantifier = quantifier
     }
+    
+    static func ==(lhs: DataCollectorMealCategory, rhs: DataCollectorMealCategory) -> Bool {
+        return lhs.category == rhs.category
+    }
 }
 
 struct DataCollectorAlimentation {
-
-    var alimentationCategory: [DataCollectorAlimentationCategory] = []
-    var mealCategory: [DataCollectorMealCategory] = []
+    var alimentationCategories: [DataCollectorAlimentationCategory] = []
+    var mealCategories: [DataCollectorMealCategory] = []
     var waterCount: Int = 0
     var breakCount: Int = 0
     var point: Int = 0
     
-    mutating func setAlimentationCategoryArray(category: String, quantifier: Int) {
-        alimentationCategory.append(DataCollectorAlimentationCategory(alimentationCategory: category, quantifier: quantifier))
+    mutating func setAlimentationCategoryArray(_ categories: [DataCollectorAlimentationCategory]) {
+        alimentationCategories.append(contentsOf: categories)
     }
     
-    mutating func setMealCategoryArray(category: String, quantifier: Int) {
-        mealCategory.append(DataCollectorMealCategory(category: category, hourMeal: Date.now, quantifier: quantifier))
+    mutating func setAlimentationCategory(category: String, quantifier: Int) {
+        alimentationCategories.append(DataCollectorAlimentationCategory(alimentationCategory: category, quantifier: quantifier))
     }
     
-    internal func sendData() -> Alimentation {
+    mutating func setMealCategoryArray(_ categories: [DataCollectorMealCategory]) {
+        mealCategories.append(contentsOf: categories)
+    }
+    
+    mutating func setMealCategory(category: String, quantifier: Int) {
+        mealCategories.append(DataCollectorMealCategory(category: category, hourMeal: Date.now, quantifier: quantifier))
+    }
+    
+    func saveData() throws -> Alimentation {
         var persistence = PersistenceController.shared
 
-        do {
-            let alimentation = try persistence.alimentation(breakCount: breakCount, point: point, waterCount: waterCount, alimentationCategory: alimentationCategory, meal: mealCategory)
-            return alimentation
-        } catch {
-            return Alimentation()
-        }
+        return try persistence.alimentation(breakCount: breakCount,
+                                            point: point,
+                                            waterCount: waterCount,
+                                            alimentationCategory: alimentationCategories,
+                                            meal: mealCategories)
     }
 }

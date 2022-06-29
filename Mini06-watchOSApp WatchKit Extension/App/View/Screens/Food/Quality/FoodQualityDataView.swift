@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct FoodQualityDataView: View {
-    @Environment(\.dismiss) var dismiss
-    @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
-    @ObservedObject var viewModel: FoodQualityDataViewModel
-    var data = UserDataInput()
+    @ObservedObject var viewModel: DataCollectingFlowViewModel
     
     var body: some View {
         GeometryReader { metrics in
@@ -47,8 +44,7 @@ struct FoodQualityDataView: View {
                                 quantifier: dataModel.quantifier,
                                 metrics: metrics
                             ) { selected in
-                                viewModel.setupFoodArray(food: dataModel.name, selected: selected)
-                                setUpFoodCategory(category: dataModel.name, quantifier: dataModel.quantifier)
+                                viewModel.foodQualityDataViewModel.setupFoodArray(dataModel: dataModel, selected: selected)
                             }
                         }
                         
@@ -64,28 +60,17 @@ struct FoodQualityDataView: View {
                         Spacer()
                         
                         RoundedSquareButton(metrics: metrics) {
-                            if let nextScreen = selectedScreen.next() {
-                                withAnimation(.easeInOut(duration: 0.6)) {
-                                    selectedScreen = nextScreen
-                            
-                                }
-                            } else {
-                                dismiss()
-                            }
+                            viewModel.saveFoodQuality()
                         }
                     }
                 }
             }
         }
     }
-    
-    func setUpFoodCategory(category: String, quantifier: Int) {
-        data.dataAlimentation.setAlimentationCategoryArray(category: category, quantifier: quantifier)
-    }
 }
 
 struct FoodQualityDataView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodQualityDataView(selectedScreen: .constant(.foodQuantity), viewModel: FoodQualityDataViewModel())
+        FoodQualityDataView(viewModel: DataCollectingFlowViewModel(coreDataObserver: HomeViewModel()))
     }
 }

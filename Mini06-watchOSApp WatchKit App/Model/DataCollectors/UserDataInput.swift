@@ -8,9 +8,8 @@
 import Foundation
 
 class UserDataInput: ObservableObject {
-    
-    @Published var dataAlimentation: DataCollectorAlimentation
     @Published var dataEmotional: DataCollectorEmotional
+    @Published var dataAlimentation: DataCollectorAlimentation
     
     init(dataAlimentation: DataCollectorAlimentation, dataEmotional: DataCollectorEmotional) {
         self.dataAlimentation = dataAlimentation
@@ -22,7 +21,13 @@ class UserDataInput: ObservableObject {
                   dataEmotional: DataCollectorEmotional(emojiCategory: DataCollectorEmojiCategory(category: "nil", quantifier: 0)))
     }
     
-    func saveData() {
-        let _ = dataEmotional.sendData()
+    func saveData(sleep: Sleep) throws {
+        var persistence = PersistenceController.shared
+        let emotional = try dataEmotional.saveData()
+        let alimentation = try dataAlimentation.saveData()
+        
+        try persistence.createDailyGeneral(alimentation: alimentation,
+                                           emotional: emotional,
+                                           sleep: sleep)
     }
 }

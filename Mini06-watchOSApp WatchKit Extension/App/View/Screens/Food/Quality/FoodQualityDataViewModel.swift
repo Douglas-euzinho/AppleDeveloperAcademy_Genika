@@ -7,31 +7,28 @@
 
 import Foundation
 
-class FoodQualityDataViewModel: ObservableObject {
-    @Published var foodArraySelected: [String] = []
+class FoodQualityDataViewModel {
+    var foodCategories: [DataCollectorAlimentationCategory] = []
     
-    private func appendFoodSelected(food: String) {
-        if foodArraySelected.contains(food) {
-            return
+    func setupFoodArray(dataModel: FoodQualityDataModel, selected: Bool) {
+        let foodCategory = DataCollectorAlimentationCategory(alimentationCategory: dataModel.name,
+                                                                     quantifier: dataModel.quantifier)
+        if selected {
+            appendFoodSelected(category: foodCategory)
         } else {
-            foodArraySelected.append(food)
+            deleteFoodSelected(category: foodCategory)
         }
     }
     
-    func setupFoodArray(food: String, selected: Bool) {
-        if selected{
-            appendFoodSelected(food: food)
-        } else {
-            deleteFoodSelected(food: food)
+    private func appendFoodSelected(category: DataCollectorAlimentationCategory) {
+        if !foodCategories.contains(category) {
+            foodCategories.append(category)
         }
     }
     
-    private func deleteFoodSelected(food: String) {
-        for index in 0..<foodArraySelected.count {
-            if foodArraySelected[index] == food {
-                foodArraySelected.remove(at: index)
-                return
-            }
+    private func deleteFoodSelected(category: DataCollectorAlimentationCategory) {
+        if let index = foodCategories.firstIndex(of: category) {
+            foodCategories.remove(at: index)
         }
     }
 }

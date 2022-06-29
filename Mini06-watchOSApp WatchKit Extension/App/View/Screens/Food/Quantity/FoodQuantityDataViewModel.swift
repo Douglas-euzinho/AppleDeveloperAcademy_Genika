@@ -7,35 +7,31 @@
 
 import Foundation
 
-class FoodQuantityDataViewModel: ObservableObject{
+class FoodQuantityDataViewModel {
+    var mealCategories: [DataCollectorMealCategory] = []
+    private(set) var waterStepper = FoodQuantityStepperViewModel(image: "💧", sublabel: "Copos")
+    private(set) var breakStepper = FoodQuantityStepperViewModel(image: "🍌", sublabel: "Lanches")
     
-    @Published var mealArray:[String] = []
-    
-    func setupMealArray(meal:String, quantifier: Int, selected:Bool){
-        
-        if selected{
-            appendMeal(meal: meal)
-        }else{
-            deleteMeal(meal: meal)
+    func setupMealArray(mealDataModel: FoodQuantityRowModel, selected: Bool) {
+        let mealCategory = DataCollectorMealCategory(category: mealDataModel.title,
+                                                     hourMeal: mealDataModel.hourMeal,
+                                                     quantifier: mealDataModel.quantifier)
+        if selected {
+            appendMeal(meal: mealCategory)
+        } else {
+            deleteMeal(meal: mealCategory)
         }
     }
     
-    private func appendMeal(meal:String){
-        
-        if mealArray.contains(meal){
-            return
-        } else{
-            mealArray.append(meal)
+    private func appendMeal(meal: DataCollectorMealCategory) {
+        if !mealCategories.contains(meal) {
+            mealCategories.append(meal)
         }    
     }
 
-    private func deleteMeal(meal:String){
-        
-        for index in 0...mealArray.count{
-            if mealArray[index] == meal{
-                mealArray.remove(at: index)
-                return
-            }
+    private func deleteMeal(meal: DataCollectorMealCategory) {
+        if let index = mealCategories.firstIndex(of: meal) {
+            mealCategories.remove(at: index)
         }
     }
 }

@@ -14,7 +14,7 @@ struct FoodQualityDataModel: Identifiable {
     let quantifier: Int
     
     static let data: [FoodQualityDataModel] = [
-        FoodQualityDataModel(image: "🍞", name: "Carboidratos", quantifier: 5 ),
+        FoodQualityDataModel(image: "🍞", name: "Carboidratos", quantifier: 5),
         FoodQualityDataModel(image: "🥩", name: "Carnes", quantifier: 6),
         FoodQualityDataModel(image: "🥕", name: "Vegetais", quantifier: 8),
         FoodQualityDataModel(image: "🍎", name: "Frutas", quantifier: 9),

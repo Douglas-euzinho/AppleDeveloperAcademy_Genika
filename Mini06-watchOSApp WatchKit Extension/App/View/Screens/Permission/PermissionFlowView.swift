@@ -24,6 +24,7 @@ struct PermissionFlowView: View {
         }
     }
     
+    @ObservedObject var homeViewModel: HomeViewModel
     @State var selectedScreen: PermissionFlowScreens = .permission
     @State var permissionPassed: Bool = UserDefaults.standard.bool(withKey: .permissionPassed)
     
@@ -33,14 +34,14 @@ struct PermissionFlowView: View {
                 switch selectedScreen {
                 case .permission:
                     if permissionPassed{
-                        DataCollectingFlowView()
-                    }else{
+                        DataCollectingFlowView(viewModel: DataCollectingFlowViewModel(coreDataObserver: homeViewModel))
+                    } else {
                         PermissionView(selectedScreen: $selectedScreen)
                     }
                 case .warning:
                     WarningView(selectedScreen: $selectedScreen)
                 case .dataFlow:
-                    DataCollectingFlowView()
+                    DataCollectingFlowView(viewModel: DataCollectingFlowViewModel(coreDataObserver: homeViewModel))
                 }
             }
             .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))

@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct EmotionalView: View {
-    @Environment(\.dismiss) var dismiss
-    @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
+    @ObservedObject var viewModel: DataCollectingFlowViewModel
     let allFeelings = FeelingModel.all
-    @State var feelingSelected: FeelingModel.Feelings = .null
-    @State var allEmojis: [EmojiCategory] = [EmojiCategory]()
-    @EnvironmentObject var data: UserDataInput
 
     var body: some View {
         GeometryReader { metrics in
@@ -26,15 +22,7 @@ struct EmotionalView: View {
                 List {
                     ForEach(allFeelings) { feeling in
                         EmotionalRowView(feeling: feeling, metrics: metrics) {
-                            feelingSelected = feeling.tag
-                            if let nextScreen = selectedScreen.next() {
-                                withAnimation(.easeInOut(duration: 0.6)) {
-                                    data.dataEmotional.setFeeling(feeling: feelingSelected.rawValue, quantifier: feeling.quantifier)
-                                    selectedScreen = nextScreen
-                                }
-                            } else {
-                                dismiss()
-                            }
+                            viewModel.selectFeeling(feeling)
                         }
                     }
                     .listRowBackground(Color.clear)
@@ -47,6 +35,6 @@ struct EmotionalView: View {
 
 struct EmotionalView_Previews: PreviewProvider {
     static var previews: some View {
-        EmotionalView(selectedScreen: .constant(.foodQuantity))
+        EmotionalView(viewModel: DataCollectingFlowViewModel(coreDataObserver: HomeViewModel()))
     }
 }

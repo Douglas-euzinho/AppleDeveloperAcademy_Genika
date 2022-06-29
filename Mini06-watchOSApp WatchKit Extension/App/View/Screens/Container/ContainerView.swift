@@ -38,14 +38,16 @@ struct ContainerView: View {
                 .animation(.easeOut(duration: 0.4), value: screenSelected)
                 .transition(viewsTransition())
                 
-                VStack {
-                    Spacer()
-                    PaginationIndicatior(allViewCases: Screens.allCases,
-                                         viewSelected: screenSelected,
-                                         metrics: metrics)
+                if !homeViewModel.homeDataIsEmpty {
+                    VStack {
+                        Spacer()
+                        PaginationIndicatior(allViewCases: Screens.allCases,
+                                             viewSelected: screenSelected,
+                                             metrics: metrics)
+                    }
+                    .padding(.bottom)
+                    .ignoresSafeArea(.all, edges: .bottom)
                 }
-                .padding(.bottom)
-                .ignoresSafeArea(.all, edges: .bottom)
             }
             .highPriorityGesture(
                 DragGesture(minimumDistance: 3.0, coordinateSpace: .local)
@@ -74,7 +76,8 @@ struct ContainerView: View {
                         default:
                             break
                         }
-                    })
+                    }),
+                including: homeViewModel.homeDataIsEmpty ? .subviews : .all
             )
         }
     }

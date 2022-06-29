@@ -9,11 +9,10 @@ import SwiftUI
 
 struct OnboardingFlowView: View {
     enum Screens: CaseIterable {
-        case one, two, three
+        case one, two, three, main
     }
     
     @State private var screenSelected: Screens = .one
-    @State private var showMainScreen: Bool = false
     
     var body: some View {
         GeometryReader { metrics in
@@ -66,21 +65,26 @@ struct OnboardingFlowView: View {
                                 presentMainScreen()
                             }
                         )
+                    case .main:
+                        ContainerView()
                     }
                 }
+                .animation(.easeOut(duration: 0.4), value: screenSelected)
                 .transition(.asymmetric(insertion: .move(edge: .trailing),
                                         removal: .move(edge: .leading)))
                 
-                VStack {
-                    Spacer()
-                    PaginationIndicatior(allViewCases: Screens.allCases,
-                                       viewSelected: screenSelected,
-                                       metrics: metrics)
+                if screenSelected != .main {
+                    VStack {
+                        Spacer()
+                        PaginationIndicatior(allViewCases: [.one, .two, .three],
+                                             viewSelected: screenSelected,
+                                             metrics: metrics)
+                    }
+                    .padding(.bottom)
+                    .ignoresSafeArea(.all, edges: .bottom)
                 }
-                .padding(.bottom)
-                .ignoresSafeArea(.all, edges: .bottom)
             }
-            .gesture(
+            .highPriorityGesture(
                 DragGesture(minimumDistance: 3.0, coordinateSpace: .local)
                     .onEnded({ dragValue in
                         switch(dragValue.translation.width, dragValue.translation.height) {
@@ -91,28 +95,28 @@ struct OnboardingFlowView: View {
                             else { return }
                             
                             if let nextIndex = Screens.allCases.firstIndex(of: screenSelected) {
-                                selectNextScreen(Screens.allCases[nextIndex + 1])
+                                let nextScreen = Screens.allCases[nextIndex + 1]
+                                if nextScreen == .main {
+                                    presentMainScreen()
+                                } else {
+                                    selectNextScreen(nextScreen)                                    
+                                }
                             }
                         default:
                             break
                         }
-                    })
-            )
-        }
-        .sheet(isPresented: $showMainScreen) {
-            ContainerView()
+                    }),
+                including: screenSelected == .main ? .subviews : .all)
         }
     }
     
     func presentMainScreen() {
         UserDefaults.standard.setValue(true, withKey: .onboardingPassed)
-        showMainScreen = true
+        selectNextScreen(.main)
     }
     
     private func selectNextScreen(_ nextScreen: Screens) {
-        withAnimation(.easeOut(duration: 0.4)) {
-            screenSelected = nextScreen
-        }
+        screenSelected = nextScreen
     }
 }
 

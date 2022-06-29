@@ -62,12 +62,17 @@ struct HealthStoreManager {
                     predicate: nil, limit: 2,
                     sortDescriptors: descriptors,
                     resultsHandler: { query, samples, error in
-                        if let error = error {
-                            debugPrint("[Error - Fetch Sleep Data]: \(error.localizedDescription)")
+                        guard error == nil else {
+                            debugPrint("[Error - Fetch Sleep Data]: \(error?.localizedDescription ?? "NO CAUSE")")
                             continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
+                            return
                         }
                         
-                        guard let sample = samples?.first as? HKCategorySample else { return }
+                        guard let sample = samples?.first as? HKCategorySample else {
+                            continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
+                            return
+                        }
+                        
                         let sleepTimeForOneDay = Double(sample.endDate.timeIntervalSince(sample.startDate))
                         continuation.resume(returning: sleepTimeForOneDay / 3_600.00)
                     }

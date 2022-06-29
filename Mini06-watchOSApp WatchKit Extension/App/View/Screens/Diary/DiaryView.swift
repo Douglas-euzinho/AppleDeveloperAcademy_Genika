@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DiaryView: View {
+    @ObservedObject var homeViewModel: HomeViewModel
     @State private var showDataCollectingFlow: Bool = false
     
     var body: some View {
@@ -33,13 +34,13 @@ struct DiaryView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Diário")
         .fullScreenCover(isPresented: $showDataCollectingFlow) {
-            DataCollectingFlowView()
+            DataCollectingFlowView(viewModel: DataCollectingFlowViewModel(coreDataObserver: homeViewModel))
         }
     }
 }
 
 struct DiaryView_Previews: PreviewProvider {
     static var previews: some View {
-        DiaryView()
+        DiaryView(homeViewModel: HomeViewModel())
     }
 }

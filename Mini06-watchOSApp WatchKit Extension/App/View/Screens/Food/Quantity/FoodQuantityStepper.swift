@@ -10,7 +10,6 @@ import SwiftUI
 struct FoodQuantityStepper: View {
     @ObservedObject var viewModel: FoodQuantityStepperViewModel
     var metrics: GeometryProxy
-    @EnvironmentObject var quantity: Quantity
     
     var body: some View {
         VStack(spacing: 1) {
@@ -36,7 +35,7 @@ struct FoodQuantityStepper: View {
             
             HStack(spacing: 1) {
                 Button {
-                    quantity.value = viewModel.decrease()
+                    viewModel.decrease()
                 } label: {
                     Rectangle()
                         .fill(AppColor.lightGray.color)
@@ -51,7 +50,7 @@ struct FoodQuantityStepper: View {
                 .frame(height: .width(44, from: metrics))
                 
                 Button {
-                    quantity.value = viewModel.increase()
+                    viewModel.increase()
                 } label: {
                     Rectangle()
                         .fill(AppColor.lightGray.color)

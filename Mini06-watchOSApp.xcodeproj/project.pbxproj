@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		364559F92861114A00368836 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559F82861114A00368836 /* Persistence.swift */; };
+		364559F92861114A00368836 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559F82861114A00368836 /* PersistenceController.swift */; };
 		364559FB286166E100368836 /* EnumError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364559FA286166E100368836 /* EnumError.swift */; };
 		500ADCC92857ECAF00E619CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC40284EC02200C85359 /* Assets.xcassets */; };
 		500ADCCC2857EE3000E619CF /* FeelingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500ADCCB2857EE3000E619CF /* FeelingModel.swift */; };
@@ -53,6 +53,14 @@
 		50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC53284EC02300C85359 /* ComplicationController.swift */; };
 		50BCEC56284EC02300C85359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC55284EC02300C85359 /* Assets.xcassets */; };
 		50BFDB95286B900200706E55 /* HealthStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDB94286B900200706E55 /* HealthStoreManager.swift */; };
+		50BFDB97286BD6FF00706E55 /* DataCollectingFlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDB96286BD6FF00706E55 /* DataCollectingFlowViewModel.swift */; };
+		50BFDB9B286BD81E00706E55 /* CoreDataObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDB9A286BD81E00706E55 /* CoreDataObserverProtocol.swift */; };
+		50BFDB9F286BD94100706E55 /* PersistenceController+Emotional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDB9E286BD94100706E55 /* PersistenceController+Emotional.swift */; };
+		50BFDBA1286BD94C00706E55 /* PersistenceController+DailyGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDBA0286BD94C00706E55 /* PersistenceController+DailyGeneral.swift */; };
+		50BFDBA3286BD9A900706E55 /* PersistenceController+Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDBA2286BD9A900706E55 /* PersistenceController+Sleep.swift */; };
+		50BFDBA5286BD9B300706E55 /* PersistenceController+Alimentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDBA4286BD9B300706E55 /* PersistenceController+Alimentation.swift */; };
+		50BFDBA7286BDAA100706E55 /* FoodQuantityRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDBA6286BDAA100706E55 /* FoodQuantityRowModel.swift */; };
+		50BFDBA9286BDFF400706E55 /* Date+dateFromTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDBA8286BDFF400706E55 /* Date+dateFromTime.swift */; };
 		50DCF8932857B0320053887C /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8922857B0320053887C /* DiaryView.swift */; };
 		50DCF8972857B2130053887C /* CGFloat+ScreenMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */; };
 		50DCF8992857BA340053887C /* View+AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8982857BA340053887C /* View+AppColor.swift */; };
@@ -139,7 +147,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		364559F82861114A00368836 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		364559F82861114A00368836 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		364559FA286166E100368836 /* EnumError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumError.swift; sourceTree = "<group>"; };
 		500ADCCB2857EE3000E619CF /* FeelingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingModel.swift; sourceTree = "<group>"; };
 		500ADCCE285807AF00E619CF /* EmotionalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalRowView.swift; sourceTree = "<group>"; };
@@ -187,6 +195,14 @@
 		50BCEC5A284EC02300C85359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50BCEC5B284EC02300C85359 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		50BFDB94286B900200706E55 /* HealthStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStoreManager.swift; sourceTree = "<group>"; };
+		50BFDB96286BD6FF00706E55 /* DataCollectingFlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectingFlowViewModel.swift; sourceTree = "<group>"; };
+		50BFDB9A286BD81E00706E55 /* CoreDataObserverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataObserverProtocol.swift; sourceTree = "<group>"; };
+		50BFDB9E286BD94100706E55 /* PersistenceController+Emotional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceController+Emotional.swift"; sourceTree = "<group>"; };
+		50BFDBA0286BD94C00706E55 /* PersistenceController+DailyGeneral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceController+DailyGeneral.swift"; sourceTree = "<group>"; };
+		50BFDBA2286BD9A900706E55 /* PersistenceController+Sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceController+Sleep.swift"; sourceTree = "<group>"; };
+		50BFDBA4286BD9B300706E55 /* PersistenceController+Alimentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceController+Alimentation.swift"; sourceTree = "<group>"; };
+		50BFDBA6286BDAA100706E55 /* FoodQuantityRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQuantityRowModel.swift; sourceTree = "<group>"; };
+		50BFDBA8286BDFF400706E55 /* Date+dateFromTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+dateFromTime.swift"; sourceTree = "<group>"; };
 		50DCF8922857B0320053887C /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+ScreenMetrics.swift"; sourceTree = "<group>"; };
 		50DCF8982857BA340053887C /* View+AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AppColor.swift"; sourceTree = "<group>"; };
@@ -247,12 +263,11 @@
 		500ADCCA2857EE1C00E619CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				50BFDB9D286BD90B00706E55 /* Others */,
+				50BFDB9C286BD8BE00706E55 /* Persistence */,
 				FBBAED932866367500CFD86E /* HealthKitFunctions.swift */,
 				FBBAED432860F0B100CFD86E /* CoreData */,
-				500ADCCB2857EE3000E619CF /* FeelingModel.swift */,
-				50957B14285F61C700C908BB /* FoodQualityDataModel.swift */,
 				FBBAED882865FEDB00CFD86E /* DataCollectors */,
-				505F171D28626C92002D6BF5 /* OnboardingBarGraphicModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,6 +383,7 @@
 			children = (
 				50BCEC4D284EC02300C85359 /* ContainerView.swift */,
 				50F3D3F6285A889F007DE261 /* DataCollectingFlowView.swift */,
+				50BFDB96286BD6FF00706E55 /* DataCollectingFlowViewModel.swift */,
 			);
 			path = Container;
 			sourceTree = "<group>";
@@ -434,6 +450,29 @@
 			path = "Mini06-watchOSApp WatchKit Extension";
 			sourceTree = "<group>";
 		};
+		50BFDB9C286BD8BE00706E55 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				364559F82861114A00368836 /* PersistenceController.swift */,
+				50BFDB9E286BD94100706E55 /* PersistenceController+Emotional.swift */,
+				50BFDBA0286BD94C00706E55 /* PersistenceController+DailyGeneral.swift */,
+				50BFDBA2286BD9A900706E55 /* PersistenceController+Sleep.swift */,
+				50BFDBA4286BD9B300706E55 /* PersistenceController+Alimentation.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		50BFDB9D286BD90B00706E55 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				500ADCCB2857EE3000E619CF /* FeelingModel.swift */,
+				50957B14285F61C700C908BB /* FoodQualityDataModel.swift */,
+				505F171D28626C92002D6BF5 /* OnboardingBarGraphicModel.swift */,
+				50BFDBA6286BDAA100706E55 /* FoodQuantityRowModel.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		50DCF8912857B0250053887C /* Diary */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +488,7 @@
 				50DCF89A2857BA410053887C /* Defaults */,
 				50DCF8952857B1F50053887C /* Extensions */,
 				50BFDB94286B900200706E55 /* HealthStoreManager.swift */,
+				50BFDB9A286BD81E00706E55 /* CoreDataObserverProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -460,6 +500,7 @@
 				50DCF8982857BA340053887C /* View+AppColor.swift */,
 				50A3DEFD285920B3007952F8 /* View+CornerRadius.swift */,
 				509C88A02863A12D004703D2 /* UserDefaults+ManagingValues.swift */,
+				50BFDBA8286BDFF400706E55 /* Date+dateFromTime.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -467,6 +508,7 @@
 		50DCF89A2857BA410053887C /* Defaults */ = {
 			isa = PBXGroup;
 			children = (
+				364559FA286166E100368836 /* EnumError.swift */,
 				50DCF89C2857BA6F0053887C /* AppColors.swift */,
 				50A3DEFF28592116007952F8 /* QuantityIndicator.swift */,
 				505F172728626EA8002D6BF5 /* OnboardingText.swift */,
@@ -535,25 +577,15 @@
 		FBBAED432860F0B100CFD86E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				364559FA286166E100368836 /* EnumError.swift */,
-				364559F82861114A00368836 /* Persistence.swift */,
-				FBBAED442860F0DD00CFD86E /* CoreData.xcdatamodeld */,
-				FBBAED472860F1C400CFD86E /* Models */,
-			);
-			name = CoreData;
-			path = ../CoreData;
-			sourceTree = "<group>";
-		};
-		FBBAED472860F1C400CFD86E /* Models */ = {
-			isa = PBXGroup;
-			children = (
 				FBBAED712860F6C500CFD86E /* DailyGeneral */,
 				FBBAED702860F6B000CFD86E /* Food */,
 				FBBAED6F2860F68E00CFD86E /* Exercice */,
 				FBBAED6E2860F66F00CFD86E /* Sleep */,
 				FBBAED6D2860F64600CFD86E /* Emotional */,
+				FBBAED442860F0DD00CFD86E /* CoreData.xcdatamodeld */,
 			);
-			path = Models;
+			name = CoreData;
+			path = ../CoreData;
 			sourceTree = "<group>";
 		};
 		FBBAED6D2860F64600CFD86E /* Emotional */ = {
@@ -783,16 +815,19 @@
 				50350D022864F850003CD461 /* FoodQualityDataViewModel.swift in Sources */,
 				50FE6B0028528DB2007F6073 /* DashedProgressView.swift in Sources */,
 				50DCF8A52857CAAC0053887C /* EmotionalView.swift in Sources */,
+				50BFDB9B286BD81E00706E55 /* CoreDataObserverProtocol.swift in Sources */,
 				50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */,
 				FBBAED942866367500CFD86E /* HealthKitFunctions.swift in Sources */,
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
 				50DCF8A02857BAD60053887C /* RoundedRectangleButton.swift in Sources */,
 				FBBAED5D2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift in Sources */,
+				50BFDBA3286BD9A900706E55 /* PersistenceController+Sleep.swift in Sources */,
 				50350D1728664B27003CD461 /* HomePlaceholderView.swift in Sources */,
 				FBBAED622860F5FD00CFD86E /* Sleep+CoreDataProperties.swift in Sources */,
 				50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */,
 				507BE86C286A3FE500B0B46A /* DataEmotionalCollector.swift in Sources */,
 				505F172828626EA8002D6BF5 /* OnboardingText.swift in Sources */,
+				50BFDB9F286BD94100706E55 /* PersistenceController+Emotional.swift in Sources */,
 				50DCF8992857BA340053887C /* View+AppColor.swift in Sources */,
 				FBBAED692860F5FD00CFD86E /* Exercice+CoreDataClass.swift in Sources */,
 				FBBAED9228662D4700CFD86E /* PermissionButtonView.swift in Sources */,
@@ -804,9 +839,11 @@
 				50957B1F285F6C8400C908BB /* FoodQuantityStepperViewModel.swift in Sources */,
 				50BCEC4E284EC02300C85359 /* ContainerView.swift in Sources */,
 				FBBAED602860F5FD00CFD86E /* Bpm+CoreDataProperties.swift in Sources */,
+				50BFDB97286BD6FF00706E55 /* DataCollectingFlowViewModel.swift in Sources */,
 				509C88A52863A201004703D2 /* PaginationIndicator.swift in Sources */,
 				50FE6AFA285186F7007F6073 /* LinearProgressiveView.swift in Sources */,
 				500ADCCF285807AF00E619CF /* EmotionalRowView.swift in Sources */,
+				50BFDBA7286BDAA100706E55 /* FoodQuantityRowModel.swift in Sources */,
 				50FE6AEE2851861B007F6073 /* HomeViewModel.swift in Sources */,
 				FBBAED5E2860F5FD00CFD86E /* Alimentation+CoreDataProperties.swift in Sources */,
 				50A3DF0028592116007952F8 /* QuantityIndicator.swift in Sources */,
@@ -818,6 +855,7 @@
 				50957B0F285F5DC000C908BB /* RoundedSquareButton.swift in Sources */,
 				FBBAED462860F0DD00CFD86E /* CoreData.xcdatamodeld in Sources */,
 				FBBAED7F2863B3AF00CFD86E /* FoodQuantityDataViewModel.swift in Sources */,
+				50BFDBA9286BDFF400706E55 /* Date+dateFromTime.swift in Sources */,
 				50BCEC54284EC02300C85359 /* ComplicationController.swift in Sources */,
 				509E5D9028515CFB00393673 /* HomeView.swift in Sources */,
 				50BCEC4C284EC02300C85359 /* Mini06_watchOSAppApp.swift in Sources */,
@@ -834,6 +872,7 @@
 				507BE86B286A3FDA00B0B46A /* UserDataInput.swift in Sources */,
 				FBBAED7928639C6A00CFD86E /* EmotionalIntensiveViewModel.swift in Sources */,
 				FBBAED6A2860F5FD00CFD86E /* Exercice+CoreDataProperties.swift in Sources */,
+				50BFDBA5286BD9B300706E55 /* PersistenceController+Alimentation.swift in Sources */,
 				505F172528626D96002D6BF5 /* HeaderOnboardingThree.swift in Sources */,
 				500ADCCC2857EE3000E619CF /* FeelingModel.swift in Sources */,
 				FBBAED672860F5FD00CFD86E /* EmojiCategory+CoreDataClass.swift in Sources */,
@@ -842,13 +881,14 @@
 				505F172128626CDE002D6BF5 /* HeaderOnboardingOne.swift in Sources */,
 				FBBAED642860F5FD00CFD86E /* Meal+CoreDataProperties.swift in Sources */,
 				505F171E28626C93002D6BF5 /* OnboardingBarGraphicModel.swift in Sources */,
-				364559F92861114A00368836 /* Persistence.swift in Sources */,
+				364559F92861114A00368836 /* PersistenceController.swift in Sources */,
 				FBBAED662860F5FD00CFD86E /* AlimentationCategory+CoreDataProperties.swift in Sources */,
 				FBBAED5B2860F5FD00CFD86E /* Emotional+CoreDataClass.swift in Sources */,
 				50957B1D285F6A6F00C908BB /* FoodQuantityStepper.swift in Sources */,
 				FBBAED5C2860F5FD00CFD86E /* Emotional+CoreDataProperties.swift in Sources */,
 				50188B6D2863A5180017AF2C /* EmptyHomeView.swift in Sources */,
 				FBBAED632860F5FD00CFD86E /* Meal+CoreDataClass.swift in Sources */,
+				50BFDBA1286BD94C00706E55 /* PersistenceController+DailyGeneral.swift in Sources */,
 				50F3D3F5285A7AF2007DE261 /* FoodQuantityDataView.swift in Sources */,
 				50BFDB95286B900200706E55 /* HealthStoreManager.swift in Sources */,
 				505F171C2862607D002D6BF5 /* OnboardingView.swift in Sources */,

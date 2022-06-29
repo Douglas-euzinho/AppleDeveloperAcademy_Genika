@@ -18,7 +18,6 @@ struct DataCollectorEmojiCategory {
 }
 
 struct DataCollectorEmotional {
-    
     var emojiCategory: DataCollectorEmojiCategory
     var intensity: Int = 0
     var score: Int = 0
@@ -32,15 +31,18 @@ struct DataCollectorEmotional {
         intensity = value
     }
     
-    internal func sendData() -> Emotional {
+    mutating func calculateScore() {
+        score = intensity * emojiCategory.quantifier
+    }
+    
+    func saveData() throws -> Emotional {
         var persistence = PersistenceController.shared
         
-        do{
-            let emotional = try persistence.emotional(intensity: intensity, score: score, emojiCategory: persistence.emojiCategory(category: emojiCategory.category, quantifier: emojiCategory.quantifier))
-            return emotional
-        } catch{
-            //TODO: tratar erro
-        }
-        return Emotional()
+        let emojiCategory = try persistence.emojiCategory(category: emojiCategory.category,
+                                                          quantifier: emojiCategory.quantifier)
+        
+        return try persistence.emotional(intensity: intensity,
+                                         score: score,
+                                         emojiCategory: emojiCategory)
     }
 }

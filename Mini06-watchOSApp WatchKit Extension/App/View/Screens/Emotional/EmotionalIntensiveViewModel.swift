@@ -6,43 +6,37 @@
 //
 
 import SwiftUI
-import CoreData
 
 class EmotionalIntensiveViewModel: ObservableObject {
-
     @Published var intensiveValue: QuantityIndicator = .lowest
     
     func decrease() {
-        withAnimation(.linear(duration: 0.25)) {
-            switch intensiveValue {
-            case .lowest:
-                break
-            case .low:
-                intensiveValue = .lowest
-            case .medium:
-                intensiveValue = .low
-            case .high:
-                intensiveValue = .medium
-            case .highest:
-                intensiveValue = .high
-            }
+        switch intensiveValue {
+        case .lowest:
+            break
+        case .low:
+            intensiveValue = .lowest
+        case .medium:
+            intensiveValue = .low
+        case .high:
+            intensiveValue = .medium
+        case .highest:
+            intensiveValue = .high
         }
     }
     
     func increase() {
-        withAnimation(.linear(duration: 0.25)) {
-            switch intensiveValue {
-            case .lowest:
-                intensiveValue = .low
-            case .low:
-                intensiveValue = .medium
-            case .medium:
-                intensiveValue = .high
-            case .high:
-                intensiveValue = .highest
-            case .highest:
-                break
-            }
+        switch intensiveValue {
+        case .lowest:
+            intensiveValue = .low
+        case .low:
+            intensiveValue = .medium
+        case .medium:
+            intensiveValue = .high
+        case .high:
+            intensiveValue = .highest
+        case .highest:
+            break
         }
     }
 }

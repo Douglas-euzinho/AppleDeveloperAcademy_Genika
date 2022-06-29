@@ -9,7 +9,7 @@ import SwiftUI
 import HealthKit
 
 struct EmptyHomeView: View {
-    
+    @ObservedObject var homeViewModel: HomeViewModel
     @State var showPermissionScreen: Bool = false
     
     var body: some View {
@@ -38,7 +38,7 @@ struct EmptyHomeView: View {
             }
         }
         .sheet(isPresented: $showPermissionScreen, content: {
-            PermissionFlowView()
+            PermissionFlowView(homeViewModel: homeViewModel)
         })
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Health")
@@ -47,6 +47,6 @@ struct EmptyHomeView: View {
 
 struct EmptyHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        EmptyHomeView()
+        EmptyHomeView(homeViewModel: HomeViewModel())
     }
 }

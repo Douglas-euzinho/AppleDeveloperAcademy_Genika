@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class HomeViewModel: ObservableObject {
+class HomeViewModel: ObservableObject, CoreDataObserverProtocol {
     @Published var foodQualityValue: CGFloat = 0
     @Published var activityQualityValue: CGFloat = 0
     @Published var sleepQualityValue: CGFloat = 0
@@ -41,6 +41,12 @@ class HomeViewModel: ObservableObject {
         emotionalFocusDataModel = FocusDataModel(title: "Emoções",
                                                  qualityLabel: "Intenso",
                                                  quantityLabel: "Negativo")
+        
+        update()
+    }
+    
+    func update() {
+        homeDataIsEmpty = PersistenceController.shared.getAllDailyGeneral().isEmpty
     }
     
     func randomizeValues() {

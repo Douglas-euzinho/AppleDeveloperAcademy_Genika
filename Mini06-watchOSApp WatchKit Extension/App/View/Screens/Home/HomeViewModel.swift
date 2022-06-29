@@ -35,9 +35,7 @@ class HomeViewModel: ObservableObject, CoreDataObserverProtocol {
                                                 qualityLabel: "Pesado",
                                                 quantityLabel: "30min")
         
-        sleepFocusDataModel = FocusDataModel(title: "Sono",
-                                             qualityLabel: "",
-                                             quantityLabel: "")
+        sleepFocusDataModel = FocusDataModel(title: "Sono")
         
         emotionalFocusDataModel = FocusDataModel(title: "Emoções",
                                                  qualityLabel: "Negativo",

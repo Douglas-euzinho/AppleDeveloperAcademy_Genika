@@ -9,8 +9,8 @@ import SwiftUI
 
 struct FocusDataModel {
     let title: String
-    var qualityLabel: String
-    var quantityLabel: String
+    var qualityLabel: String = ""
+    var quantityLabel: String = ""
 }
 
 struct FocusView: View {

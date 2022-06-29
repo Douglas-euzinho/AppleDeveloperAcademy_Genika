@@ -96,12 +96,14 @@ struct HealthStoreManager {
                     return
                 }
                 let query = HKSampleQuery(sampleType: HKQuantityType(.stepCount), predicate: nil, limit: 1, sortDescriptors: descriptors) { query, samples, error in
-                    if let error = error {
-                        debugPrint("[Error - Fetch Step Count Data]: \(error.localizedDescription)")
+                    guard error == nil else {
+                        debugPrint("[Error - Fetch Sleep Data]: \(error?.localizedDescription ?? "NO CAUSE")")
                         continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
+                        return
                     }
                     
                     guard let sample = samples?.first as? HKCategorySample else {
+                        continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
                         return
                     }
                     
@@ -126,12 +128,14 @@ struct HealthStoreManager {
                 }
                 
                 let query = HKSampleQuery(sampleType: HKQuantityType(.activeEnergyBurned), predicate: nil, limit: 2, sortDescriptors: descriptors) { query, samples, error in
-                    if let error = error {
-                        debugPrint("[Error - Fetch Kcal Lost Data]: \(error.localizedDescription)")
+                    guard error == nil else {
+                        debugPrint("[Error - Fetch Sleep Data]: \(error?.localizedDescription ?? "NO CAUSE")")
                         continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
+                        return
                     }
                     
                     guard let sample = samples?.first as? HKCategorySample else {
+                        continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
                         return
                     }
                     
@@ -159,12 +163,14 @@ struct HealthStoreManager {
                 }
                 
                 let query = HKSampleQuery(sampleType: HKQuantityType(.distanceWalkingRunning), predicate: nil, limit: 2, sortDescriptors: descriptors) { query, samples, error in
-                    if let error = error {
-                        debugPrint("[Error - Fetch Kcal Lost Data]: \(error.localizedDescription)")
+                    guard error == nil else {
+                        debugPrint("[Error - Fetch Sleep Data]: \(error?.localizedDescription ?? "NO CAUSE")")
                         continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
+                        return
                     }
                     
                     guard let sample = samples?.first as? HKCategorySample else {
+                        continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
                         return
                     }
                     

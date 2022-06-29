@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct PaginationIndicatior: View {
-    var allViewCases: [OnboardingFlowView.Screens]
-    var viewSelected: OnboardingFlowView.Screens
+struct PaginationIndicatior<T: Equatable>: View {
+    var allViewCases: [T]
+    var viewSelected: T
     var metrics: GeometryProxy
     
     var body: some View {

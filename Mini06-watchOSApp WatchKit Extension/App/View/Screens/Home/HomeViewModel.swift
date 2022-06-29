@@ -19,6 +19,7 @@ class HomeViewModel: ObservableObject, CoreDataObserverProtocol {
     @Published var emotionalQuantityValue: QuantityIndicator? = .none
     
     @Published var homeDataIsEmpty: Bool = false
+    @Published var hasRecordForToday: Bool = false
     
     @Published var foodFocusDataModel: FocusDataModel
     @Published var activityFocusDataModel: FocusDataModel
@@ -27,41 +28,70 @@ class HomeViewModel: ObservableObject, CoreDataObserverProtocol {
     
     init() {
         foodFocusDataModel = FocusDataModel(title: "Alimentação",
-                                            qualityLabel: "1 Refeição",
-                                            quantityLabel: "Ruim")
+                                            qualityLabel: "Ruim",
+                                            quantityLabel: "1 Refeição")
         
         activityFocusDataModel = FocusDataModel(title: "Atividades",
-                                                qualityLabel: "30min",
-                                                quantityLabel: "Pesado")
+                                                qualityLabel: "Pesado",
+                                                quantityLabel: "30min")
         
-        sleepFocusDataModel = FocusDataModel(title: "Sono",
-                                             qualityLabel: "8 horas",
-                                             quantityLabel: "Muito bom")
+        sleepFocusDataModel = FocusDataModel(title: "Sono")
         
         emotionalFocusDataModel = FocusDataModel(title: "Emoções",
-                                                 qualityLabel: "Intenso",
-                                                 quantityLabel: "Negativo")
+                                                 qualityLabel: "Negativo",
+                                                 quantityLabel: "Intenso")
         
         update()
     }
     
     func update() {
-        homeDataIsEmpty = PersistenceController.shared.getAllDailyGeneral().isEmpty
+        let allDailyGeneral = PersistenceController.shared.getAllDailyGeneral()
+        homeDataIsEmpty = allDailyGeneral.isEmpty
+        
+        let today = Date.now
+        let lastWeekDate = Date.now.advanced(by: -604_800)
+        
+        let recordsDate = allDailyGeneral
+            .compactMap({ $0.date })
+            .sorted(by: { $0.compare($1) == .orderedDescending })
+            .filter({ (lastWeekDate...today).contains($0) })
+        
+        hasRecordForToday = recordsDate.contains(where: { Calendar.current.isDateInToday($0) })
+        
+        updateSleepData(sleepArray: allDailyGeneral.compactMap({ $0.sleep }))
     }
     
-    func randomizeValues() {
-        let quantityArray = QuantityIndicator.allCases
-
-        withAnimation(.easeInOut(duration: 0.5)) {
-            foodQualityValue = CGFloat(Double.random(in: 0...100))
-            activityQualityValue = CGFloat(Double.random(in: 0...100))
-            sleepQualityValue = CGFloat(Double.random(in: 0...100))
-            emotionalQualityValue = CGFloat(Double.random(in: 0...100))
-            
-            foodQuantityValue = quantityArray.randomElement()!
-            activityQuantityValue = quantityArray.randomElement()!
-            sleepQuantityValue = quantityArray.randomElement()!
-            emotionalQuantityValue = quantityArray.randomElement()!
+    private func updateSleepData(sleepArray: [Sleep]) {
+        guard !sleepArray.isEmpty else {
+            sleepQuantityValue = .none
+            sleepFocusDataModel.quantityLabel = ""
+            return
+        }
+        
+        var amount: Double = 0.0
+        sleepArray.forEach { sleep in
+            amount += Double(sleep.score)
+        }
+        
+        let average = amount / Double(sleepArray.count)
+        switch average {
+        case let sleepTime where sleepTime < 2:
+            sleepQuantityValue = .lowest
+        case let sleepTime where sleepTime < 6:
+            sleepQuantityValue = .low
+        case let sleepTime where sleepTime < 9:
+            sleepQuantityValue = .medium
+        case let sleepTime where sleepTime < 10:
+            sleepQuantityValue = .high
+        default:
+            sleepQuantityValue = .highest
+        }
+        
+        sleepFocusDataModel.quantityLabel = String(format: "%.1f", average)
+        if average == 1.0 {
+            sleepFocusDataModel.quantityLabel.append(" hora")
+        } else {
+            sleepFocusDataModel.quantityLabel.append(" horas")
         }
     }
 }

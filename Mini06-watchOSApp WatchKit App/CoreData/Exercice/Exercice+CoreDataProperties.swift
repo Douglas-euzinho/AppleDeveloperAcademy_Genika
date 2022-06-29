@@ -18,7 +18,7 @@ extension Exercice {
 
     @NSManaged public var countSteps: Int64
     @NSManaged public var didExercice: Bool
-    @NSManaged public var distanceWalked: Float
+    @NSManaged public var distanceWalked: Double
     @NSManaged public var id: UUID?
     @NSManaged public var kcalLost: Int64
     @NSManaged public var bpm: NSSet?

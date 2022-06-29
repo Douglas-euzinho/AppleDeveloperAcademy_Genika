@@ -21,13 +21,13 @@ class UserDataInput: ObservableObject {
                   dataEmotional: DataCollectorEmotional(emojiCategory: DataCollectorEmojiCategory(category: "nil", quantifier: 0)))
     }
     
-    func saveData(sleep: Sleep) throws {
+    func saveData(sleep: Sleep, exercice: Exercice) throws {
         var persistence = PersistenceController.shared
         let emotional = try dataEmotional.saveData()
         let alimentation = try dataAlimentation.saveData()
         
         try persistence.createDailyGeneral(alimentation: alimentation,
                                            emotional: emotional,
-                                           sleep: sleep)
+                                           sleep: sleep, exercice: exercice)
     }
 }

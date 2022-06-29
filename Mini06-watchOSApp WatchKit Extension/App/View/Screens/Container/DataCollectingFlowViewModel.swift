@@ -68,7 +68,14 @@ class DataCollectingFlowViewModel: ObservableObject {
         do {
             let timeSleeping = try? await HealthStoreManager.shared.getSleepTime()
             let sleep = try PersistenceController.shared.createSleep(timeSleeping: Int(timeSleeping ?? 0.0))
-            try data.saveData(sleep: sleep)
+            
+            let stepCount = try? await HealthStoreManager.shared.getStepCount()
+            let kcalLost = try? await HealthStoreManager.shared.getKcalLost()
+            let distanceWalked = try? await HealthStoreManager.shared.getDistanceWalked()
+            let exercice = try PersistenceController.shared.createExercice(stepCount: stepCount ?? 0, kcalLost: kcalLost ?? 0, distanceWalked: distanceWalked ?? 0.0)
+            
+            try data.saveData(sleep: sleep, exercice: exercice)
+            
             DispatchQueue.main.async { [weak self] in
                 self?.coreDataObserver.update()
             }

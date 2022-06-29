@@ -66,9 +66,6 @@ struct HomeView: View {
                     FourthView: FourthView,
                     metrics: metrics
                 )
-                    .onTapGesture {
-                        homeViewModel.randomizeValues()
-                    }
                     .blur(radius: showFocusView ? 4.0 : 0.0)
                 
                 if showFocusView {

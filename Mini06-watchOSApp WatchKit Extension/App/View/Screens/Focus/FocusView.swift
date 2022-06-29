@@ -47,7 +47,7 @@ struct FocusView: View {
                             .overlay {
                                 GeometryReader { vstackDimension in
                                     VStack(spacing: 0) {
-                                        Text(model.qualityLabel)
+                                        Text(model.quantityLabel)
                                             .font(.caption2)
                                             .frame(maxWidth: .infinity)
                                         Spacer()
@@ -59,7 +59,7 @@ struct FocusView: View {
                                         
                                         Spacer()
                                         
-                                        Text(model.quantityLabel)
+                                        Text(model.qualityLabel)
                                             .font(.caption2)
                                             .frame(maxWidth: .infinity)
                                     }

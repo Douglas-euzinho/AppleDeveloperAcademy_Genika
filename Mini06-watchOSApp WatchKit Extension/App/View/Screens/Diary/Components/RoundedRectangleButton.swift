@@ -15,6 +15,7 @@ struct RoundedRectangleButton: View {
     let title: String
     let imageName: String
     let theme: Theme
+    var isDisabled: Bool = false
     var metrics: GeometryProxy
     var action: () -> Void = { }
     
@@ -35,14 +36,16 @@ struct RoundedRectangleButton: View {
         }
         .buttonStyle(.borderless)
         .backgroundColor(appColor: theme == .dark ? .darkGray : .white)
+        .opacity(isDisabled ? 0.5 : 1.0)
         .cornerRadius(.width(8, from: metrics))
+        .disabled(isDisabled)
     }
 }
 
 struct RoundedRectangleButton_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { metrics in
-            RoundedRectangleButton(title: "Registrar", imageName: "doc.fill", theme: .light, metrics: metrics)
+            RoundedRectangleButton(title: "Registrar", imageName: "doc.fill", theme: .light, isDisabled: false, metrics: metrics)
         }
     }
 }

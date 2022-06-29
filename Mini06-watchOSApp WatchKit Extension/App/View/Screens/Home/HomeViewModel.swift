@@ -19,6 +19,7 @@ class HomeViewModel: ObservableObject, CoreDataObserverProtocol {
     @Published var emotionalQuantityValue: QuantityIndicator? = .none
     
     @Published var homeDataIsEmpty: Bool = false
+    @Published var hasRecordForToday: Bool = false
     
     @Published var foodFocusDataModel: FocusDataModel
     @Published var activityFocusDataModel: FocusDataModel
@@ -46,7 +47,10 @@ class HomeViewModel: ObservableObject, CoreDataObserverProtocol {
     }
     
     func update() {
-        homeDataIsEmpty = PersistenceController.shared.getAllDailyGeneral().isEmpty
+        let allDailyGeneral = PersistenceController.shared.getAllDailyGeneral()
+        homeDataIsEmpty = allDailyGeneral.isEmpty
+        let recordsDate = allDailyGeneral.compactMap({ $0.date }).sorted(by: { $0.compare($1) == .orderedDescending })
+        hasRecordForToday = recordsDate.contains(where: { Calendar.current.isDateInToday($0) })
     }
     
     func randomizeValues() {

@@ -19,8 +19,10 @@ struct DiaryView: View {
                 VStack(spacing: 0) {
                     Spacer()
                     RoundedRectangleButton(title: "Registrar",
-                                    imageName: "square.and.pencil",
-                                    theme: .light, metrics: metrics) {
+                                           imageName: "square.and.pencil",
+                                           theme: .light,
+                                           isDisabled: homeViewModel.hasRecordForToday,
+                                           metrics: metrics) {
                         showDataCollectingFlow = true
                     }
                     Spacer()

@@ -13,22 +13,18 @@ struct DiaryView: View {
     
     var body: some View {
         GeometryReader { metrics in
-            VStack(spacing: 0) {
-                RoundedRectangleButton(title: "Registrar",
-                                imageName: "square.and.pencil",
-                                theme: .light, metrics: metrics) {
-                    showDataCollectingFlow = true
+            ZStack {
+                Color.black.opacity(0.3)
+                
+                VStack(spacing: 0) {
+                    Spacer()
+                    RoundedRectangleButton(title: "Registrar",
+                                    imageName: "square.and.pencil",
+                                    theme: .light, metrics: metrics) {
+                        showDataCollectingFlow = true
+                    }
+                    Spacer()
                 }
-                
-                Spacer()
-                RoundedRectangleButton(title: "Relatórios",
-                                imageName: "doc.text",
-                                theme: .dark, metrics: metrics)
-                
-                Spacer()
-                RoundedRectangleButton(title: "Histórico",
-                                imageName: "calendar",
-                                theme: .dark, metrics: metrics)
             }
         }
         .navigationBarTitleDisplayMode(.inline)

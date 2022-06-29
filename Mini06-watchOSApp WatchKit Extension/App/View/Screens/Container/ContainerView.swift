@@ -61,7 +61,7 @@ struct ContainerView: View {
                                 moveDirection = .left
                                 screenSelected = Screens.allCases[nextIndex + 1]
                             }
-                        case (0..., -30...30):
+                        case (0..., -50...50):
                             guard
                                 let firstScreen = Screens.allCases.first,
                                 screenSelected != firstScreen

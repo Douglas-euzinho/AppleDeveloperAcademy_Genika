@@ -20,8 +20,8 @@ struct FoodQualityDataModel: Identifiable {
         FoodQualityDataModel(image: "🍎", name: "Frutas", quantifier: 4),
         FoodQualityDataModel(image: "🧀", name: "Laticínios", quantifier: 3),
         FoodQualityDataModel(image: "🛢", name: "Gorduras", quantifier: 2),
-        FoodQualityDataModel(image: "🍩", name: "Doces", quantifier: -1),
-        FoodQualityDataModel(image: "🍔", name: "Fast-Food", quantifier: -1),
-        FoodQualityDataModel(image: "🍫", name: "Processados", quantifier: -1),
+        FoodQualityDataModel(image: "🍩", name: "Doces", quantifier: -2),
+        FoodQualityDataModel(image: "🍔", name: "Fast-Food", quantifier: -2),
+        FoodQualityDataModel(image: "🍫", name: "Processados", quantifier: -4),
     ]
 }

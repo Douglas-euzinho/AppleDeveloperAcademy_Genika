@@ -49,19 +49,24 @@ struct FocusView: View {
                                     VStack(spacing: 0) {
                                         Text(model.quantityLabel)
                                             .font(.caption2)
+                                            .minimumScaleFactor(0.8)
                                             .frame(maxWidth: .infinity)
+                                        
                                         Spacer()
                                         
                                         homeSegmentView
                                             .onAppear {
                                                 homeSegmentView.hasBackground = true
                                             }
+                                            .frame(height: vstackDimension.size.height * 0.55)
+                                            .layoutPriority(1)
                                         
                                         Spacer()
                                         
                                         Text(model.qualityLabel)
                                             .font(.caption2)
                                             .frame(maxWidth: .infinity)
+                                            .minimumScaleFactor(0.8)
                                     }
                                     .padding(.all, .width(4, from: metrics))
                                 }
@@ -71,6 +76,7 @@ struct FocusView: View {
                         
                         Text("Média dos últimos 7 dias")
                             .font(.caption2)
+                            .minimumScaleFactor(0.8)
                             .foregroundColor(appColor: .textColorGray)
                             .padding(.bottom, .width(16, from: metrics))
                             .padding(.top)

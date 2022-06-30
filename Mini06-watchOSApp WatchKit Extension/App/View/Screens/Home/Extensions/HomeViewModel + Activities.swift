@@ -27,11 +27,11 @@ extension HomeViewModel{
         switch average {
         case let bpm where bpm < 40:
             activityQuantityValue = .lowest
-        case let exerciceScore where exerciceScore < 80:
+        case let bpm where bpm < 80:
             activityQuantityValue = .low
-        case let exerciceScore where exerciceScore < 120:
+        case let bpm where bpm < 120:
             activityQuantityValue = .medium
-        case let exerciceScore where exerciceScore < 160:
+        case let bpm where bpm < 160:
             activityQuantityValue = .high
         default:
             activityQuantityValue = .highest

@@ -97,13 +97,9 @@ extension HomeViewModel{
         case let quality where quality <= 60:
             activityFocusDataModel.qualityLabel = "Regular"
         case let quality where quality <= 80:
-            activityFocusDataModel.qualityLabel = "ótimo"
+            activityFocusDataModel.qualityLabel = "Ótimo"
         default:
             activityFocusDataModel.qualityLabel = "Excelente"
         }
     }
 }
-
-//Passos remomendados: 10.000
-//calorias gastas: 300
-//distancia andada: 6

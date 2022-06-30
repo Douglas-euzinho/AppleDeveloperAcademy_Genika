@@ -15,19 +15,19 @@ extension HomeViewModel{
             return
         }
         
-        var amount: Double = 0.0
+        var amount: Int = 0
         alimentationArray.forEach { alimentation in
-            amount += Double(alimentation.breakCount)
-            amount += Double(alimentation.meal?.count ?? 0)
+            amount += Int(alimentation.breakCount)
+            amount += alimentation.meal?.count ?? 0
         }
         
-        let average = amount / Double(alimentationArray.count)
+        let average = amount / alimentationArray.count
         switch average {
         case let foodQuantity where foodQuantity < 2:
             foodQuantityValue = .lowest
         case let foodQuantity where foodQuantity < 4:
             foodQuantityValue = .low
-        case let foodQuantity where foodQuantity < 7:
+        case let foodQuantity where foodQuantity < 6:
             foodQuantityValue = .medium
         case let foodQuantity where foodQuantity < 8:
             foodQuantityValue = .high
@@ -35,8 +35,8 @@ extension HomeViewModel{
             foodQuantityValue = .highest
         }
         
-        foodFocusDataModel.quantityLabel = String(format: "%.1f", average)
-        if average == 1.0 {
+        foodFocusDataModel.quantityLabel = "\(average)"
+        if average == 1 {
             foodFocusDataModel.quantityLabel.append(" Refeição")
         } else {
             foodFocusDataModel.quantityLabel.append(" Refeições")
@@ -76,6 +76,21 @@ extension HomeViewModel{
         }
         let qualityAverage = qualityAmount / Double(alimentationArray.count)
         foodQualityValue = (100 * qualityAverage) / 41
+        
+        switch foodQualityValue {
+        case let value where value < 20.0:
+            foodFocusDataModel.qualityLabel = "Muito Mal"
+        case let value where value < 40.0:
+            foodFocusDataModel.qualityLabel = "Mal"
+        case let value where value < 60.0:
+            foodFocusDataModel.qualityLabel = "Regular"
+        case let value where value < 80.0:
+            foodFocusDataModel.qualityLabel = "Bem"
+        case let value where value < 100.0:
+            foodFocusDataModel.qualityLabel = "Muito Bem"
+        default:
+            foodFocusDataModel.qualityLabel = ""
+        }
     }
 }
 

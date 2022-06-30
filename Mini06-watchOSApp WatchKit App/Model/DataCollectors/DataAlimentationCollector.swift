@@ -45,22 +45,16 @@ struct DataCollectorAlimentation {
     var point: Int = 0
     
     mutating func setAlimentationCategoryArray(_ categories: [DataCollectorAlimentationCategory]) {
+        categories.forEach { alimentation in
+            point += alimentation.quantifier
+        }
         alimentationCategories.append(contentsOf: categories)
     }
-    
-    mutating func setAlimentationCategory(category: String, quantifier: Int) {
-        alimentationCategories.append(DataCollectorAlimentationCategory(alimentationCategory: category, quantifier: quantifier))
-        point += quantifier
-    }
-    
+
     mutating func setMealCategoryArray(_ categories: [DataCollectorMealCategory]) {
         mealCategories.append(contentsOf: categories)
     }
-    
-    mutating func setMealCategory(category: String, quantifier: Int) {
-        mealCategories.append(DataCollectorMealCategory(category: category, hourMeal: Date.now, quantifier: quantifier))
-    }
-    
+
     func saveData() throws -> Alimentation {
         var persistence = PersistenceController.shared
 

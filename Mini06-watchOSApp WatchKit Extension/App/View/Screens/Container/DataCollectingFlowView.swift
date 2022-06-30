@@ -8,51 +8,35 @@
 import SwiftUI
 
 struct DataCollectingFlowView: View {
-    enum DataCollectingFlowScreens: Hashable {
-        case emotional, emotionalIntensive, alert, food, foodQuantity
-        
-        func next() -> DataCollectingFlowScreens? {
-            switch self {
-            case .emotional:
-                return .emotionalIntensive
-            case .emotionalIntensive:
-                return .alert
-            case .alert:
-                return .food
-            case .food:
-                return .foodQuantity
-            case .foodQuantity:
-                return nil
-            }
-        }
+    enum Screens: Hashable {
+        case emotional
+        case emotionalIntensive
+        case alert
+        case food
+        case foodQuantity
     }
     
-    @State var selectedScreen: DataCollectingFlowScreens = .emotional
+    @StateObject var viewModel: DataCollectingFlowViewModel
     
     var body: some View {
         ZStack {
             Group {
-                switch selectedScreen {
+                switch viewModel.selectedScreen {
                 case .emotional:
-                    EmotionalView(selectedScreen: $selectedScreen)
+                    EmotionalView(viewModel: viewModel)
                 case .emotionalIntensive:
-                    EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(feelingSelected: nil), selectedScreen: $selectedScreen)
+                    EmotionalIntensiveView(viewModel: viewModel)
+                        .environmentObject(viewModel.emotionalIntensiveViewModel)
                 case .alert:
-                    FoodAlertView(selectedScreen: $selectedScreen)
+                    FoodAlertView(viewModel: viewModel)
                 case .food:
-                    FoodQualityDataView(selectedScreen: $selectedScreen)
+                    FoodQualityDataView(viewModel: viewModel)
                 case .foodQuantity:
-                    FoodQuantityDataView(selectedScreen: $selectedScreen)
+                    FoodQuantityDataView(viewModel: viewModel)
                 }
             }
+            .animation(.easeInOut(duration: 0.6), value: viewModel.selectedScreen)
             .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
         }
-        .navigationBarTitleDisplayMode(.inline)
-    }
-}
-
-struct DataCollectingFlowView_Previews: PreviewProvider {
-    static var previews: some View {
-        DataCollectingFlowView()
     }
 }

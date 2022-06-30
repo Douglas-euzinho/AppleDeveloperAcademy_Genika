@@ -9,10 +9,23 @@ import SwiftUI
 
 @main
 struct Mini06_watchOSAppApp: App {
+    
+    let onboardingPassed: Bool
+    
+    init() {
+        onboardingPassed = UserDefaults.standard.bool(withKey: .onboardingPassed)
+    }
+    
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContainerView()
+                Group {
+                    if !onboardingPassed {
+                        OnboardingFlowView()
+                    } else {
+                        ContainerView()                    
+                    }
+                }
             }
         }
 

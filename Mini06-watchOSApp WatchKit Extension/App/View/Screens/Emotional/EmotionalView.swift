@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct EmotionalView: View {
-    @Environment(\.dismiss) var dismiss
-    @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
+    @ObservedObject var viewModel: DataCollectingFlowViewModel
     let allFeelings = FeelingModel.all
-    @State var feelingSelected: FeelingModel.Feelings? = .none
-    
+
     var body: some View {
         GeometryReader { metrics in
             VStack {
@@ -24,28 +22,19 @@ struct EmotionalView: View {
                 List {
                     ForEach(allFeelings) { feeling in
                         EmotionalRowView(feeling: feeling, metrics: metrics) {
-                            feelingSelected = feeling.tag
-                            if let nextScreen = selectedScreen.next() {
-                                withAnimation(.easeInOut(duration: 0.6)) {
-                                    selectedScreen = nextScreen
-                                }
-                            } else {
-                                dismiss()
-                            }
+                            viewModel.selectFeeling(feeling)
                         }
                     }
                     .listRowBackground(Color.clear)
                 }
                 .listStyle(.carousel)
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Emocional")
         }
     }
 }
 
 struct EmotionalView_Previews: PreviewProvider {
     static var previews: some View {
-        EmotionalView(selectedScreen: .constant(.foodQuantity))
+        EmotionalView(viewModel: DataCollectingFlowViewModel(coreDataObserver: HomeViewModel()))
     }
 }

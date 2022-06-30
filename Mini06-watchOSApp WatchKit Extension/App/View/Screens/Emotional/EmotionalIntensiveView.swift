@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct EmotionalIntensiveView: View {
-    @Environment(\.dismiss) var dismiss
-    @StateObject var viewModel: EmotionalIntensiveViewModel
-    @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
+    @EnvironmentObject var emotionalIntensiveVM: EmotionalIntensiveViewModel
+    @ObservedObject var viewModel: DataCollectingFlowViewModel
     
     var body: some View {
         GeometryReader { metrics in
@@ -23,7 +22,7 @@ struct EmotionalIntensiveView: View {
                 
                 HStack(spacing: 1) {
                     Button {
-                        viewModel.decrease()
+                        emotionalIntensiveVM.decrease()
                     } label: {
                         Rectangle()
                             .fill(AppColor.lightGray.color)
@@ -39,13 +38,14 @@ struct EmotionalIntensiveView: View {
                     Rectangle()
                         .fill(AppColor.lightGray.color)
                         .overlay {
-                            EmotionIntensiveValueView(value: viewModel.intensiveValue)
+                            EmotionIntensiveValueView(value: emotionalIntensiveVM.intensiveValue)
                                 .frame(height: .width(5, from: metrics))
                                 .padding(.horizontal, .width(4, from: metrics))
+                                .animation(.linear(duration: 0.25), value: emotionalIntensiveVM.intensiveValue)
                         }
                     
                     Button {
-                        viewModel.increase()
+                        viewModel.emotionalIntensiveViewModel.increase()
                     } label: {
                         Rectangle()
                             .fill(AppColor.lightGray.color)
@@ -66,24 +66,16 @@ struct EmotionalIntensiveView: View {
                     Spacer()
                     
                     RoundedSquareButton(metrics: metrics) {
-                        if let nextScreen = selectedScreen.next() {
-                            withAnimation(.easeInOut(duration: 0.6)) {
-                                selectedScreen = nextScreen
-                            }
-                        } else {
-                            dismiss()
-                        }
+                        viewModel.saveIntensiveValue()
                     }
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Intensidade")
         }
     }
 }
 
 struct EmotionalIntensiveVIew_Previews: PreviewProvider {
     static var previews: some View {
-        EmotionalIntensiveView(viewModel: EmotionalIntensiveViewModel(feelingSelected: .happy), selectedScreen: .constant(.foodQuantity))
+        EmotionalIntensiveView(viewModel: DataCollectingFlowViewModel(coreDataObserver: HomeViewModel()))
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FoodQuantityStepper: View {
-    @StateObject var viewModel: FoodQuantityStepperViewModel
+    @ObservedObject var viewModel: FoodQuantityStepperViewModel
     var metrics: GeometryProxy
     
     var body: some View {

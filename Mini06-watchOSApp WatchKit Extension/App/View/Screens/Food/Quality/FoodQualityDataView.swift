@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct FoodQualityDataView: View {
-    @Environment(\.dismiss) var dismiss
-    @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
+    @ObservedObject var viewModel: DataCollectingFlowViewModel
     
     var body: some View {
         GeometryReader { metrics in
@@ -42,9 +41,10 @@ struct FoodQualityDataView: View {
                             FoodQualityRowView(
                                 imageName: dataModel.image,
                                 title: dataModel.name,
+                                quantifier: dataModel.quantifier,
                                 metrics: metrics
                             ) { selected in
-                                // TODO: put selected data model into a array for passing data to following view
+                                viewModel.foodQualityDataViewModel.setupFoodArray(dataModel: dataModel, selected: selected)
                             }
                         }
                         
@@ -60,24 +60,17 @@ struct FoodQualityDataView: View {
                         Spacer()
                         
                         RoundedSquareButton(metrics: metrics) {
-                            if let nextScreen = selectedScreen.next() {
-                                withAnimation(.easeInOut(duration: 0.6)) {
-                                    selectedScreen = nextScreen
-                                }
-                            } else {
-                                dismiss()
-                            }
+                            viewModel.saveFoodQuality()
                         }
                     }
                 }
             }
         }
-        .navigationTitle("Qualidade")
     }
 }
 
 struct FoodQualityDataView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodQualityDataView(selectedScreen: .constant(.foodQuantity))
+        FoodQualityDataView(viewModel: DataCollectingFlowViewModel(coreDataObserver: HomeViewModel()))
     }
 }

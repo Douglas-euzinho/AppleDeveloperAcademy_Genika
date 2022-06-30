@@ -15,19 +15,25 @@ struct HomeSegmentView: View {
     let highImagePath: String
     var qualityProgressValue: CGFloat
     var quantityProgressValue: QuantityIndicator?
+    var hasBackground: Bool = false
     
     var body: some View {
         GeometryReader { metrics in
             ZStack {
+                Circle()
+                    .fill(hasBackground ? Color(uiColor: .darkGray) : Color.clear)
+                    .frame(width: metrics.size.height * 0.6)
+                    .overlay {
+                        Image(mainImagePath)
+                            .resizable()
+                            .frame(width: metrics.size.height * 0.4,
+                                   height: metrics.size.height * 0.4)
+                    }
+                
                 LinearProgressView(percentage: qualityProgressValue,
                                    metrics: metrics)
                 
                 DashedProgressView(value: quantityProgressValue, metrics: metrics)
-                
-                Image(mainImagePath)
-                    .resizable()
-                    .frame(width: metrics.size.height * 0.4,
-                           height: metrics.size.height * 0.4)
                 
                 VStack {
                     HStack {
@@ -61,7 +67,7 @@ struct HomeSegmentView: View {
     
     @ViewBuilder
     private func createImageIndicator(to imagePath: String, metrics: GeometryProxy) -> some View {
-        Image(systemName: imagePath)
+        Image(imagePath)
             .resizable()
             .frame(width: metrics.size.width * 0.175,
                    height: metrics.size.width * 0.175)

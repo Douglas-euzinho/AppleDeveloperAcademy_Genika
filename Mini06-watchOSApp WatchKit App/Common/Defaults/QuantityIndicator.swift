@@ -7,10 +7,10 @@
 
 import Foundation
 
-enum QuantityIndicator: CaseIterable {
-    case lowest
-    case low
-    case medium
-    case high
-    case highest
+enum QuantityIndicator: Int, CaseIterable {
+    case lowest = 1
+    case low = 2
+    case medium = 3
+    case high = 4
+    case highest = 5
 }

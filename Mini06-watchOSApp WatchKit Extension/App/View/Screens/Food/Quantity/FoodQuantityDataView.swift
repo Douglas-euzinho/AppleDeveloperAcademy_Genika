@@ -9,10 +9,8 @@ import SwiftUI
 
 struct FoodQuantityDataView: View {
     @Environment(\.dismiss) var dismiss
-    @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
-    @State var value1: Int = 0
-    @State var value2: Int = 0
-    
+    @ObservedObject var viewModel: DataCollectingFlowViewModel
+        
     var body: some View {
         GeometryReader { metrics in
             VStack(spacing: 0) {
@@ -27,34 +25,34 @@ struct FoodQuantityDataView: View {
                 .padding(.bottom, .width(10, from: metrics))
                 
                 ScrollView {
-                    FoodQualityRowView(imageName: "☕️", title: "Café", sublabel: "9:00", metrics: metrics) { selected in
-
-                    }
-
-                    FoodQualityRowView(imageName: "🍽", title: "Almoço", sublabel: "13:00", metrics: metrics) { selected in
-
-                    }
-
-                    FoodQualityRowView(imageName: "🛎", title: "Janta", sublabel: "20:00", metrics: metrics) { selected in
-
+                    VStack {
+                        ForEach(FoodQuantityRowModel.allRows) { rowData in
+                            FoodQualityRowView(
+                                imageName: rowData.imageName,
+                                title: rowData.title,
+                                quantifier: rowData.quantifier,
+                                sublabel: rowData.sublabel,
+                                metrics: metrics,
+                                action: { selected in
+                                    viewModel.foodQuantityDataViewModel.setupMealArray(mealDataModel: rowData,
+                                                                                       selected: selected)
+                                }
+                            )
+                        }
                     }
                     .padding(.bottom, .width(16, from: metrics))
                     
                     HStack(spacing: .width(4, from: metrics)) {
-                        FoodQuantityStepper(viewModel: FoodQuantityStepperViewModel(image: "💧", sublabel: "Copos"),
+                        FoodQuantityStepper(viewModel: viewModel.foodQuantityDataViewModel.waterStepper,
                                             metrics: metrics)
-                        FoodQuantityStepper(viewModel: FoodQuantityStepperViewModel(image: "🍌", sublabel: "Lanches"),
+                        FoodQuantityStepper(viewModel: viewModel.foodQuantityDataViewModel.breakStepper,
                                             metrics: metrics)
                     }
                     .padding(.bottom, .width(16, from: metrics))
                     
                     Button {
-                        if let nextScreen = selectedScreen.next() {
-                            withAnimation(.easeInOut(duration: 0.6)) {
-                                selectedScreen = nextScreen
-                            }
-                        } else {
-                            dismiss()
+                        Task {
+                            await viewModel.saveFoodQuantity(dismissAction: dismiss)
                         }
                     } label: {
                         HStack(spacing: 0) {
@@ -77,12 +75,11 @@ struct FoodQuantityDataView: View {
                 }
             }
         }
-        .navigationTitle("Quantidade")
     }
 }
 
 struct FoodQuantityDataView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodQuantityDataView(selectedScreen: .constant(.foodQuantity))
+        FoodQuantityDataView(viewModel: DataCollectingFlowViewModel(coreDataObserver: HomeViewModel()))
     }
 }

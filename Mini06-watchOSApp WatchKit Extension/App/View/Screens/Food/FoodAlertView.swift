@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct FoodAlertView: View {
-    @Environment(\.dismiss) var dismiss
-    @Binding var selectedScreen: DataCollectingFlowView.DataCollectingFlowScreens
+    @ObservedObject var viewModel: DataCollectingFlowViewModel
     
     var body: some View {
         GeometryReader { metrics in
@@ -29,13 +28,7 @@ struct FoodAlertView: View {
                     .padding(.bottom, .height(40, from: metrics))
                 
                 Button {
-                    if let nextScreen = selectedScreen.next() {
-                        withAnimation(.easeInOut(duration: 0.6)) {
-                            selectedScreen = nextScreen
-                        }
-                    } else {
-                        dismiss()
-                    }
+                    viewModel.goToNextScreen()
                 } label: {
                     Text("Continuar")
                         .font(.body)
@@ -44,12 +37,11 @@ struct FoodAlertView: View {
                 }
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct FoodAlertView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodAlertView(selectedScreen: .constant(.foodQuantity))
+        FoodAlertView(viewModel: DataCollectingFlowViewModel(coreDataObserver: HomeViewModel()))
     }
 }

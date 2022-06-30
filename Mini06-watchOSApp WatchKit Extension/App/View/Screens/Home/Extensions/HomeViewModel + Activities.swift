@@ -21,26 +21,20 @@ extension HomeViewModel{
         var amount: Double = 0
         exerciceArray.forEach { exercice in
             amount += Double(exercice.kcalLost)
-            print("deu quanto?", amount)
         }
         
         let average = amount / Double(exerciceArray.count)
         switch average {
         case let exerciceScore where exerciceScore < 100:
             activityQuantityValue = .lowest
-            print("LOWEST")
         case let exerciceScore where exerciceScore < 200:
             activityQuantityValue = .low
-            print("LOW")
         case let exerciceScore where exerciceScore < 300:
             activityQuantityValue = .medium
-            print("MEDIUM")
         case let exerciceScore where exerciceScore < 500:
             activityQuantityValue = .high
-            print("HIGH")
         default:
             activityQuantityValue = .highest
-            print("HIGHEST")
         }
         
         activityFocusDataModel.quantityLabel = String(format: "%.1f", average)

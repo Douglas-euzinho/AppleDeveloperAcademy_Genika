@@ -22,7 +22,7 @@ struct HomeView: View {
             let FirstView = HomeSegmentView(
                 mainImagePath: "main_food_image",
                 lowLabel: "0r", highLabel: "9r",
-                lowImagePath: "book", highImagePath: "star",
+                lowImagePath: "food_bad", highImagePath: "food_good",
                 qualityProgressValue: homeViewModel.foodQualityValue,
                 quantityProgressValue: homeViewModel.foodQuantityValue,
                 hasBackground: showBackground(for: .first)
@@ -31,7 +31,7 @@ struct HomeView: View {
             let SecondView = HomeSegmentView(
                 mainImagePath: "main_activity_image",
                 lowLabel: "0d", highLabel: "7d",
-                lowImagePath: "book", highImagePath: "star",
+                lowImagePath: "activity_bad", highImagePath: "activity_good",
                 qualityProgressValue: homeViewModel.activityQualityValue,
                 quantityProgressValue: homeViewModel.activityQuantityValue,
                 hasBackground: showBackground(for: .second)
@@ -40,7 +40,7 @@ struct HomeView: View {
             let ThirdView = HomeSegmentView(
                 mainImagePath: "main_sleep_image",
                 lowLabel: "0h", highLabel: "11h",
-                lowImagePath: "book", highImagePath: "star",
+                lowImagePath: "sleep_bad", highImagePath: "sleep_good",
                 qualityProgressValue: homeViewModel.sleepQualityValue,
                 quantityProgressValue: homeViewModel.sleepQuantityValue,
                 hasBackground: showBackground(for: .third)
@@ -49,7 +49,7 @@ struct HomeView: View {
             let FourthView = HomeSegmentView(
                 mainImagePath: "main_emotional_image",
                 lowLabel: "fra", highLabel: "int",
-                lowImagePath: "book", highImagePath: "star",
+                lowImagePath: "emotional_bad", highImagePath: "emotional_good",
                 qualityProgressValue: homeViewModel.emotionalQualityValue,
                 quantityProgressValue: homeViewModel.emotionalQuantityValue,
                 hasBackground: showBackground(for: .fourth)

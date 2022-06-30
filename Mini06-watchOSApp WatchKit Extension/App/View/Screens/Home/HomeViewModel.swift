@@ -27,9 +27,7 @@ class HomeViewModel: ObservableObject, CoreDataObserverProtocol {
     @Published var emotionalFocusDataModel: FocusDataModel
     
     init() {
-        foodFocusDataModel = FocusDataModel(title: "Alimentação",
-                                            qualityLabel: "Ruim",
-                                            quantityLabel: "1 Refeição")
+        foodFocusDataModel = FocusDataModel(title: "Alimentação")
         
         activityFocusDataModel = FocusDataModel(title: "Atividades",
                                                 qualityLabel: "Pesado",

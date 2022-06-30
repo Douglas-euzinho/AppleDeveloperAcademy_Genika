@@ -98,6 +98,19 @@ extension HomeViewModel{
         
         let qualityAverage = qualityAmount / Double(exerciceArray.count)
         activityQualityValue = (100 * qualityAverage) / 12
+        
+        switch activityQualityValue{
+        case let quality where quality <= 20:
+            activityFocusDataModel.qualityLabel = "Muito Leve"
+        case let quality where quality <= 40:
+            activityFocusDataModel.qualityLabel = "Leve"
+        case let quality where quality <= 60:
+            activityFocusDataModel.qualityLabel = "Regular"
+        case let quality where quality <= 80:
+            activityFocusDataModel.qualityLabel = "Ótimo"
+        default:
+            activityFocusDataModel.qualityLabel = "Excelente"
+        }
     }
 }
 

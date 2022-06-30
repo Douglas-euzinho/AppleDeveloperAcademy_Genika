@@ -35,7 +35,7 @@ struct PersistenceController {
         }
         persistenceContainer.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
-                print("deu ruim", error)
+                print("[Persistent Store] Error: ", error)
             }
         }
     }
@@ -43,12 +43,11 @@ struct PersistenceController {
     // MARK: - CORE DATA METHODS
     
     mutating func saveContext() throws {
-        if context.hasChanges{
+        if context.hasChanges {
             do{
                 try context.save()
-                debugPrint(SucessType.sucessSaving)
             } catch {
-                debugPrint(ErrorType.notSaved)
+                print("[Core Data] Save Error: \(error)")
             }
         }
     }
@@ -57,10 +56,9 @@ struct PersistenceController {
         context.delete(object)
         do{
             try saveContext()
-            debugPrint(SucessType.sucessDeleting)
             return true
-        } catch{
-            debugPrint(ErrorType.notDeleted)
+        } catch {
+            print("[Core Data] Deletion Error: \(error)")
             return false
         }
     }

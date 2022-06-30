@@ -67,7 +67,7 @@ struct HomeSegmentView: View {
     
     @ViewBuilder
     private func createImageIndicator(to imagePath: String, metrics: GeometryProxy) -> some View {
-        Image(systemName: imagePath)
+        Image(imagePath)
             .resizable()
             .frame(width: metrics.size.width * 0.175,
                    height: metrics.size.width * 0.175)

@@ -18,7 +18,6 @@ extension HomeViewModel{
         var amount: Double = 0.0
         emotionalArray.forEach { emotional in
             amount += Double(emotional.intensity)
-            print("deu quanto?", amount)
         }
         
         let average = amount / Double(emotionalArray.count)
@@ -27,35 +26,23 @@ extension HomeViewModel{
             emotionalQuantityValue = .lowest
             emotionalFocusDataModel.qualityLabel = "Negativo"
             emotionalFocusDataModel.quantityLabel = "Muito Baixa"
-            print("LOWEST")
         case let emotionalScore where emotionalScore <= 2:
             emotionalQuantityValue = .low
             emotionalFocusDataModel.qualityLabel = "Negativo"
             emotionalFocusDataModel.quantityLabel = "Baixa"
-            print("LOW")
         case let emotionalScore where emotionalScore <= 3:
             emotionalQuantityValue = .medium
             emotionalFocusDataModel.qualityLabel = "Neutro"
             emotionalFocusDataModel.quantityLabel = "Média"
-            print("MEDIUM")
         case let emotionalScore where emotionalScore <= 4:
             emotionalQuantityValue = .high
             emotionalFocusDataModel.qualityLabel = "Positivo"
             emotionalFocusDataModel.quantityLabel = "Alta"
-            print("HIGH")
         default:
             emotionalQuantityValue = .highest
             emotionalFocusDataModel.qualityLabel = "Positivo"
             emotionalFocusDataModel.quantityLabel = "Muito Alta"
-            print("HIGHEST")
         }
-        
-//        emotionalFocusDataModel.quantityLabel = String(format: "%.1f", average)
-//        if average == 1.0 {
-//            emotionalFocusDataModel.quantityLabel.append(" ")
-//        } else {
-//            emotionalFocusDataModel.quantityLabel.append(" ")
-//        }
         
         var qualityAmount: Double = 0
         emotionalArray.forEach { emotional in

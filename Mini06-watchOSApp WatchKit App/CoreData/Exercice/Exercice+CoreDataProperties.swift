@@ -21,6 +21,7 @@ extension Exercice {
     @NSManaged public var distanceWalked: Double
     @NSManaged public var id: UUID?
     @NSManaged public var kcalLost: Int64
+    @NSManaged public var bpmWalking: Int64
     @NSManaged public var bpm: NSSet?
     @NSManaged public var dailyGeneral: DailyGeneral?
 

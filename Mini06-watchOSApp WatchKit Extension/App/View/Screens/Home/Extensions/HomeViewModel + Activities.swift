@@ -18,31 +18,27 @@ extension HomeViewModel{
         }
         
         //quantity
-        var amount: Double = 0
+        var amount: Double = 0.0
         exerciceArray.forEach { exercice in
-            amount += Double(exercice.kcalLost)
+            amount += Double(exercice.bpmWalking)
         }
         
         let average = amount / Double(exerciceArray.count)
         switch average {
-        case let exerciceScore where exerciceScore < 100:
+        case let bpm where bpm < 40:
             activityQuantityValue = .lowest
-        case let exerciceScore where exerciceScore < 200:
+        case let bpm where bpm < 80:
             activityQuantityValue = .low
-        case let exerciceScore where exerciceScore < 300:
+        case let bpm where bpm < 120:
             activityQuantityValue = .medium
-        case let exerciceScore where exerciceScore < 500:
+        case let bpm where bpm < 160:
             activityQuantityValue = .high
         default:
             activityQuantityValue = .highest
         }
         
-        activityFocusDataModel.quantityLabel = String(format: "%.1f", average)
-        if average == 1.0 {
-            activityFocusDataModel.quantityLabel.append(" ")
-        } else {
-            activityFocusDataModel.quantityLabel.append(" ")
-        }
+        activityFocusDataModel.quantityLabel = "\(Int(average)) BPM"
+
         
         //quality
         var qualityAmount: Double = 0
@@ -107,7 +103,3 @@ extension HomeViewModel{
         }
     }
 }
-
-//Passos remomendados: 10.000
-//calorias gastas: 300
-//distancia andada: 6

@@ -43,13 +43,14 @@ struct PermissionView: View{
                         Spacer(minLength: 10)
                         
                         PermissionButtonView(text: "Permitir", metrics: metrics){
-                            HealthKitFunctions.shared.autorizeHealthKit()
-                            if let nextScreen = selectedScreen.next() {
-                                withAnimation(.easeInOut(duration: 0.6)) {
-                                    selectedScreen = nextScreen
+                            HealthStoreManager.shared.autorizeHealthKit(){
+                                if let nextScreen = selectedScreen.next() {
+                                    withAnimation(.easeInOut(duration: 0.6)) {
+                                        selectedScreen = nextScreen
+                                    }
+                                } else {
+                                    dismiss()
                                 }
-                            } else {
-                                dismiss()
                             }
                         }
                     }

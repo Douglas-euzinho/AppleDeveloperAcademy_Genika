@@ -22,7 +22,7 @@ extension HomeViewModel{
         
         let average = amount / Double(sleepArray.count)
         switch average {
-        case let sleepTime where sleepTime < 2:
+        case let sleepTime where sleepTime < 3:
             sleepQuantityValue = .lowest
             sleepQualityValue = 0
         case let sleepTime where sleepTime < 6:
@@ -41,9 +41,9 @@ extension HomeViewModel{
         
         sleepFocusDataModel.quantityLabel = String(format: "%.1f", average)
         if average == 1.0 {
-            sleepFocusDataModel.quantityLabel.append(" hora")
+            sleepFocusDataModel.quantityLabel.append(" Hora")
         } else {
-            sleepFocusDataModel.quantityLabel.append(" horas")
+            sleepFocusDataModel.quantityLabel.append(" Horas")
         }
     }
 }

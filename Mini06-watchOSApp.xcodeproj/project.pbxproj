@@ -44,7 +44,7 @@
 		50A3DEFB28580A59007952F8 /* EmotionalIntensiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DEFA28580A59007952F8 /* EmotionalIntensiveView.swift */; };
 		50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DEFD285920B3007952F8 /* View+CornerRadius.swift */; };
 		50A3DF0028592116007952F8 /* QuantityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A3DEFF28592116007952F8 /* QuantityIndicator.swift */; };
-		50BCEC3C284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		50BCEC3C284EC02100C85359 /* Genika.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 50BCEC3B284EC02100C85359 /* Genika.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		50BCEC41284EC02200C85359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BCEC40284EC02200C85359 /* Assets.xcassets */; };
 		50BCEC47284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 50BCEC46284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		50BCEC4C284EC02300C85359 /* Mini06_watchOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BCEC4B284EC02300C85359 /* Mini06_watchOSAppApp.swift */; };
@@ -104,7 +104,6 @@
 		FBBAED8C2866298D00CFD86E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBAED8B2866298D00CFD86E /* HealthKit.framework */; };
 		FBBAED8F28662B2100CFD86E /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED8E28662B2100CFD86E /* PermissionView.swift */; };
 		FBBAED9228662D4700CFD86E /* PermissionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED9128662D4700CFD86E /* PermissionButtonView.swift */; };
-		FBBAED942866367500CFD86E /* HealthKitFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED932866367500CFD86E /* HealthKitFunctions.swift */; };
 		FBBAED972866415600CFD86E /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED962866415600CFD86E /* WarningView.swift */; };
 		FBBAEDD728690D7200CFD86E /* PermissionFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAEDD628690D7100CFD86E /* PermissionFlowView.swift */; };
 /* End PBXBuildFile section */
@@ -144,7 +143,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				50BCEC3C284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app in Embed Watch Content */,
+				50BCEC3C284EC02100C85359 /* Genika.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,8 +187,8 @@
 		50A3DEFA28580A59007952F8 /* EmotionalIntensiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalIntensiveView.swift; sourceTree = "<group>"; };
 		50A3DEFD285920B3007952F8 /* View+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
 		50A3DEFF28592116007952F8 /* QuantityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityIndicator.swift; sourceTree = "<group>"; };
-		50BCEC37284EC02100C85359 /* Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini06-watchOSApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50BCEC37284EC02100C85359 /* Genika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genika.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50BCEC3B284EC02100C85359 /* Genika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BCEC40284EC02200C85359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50BCEC46284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mini06-watchOSApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BCEC4B284EC02300C85359 /* Mini06_watchOSAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini06_watchOSAppApp.swift; sourceTree = "<group>"; };
@@ -253,7 +252,6 @@
 		FBBAED8B2866298D00CFD86E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		FBBAED8E28662B2100CFD86E /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
 		FBBAED9128662D4700CFD86E /* PermissionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionButtonView.swift; sourceTree = "<group>"; };
-		FBBAED932866367500CFD86E /* HealthKitFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitFunctions.swift; sourceTree = "<group>"; };
 		FBBAED962866415600CFD86E /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
 		FBBAEDD628690D7100CFD86E /* PermissionFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionFlowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -431,8 +429,8 @@
 		50BCEC38284EC02100C85359 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50BCEC37284EC02100C85359 /* Watch App.app */,
-				50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */,
+				50BCEC37284EC02100C85359 /* Genika.app */,
+				50BCEC3B284EC02100C85359 /* Genika.app */,
 				50BCEC46284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension.appex */,
 			);
 			name = Products;
@@ -499,7 +497,6 @@
 				50DCF89A2857BA410053887C /* Defaults */,
 				50DCF8952857B1F50053887C /* Extensions */,
 				50BFDB94286B900200706E55 /* HealthStoreManager.swift */,
-				FBBAED932866367500CFD86E /* HealthKitFunctions.swift */,
 				50BFDB9A286BD81E00706E55 /* CoreDataObserverProtocol.swift */,
 			);
 			path = Common;
@@ -718,7 +715,7 @@
 			);
 			name = "Mini06-watchOSApp";
 			productName = "Mini06-watchOSApp";
-			productReference = 50BCEC37284EC02100C85359 /* Watch App.app */;
+			productReference = 50BCEC37284EC02100C85359 /* Genika.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
 		50BCEC3A284EC02100C85359 /* Mini06-watchOSApp WatchKit App */ = {
@@ -735,7 +732,7 @@
 			);
 			name = "Mini06-watchOSApp WatchKit App";
 			productName = "Mini06-watchOSApp WatchKit App";
-			productReference = 50BCEC3B284EC02100C85359 /* Mini06-watchOSApp WatchKit App.app */;
+			productReference = 50BCEC3B284EC02100C85359 /* Genika.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		50BCEC45284EC02300C85359 /* Mini06-watchOSApp WatchKit Extension */ = {
@@ -839,7 +836,6 @@
 				50DCF8A52857CAAC0053887C /* EmotionalView.swift in Sources */,
 				50BFDB9B286BD81E00706E55 /* CoreDataObserverProtocol.swift in Sources */,
 				50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */,
-				FBBAED942866367500CFD86E /* HealthKitFunctions.swift in Sources */,
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
 				50DCF8A02857BAD60053887C /* RoundedRectangleButton.swift in Sources */,
 				FBBAED5D2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift in Sources */,
@@ -1070,7 +1066,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = Genika;
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = Mini06_watchOSApp_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Queremos utilizar seus dados do HealthKit";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Permission for update healthData";
@@ -1082,7 +1078,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.dev.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1105,7 +1101,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = Genika;
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = Mini06_watchOSApp_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Queremos utilizar seus dados do HealthKit";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Permission for update healthData";
@@ -1117,7 +1113,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.dev.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1140,7 +1136,6 @@
 				DEVELOPMENT_TEAM = 79MM5G543B;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1148,8 +1143,8 @@
 					"@loader_path/../Frameworks",
 				);
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.dev.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp";
+				PRODUCT_NAME = Genika;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1173,7 +1168,6 @@
 				DEVELOPMENT_TEAM = 79MM5G543B;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1181,8 +1175,8 @@
 					"@loader_path/../Frameworks",
 				);
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.dev.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp";
+				PRODUCT_NAME = Genika;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1200,8 +1194,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79MM5G543B;
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.dev";
-				PRODUCT_NAME = "Watch App";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp";
+				PRODUCT_NAME = Genika;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1213,8 +1207,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79MM5G543B;
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.dev";
-				PRODUCT_NAME = "Watch App";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp";
+				PRODUCT_NAME = Genika;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

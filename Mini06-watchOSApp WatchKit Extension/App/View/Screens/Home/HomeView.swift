@@ -97,7 +97,7 @@ struct HomeView: View {
                 }
             }
         }
-        .navigationTitle("Health")
+        .navigationTitle("Genika")
         .navigationBarTitleDisplayMode(.inline)
     }
     

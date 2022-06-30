@@ -41,6 +41,7 @@
         <relationship name="emojiCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EmojiCategory" inverseName="emotional" inverseEntity="EmojiCategory"/>
     </entity>
     <entity name="Exercice" representedClassName="Exercice" syncable="YES">
+        <attribute name="bpmWalking" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="countSteps" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="didExercice" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="distanceWalked" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
@@ -68,7 +69,7 @@
         <element name="DailyGeneral" positionX="204.7425537109375" positionY="92.7318115234375" width="128" height="133"/>
         <element name="EmojiCategory" positionX="364.912109375" positionY="284.9370727539062" width="128" height="74"/>
         <element name="Emotional" positionX="505.978759765625" positionY="92.42556762695307" width="128" height="104"/>
-        <element name="Exercice" positionX="355.6248779296875" positionY="-154.8063812255859" width="128" height="148"/>
+        <element name="Exercice" positionX="355.6248779296875" positionY="-154.8063812255859" width="128" height="163"/>
         <element name="Meal" positionX="-261.6838989257812" positionY="275.4921875" width="128" height="103"/>
         <element name="Sleep" positionX="-149.8770751953125" positionY="-14.95698547363281" width="128" height="103"/>
     </elements>

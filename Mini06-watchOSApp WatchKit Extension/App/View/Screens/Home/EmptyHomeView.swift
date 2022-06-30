@@ -41,7 +41,7 @@ struct EmptyHomeView: View {
             PermissionFlowView(homeViewModel: homeViewModel)
         })
         .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle("Health")
+        .navigationTitle("Genika")
     }
 }
 

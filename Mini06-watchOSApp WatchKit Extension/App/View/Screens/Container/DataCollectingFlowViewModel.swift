@@ -72,7 +72,9 @@ class DataCollectingFlowViewModel: ObservableObject {
             let stepCount = try? await HealthStoreManager.shared.getStepCount()
             let kcalLost = try? await HealthStoreManager.shared.getKcalLost()
             let distanceWalked = try? await HealthStoreManager.shared.getDistanceWalked()
-            let exercice = try PersistenceController.shared.createExercice(stepCount: stepCount ?? 0, kcalLost: kcalLost ?? 0, distanceWalked: distanceWalked ?? 0.0)
+            let bpmAverage = try? await HealthStoreManager.shared.getBpmWalking()
+            
+            let exercice = try PersistenceController.shared.createExercice(stepCount: stepCount ?? 0, kcalLost: kcalLost ?? 0, distanceWalked: distanceWalked ?? 0.0,average: bpmAverage ?? 0)
             
             try data.saveData(sleep: sleep, exercice: exercice)
             

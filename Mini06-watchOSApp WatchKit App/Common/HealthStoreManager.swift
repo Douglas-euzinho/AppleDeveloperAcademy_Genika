@@ -102,6 +102,7 @@ struct HealthStoreManager {
                     }
                     
                     guard let sample = samples?.first as? HKCategorySample else {
+                        continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
                         return
                     }
                     
@@ -132,6 +133,7 @@ struct HealthStoreManager {
                     }
                     
                     guard let sample = samples?.first as? HKCategorySample else {
+                        continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
                         return
                     }
                     
@@ -165,6 +167,7 @@ struct HealthStoreManager {
                     }
                     
                     guard let sample = samples?.first as? HKCategorySample else {
+                        continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
                         return
                     }
                     

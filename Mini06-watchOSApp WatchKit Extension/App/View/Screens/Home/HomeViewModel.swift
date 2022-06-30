@@ -57,7 +57,7 @@ class HomeViewModel: ObservableObject, CoreDataObserverProtocol {
             .filter({ (lastWeekDate...today).contains($0) })
         
         hasRecordForToday = recordsDate.contains(where: { Calendar.current.isDateInToday($0) })
-        
+        updateAlimentationData(alimentationArray: allDailyGeneral.compactMap({ $0.alimentation }))
         updateSleepData(sleepArray: allDailyGeneral.compactMap({ $0.sleep }))
     }
     
@@ -92,6 +92,41 @@ class HomeViewModel: ObservableObject, CoreDataObserverProtocol {
             sleepFocusDataModel.quantityLabel.append(" hora")
         } else {
             sleepFocusDataModel.quantityLabel.append(" horas")
+        }
+    }
+    
+    private func updateAlimentationData(alimentationArray: [Alimentation]) {
+        guard !alimentationArray.isEmpty else {
+            foodQuantityValue = .none
+            foodFocusDataModel.quantityLabel = ""
+            return
+        }
+        
+        var amount: Double = 0.0
+        alimentationArray.forEach { alimentation in
+            amount += Double(alimentation.breakCount)
+            amount += Double(alimentation.meal?.count ?? 0)
+        }
+        
+        let average = amount / Double(alimentationArray.count)
+        switch average {
+        case let foodQuantity where foodQuantity < 2:
+            foodQuantityValue = .lowest
+        case let foodQuantity where foodQuantity < 4:
+            foodQuantityValue = .low
+        case let foodQuantity where foodQuantity < 7:
+            foodQuantityValue = .medium
+        case let foodQuantity where foodQuantity < 8:
+            foodQuantityValue = .high
+        default:
+            foodQuantityValue = .highest
+        }
+        
+        foodFocusDataModel.quantityLabel = String(format: "%.1f", average)
+        if average == 1.0 {
+            foodFocusDataModel.quantityLabel.append(" Refeição")
+        } else {
+            foodFocusDataModel.quantityLabel.append(" Refeições")
         }
     }
 }

@@ -24,11 +24,28 @@ struct HealthStoreManager {
     let distanceWalked = HKQuantityType(.distanceWalkingRunning)
     let bpmWalking = HKQuantityType(.walkingHeartRateAverage)
     
+    private let healthKitTypesToRead: Set = [
+        HKCategoryType(.sleepAnalysis),
+        HKQuantityType(.stepCount),
+        HKQuantityType(.activeEnergyBurned),
+        HKQuantityType(.distanceWalkingRunning),
+        HKQuantityType(.walkingHeartRateAverage)
+    ]
+    
     private init() {
         if HKHealthStore.isHealthDataAvailable() {
             healthStore = HKHealthStore()
         } else {
             healthStore = nil
+        }
+    }
+
+    func autorizeHealthKit(completion: @escaping () -> Void) {
+        Task {
+            let _ = await requestAuthorization(forRead: healthKitTypesToRead, forShare: [])
+            DispatchQueue.main.async {
+                completion()
+            }
         }
     }
     

@@ -104,7 +104,6 @@
 		FBBAED8C2866298D00CFD86E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBAED8B2866298D00CFD86E /* HealthKit.framework */; };
 		FBBAED8F28662B2100CFD86E /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED8E28662B2100CFD86E /* PermissionView.swift */; };
 		FBBAED9228662D4700CFD86E /* PermissionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED9128662D4700CFD86E /* PermissionButtonView.swift */; };
-		FBBAED942866367500CFD86E /* HealthKitFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED932866367500CFD86E /* HealthKitFunctions.swift */; };
 		FBBAED972866415600CFD86E /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED962866415600CFD86E /* WarningView.swift */; };
 		FBBAEDD728690D7200CFD86E /* PermissionFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAEDD628690D7100CFD86E /* PermissionFlowView.swift */; };
 /* End PBXBuildFile section */
@@ -253,7 +252,6 @@
 		FBBAED8B2866298D00CFD86E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		FBBAED8E28662B2100CFD86E /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
 		FBBAED9128662D4700CFD86E /* PermissionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionButtonView.swift; sourceTree = "<group>"; };
-		FBBAED932866367500CFD86E /* HealthKitFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitFunctions.swift; sourceTree = "<group>"; };
 		FBBAED962866415600CFD86E /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
 		FBBAEDD628690D7100CFD86E /* PermissionFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionFlowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -499,7 +497,6 @@
 				50DCF89A2857BA410053887C /* Defaults */,
 				50DCF8952857B1F50053887C /* Extensions */,
 				50BFDB94286B900200706E55 /* HealthStoreManager.swift */,
-				FBBAED932866367500CFD86E /* HealthKitFunctions.swift */,
 				50BFDB9A286BD81E00706E55 /* CoreDataObserverProtocol.swift */,
 			);
 			path = Common;
@@ -840,7 +837,6 @@
 				50DCF8A52857CAAC0053887C /* EmotionalView.swift in Sources */,
 				50BFDB9B286BD81E00706E55 /* CoreDataObserverProtocol.swift in Sources */,
 				50FE6AF7285186C9007F6073 /* HomeSegmentView.swift in Sources */,
-				FBBAED942866367500CFD86E /* HealthKitFunctions.swift in Sources */,
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
 				50DCF8A02857BAD60053887C /* RoundedRectangleButton.swift in Sources */,
 				FBBAED5D2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift in Sources */,

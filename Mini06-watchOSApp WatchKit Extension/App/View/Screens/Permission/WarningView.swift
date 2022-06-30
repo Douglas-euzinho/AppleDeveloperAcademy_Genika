@@ -11,7 +11,7 @@ struct WarningView: View{
     
     @Environment(\.dismiss) var dismiss
     @Binding var selectedScreen: PermissionFlowView.PermissionFlowScreens
-    let name: String = "xxx"
+    let name: String = "Genika"
 
     var body: some View{
         

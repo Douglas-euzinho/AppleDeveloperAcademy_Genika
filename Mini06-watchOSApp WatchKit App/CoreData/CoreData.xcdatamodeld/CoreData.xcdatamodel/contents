@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Alimentation" representedClassName="Alimentation" syncable="YES">
         <attribute name="breakCount" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
@@ -56,12 +56,8 @@
         <relationship name="alimentation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Alimentation" inverseName="meal" inverseEntity="Alimentation"/>
     </entity>
     <entity name="Sleep" representedClassName="Sleep" syncable="YES">
-        <attribute name="finalSleepHour" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="initialSleepHour" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="score" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="timeInBed" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="timeSleeping" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="timeSleeping" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="timesWakeUp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="dailyGeneral" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyGeneral" inverseName="sleep" inverseEntity="DailyGeneral"/>
     </entity>
@@ -74,6 +70,6 @@
         <element name="Emotional" positionX="505.978759765625" positionY="92.42556762695307" width="128" height="104"/>
         <element name="Exercice" positionX="355.6248779296875" positionY="-154.8063812255859" width="128" height="148"/>
         <element name="Meal" positionX="-261.6838989257812" positionY="275.4921875" width="128" height="103"/>
-        <element name="Sleep" positionX="-149.8770751953125" positionY="-14.95698547363281" width="128" height="163"/>
+        <element name="Sleep" positionX="-149.8770751953125" positionY="-14.95698547363281" width="128" height="103"/>
     </elements>
 </model>

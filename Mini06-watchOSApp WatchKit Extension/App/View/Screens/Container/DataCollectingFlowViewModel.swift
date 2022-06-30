@@ -66,8 +66,8 @@ class DataCollectingFlowViewModel: ObservableObject {
     
     func updateCoreData() async {
         do {
-            let timeSleeping = try? await HealthStoreManager.shared.getSleepTime()
-            let sleep = try PersistenceController.shared.createSleep(timeSleeping: Int(timeSleeping ?? 0.0))
+            let timeSleeping = try await HealthStoreManager.shared.getSleepTime()
+            let sleep = try PersistenceController.shared.createSleep(timeSleeping: timeSleeping)
             
             let stepCount = try? await HealthStoreManager.shared.getStepCount()
             let kcalLost = try? await HealthStoreManager.shared.getKcalLost()

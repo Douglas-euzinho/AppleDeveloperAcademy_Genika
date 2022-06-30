@@ -108,6 +108,8 @@ struct OnboardingFlowView: View {
                     }),
                 including: screenSelected == .main ? .subviews : .all)
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle("Genika")
     }
     
     func presentMainScreen() {

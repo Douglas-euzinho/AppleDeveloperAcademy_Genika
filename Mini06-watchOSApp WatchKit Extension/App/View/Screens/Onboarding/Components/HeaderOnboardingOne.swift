@@ -13,8 +13,23 @@ struct HeaderOnboardingOne: View {
     var body: some View {
         HStack {
             RoundedRectangle(cornerRadius: .width(8, from: metrics))
+                .fill(Color.clear)
                 .frame(width: .width(137, from: metrics),
                        height: .width(34, from: metrics))
+                .overlay {
+                    ZStack {
+                        HStack(spacing: 0) {
+                            Image("genika_logo")
+                                .resizable()
+                                .frame(width: .width(97, from: metrics),
+                                       height: .width(16, from: metrics))
+                                .padding(.leading, .width(8, from: metrics))
+                            
+                            Spacer()
+                        }
+                    }
+                }
+            
             Spacer()
         }
     }

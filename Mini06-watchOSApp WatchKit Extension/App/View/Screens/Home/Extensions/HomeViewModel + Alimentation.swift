@@ -51,11 +51,11 @@ extension HomeViewModel{
             var quality: Double = 0
             
             switch waterCount{
-            case let count where count < 1:
+            case let count where count < 5:
                 break
-            case let count where count < 2:
+            case let count where count < 10:
                 quality += 1
-            case let count where count < 3:
+            case let count where count < 15:
                 quality += 2
             default:
                 quality += 3

@@ -76,6 +76,10 @@
 		50FE6AFC28528D56007F6073 /* RoundedTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AFB28528D56007F6073 /* RoundedTriangle.swift */; };
 		50FE6AFE28528D95007F6073 /* CircularSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AFD28528D95007F6073 /* CircularSegment.swift */; };
 		50FE6B0028528DB2007F6073 /* DashedProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE6AFF28528DB2007F6073 /* DashedProgressView.swift */; };
+		FB0B56E1286D26C600FDADE6 /* HomeViewModel + Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0B56E0286D26C600FDADE6 /* HomeViewModel + Activities.swift */; };
+		FB0B56E3286D270A00FDADE6 /* HomeViewModel + Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0B56E2286D270A00FDADE6 /* HomeViewModel + Sleep.swift */; };
+		FB0B56E5286D271E00FDADE6 /* HomeViewModel + Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0B56E4286D271E00FDADE6 /* HomeViewModel + Feeling.swift */; };
+		FB0B56E7286D272E00FDADE6 /* HomeViewModel + Alimentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0B56E6286D272E00FDADE6 /* HomeViewModel + Alimentation.swift */; };
 		FBBAED462860F0DD00CFD86E /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED442860F0DD00CFD86E /* CoreData.xcdatamodeld */; };
 		FBBAED5B2860F5FD00CFD86E /* Emotional+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED492860F5FD00CFD86E /* Emotional+CoreDataClass.swift */; };
 		FBBAED5C2860F5FD00CFD86E /* Emotional+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED4A2860F5FD00CFD86E /* Emotional+CoreDataProperties.swift */; };
@@ -219,6 +223,10 @@
 		50FE6AFB28528D56007F6073 /* RoundedTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTriangle.swift; sourceTree = "<group>"; };
 		50FE6AFD28528D95007F6073 /* CircularSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSegment.swift; sourceTree = "<group>"; };
 		50FE6AFF28528DB2007F6073 /* DashedProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedProgressView.swift; sourceTree = "<group>"; };
+		FB0B56E0286D26C600FDADE6 /* HomeViewModel + Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewModel + Activities.swift"; sourceTree = "<group>"; };
+		FB0B56E2286D270A00FDADE6 /* HomeViewModel + Sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewModel + Sleep.swift"; sourceTree = "<group>"; };
+		FB0B56E4286D271E00FDADE6 /* HomeViewModel + Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewModel + Feeling.swift"; sourceTree = "<group>"; };
+		FB0B56E6286D272E00FDADE6 /* HomeViewModel + Alimentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewModel + Alimentation.swift"; sourceTree = "<group>"; };
 		FBBAED452860F0DD00CFD86E /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		FBBAED482860F5FD00CFD86E /* Mini06-watchOSApp WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mini06-watchOSApp WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		FBBAED492860F5FD00CFD86E /* Emotional+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emotional+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -267,7 +275,6 @@
 			children = (
 				50BFDB9D286BD90B00706E55 /* Others */,
 				50BFDB9C286BD8BE00706E55 /* Persistence */,
-				FBBAED932866367500CFD86E /* HealthKitFunctions.swift */,
 				FBBAED432860F0B100CFD86E /* CoreData */,
 				FBBAED882865FEDB00CFD86E /* DataCollectors */,
 			);
@@ -401,6 +408,7 @@
 		509E5D8E28515CCC00393673 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FB0B56DF286D268C00FDADE6 /* Extensions */,
 				50FE6AF228518685007F6073 /* Components */,
 				509E5D8F28515CFB00393673 /* HomeView.swift */,
 				50FE6AED2851861B007F6073 /* HomeViewModel.swift */,
@@ -491,6 +499,7 @@
 				50DCF89A2857BA410053887C /* Defaults */,
 				50DCF8952857B1F50053887C /* Extensions */,
 				50BFDB94286B900200706E55 /* HealthStoreManager.swift */,
+				FBBAED932866367500CFD86E /* HealthKitFunctions.swift */,
 				50BFDB9A286BD81E00706E55 /* CoreDataObserverProtocol.swift */,
 			);
 			path = Common;
@@ -575,6 +584,17 @@
 				50957B0E285F5DC000C908BB /* RoundedSquareButton.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		FB0B56DF286D268C00FDADE6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FB0B56E0286D26C600FDADE6 /* HomeViewModel + Activities.swift */,
+				FB0B56E2286D270A00FDADE6 /* HomeViewModel + Sleep.swift */,
+				FB0B56E4286D271E00FDADE6 /* HomeViewModel + Feeling.swift */,
+				FB0B56E6286D272E00FDADE6 /* HomeViewModel + Alimentation.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FBBAED432860F0B100CFD86E /* CoreData */ = {
@@ -824,15 +844,18 @@
 				50BCEC50284EC02300C85359 /* NotificationController.swift in Sources */,
 				50DCF8A02857BAD60053887C /* RoundedRectangleButton.swift in Sources */,
 				FBBAED5D2860F5FD00CFD86E /* Alimentation+CoreDataClass.swift in Sources */,
+				FB0B56E3286D270A00FDADE6 /* HomeViewModel + Sleep.swift in Sources */,
 				50BFDBA3286BD9A900706E55 /* PersistenceController+Sleep.swift in Sources */,
 				50350D1728664B27003CD461 /* HomePlaceholderView.swift in Sources */,
 				36135565286CCB88001A6452 /* PersistenceController+Exercice.swift in Sources */,
 				FBBAED622860F5FD00CFD86E /* Sleep+CoreDataProperties.swift in Sources */,
 				50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */,
 				507BE86C286A3FE500B0B46A /* DataEmotionalCollector.swift in Sources */,
+				FB0B56E7286D272E00FDADE6 /* HomeViewModel + Alimentation.swift in Sources */,
 				505F172828626EA8002D6BF5 /* OnboardingText.swift in Sources */,
 				50BFDB9F286BD94100706E55 /* PersistenceController+Emotional.swift in Sources */,
 				50DCF8992857BA340053887C /* View+AppColor.swift in Sources */,
+				FB0B56E1286D26C600FDADE6 /* HomeViewModel + Activities.swift in Sources */,
 				FBBAED692860F5FD00CFD86E /* Exercice+CoreDataClass.swift in Sources */,
 				FBBAED9228662D4700CFD86E /* PermissionButtonView.swift in Sources */,
 				50DCF8972857B2130053887C /* CGFloat+ScreenMetrics.swift in Sources */,
@@ -882,6 +905,7 @@
 				FBBAED672860F5FD00CFD86E /* EmojiCategory+CoreDataClass.swift in Sources */,
 				FBBAED5F2860F5FD00CFD86E /* Bpm+CoreDataClass.swift in Sources */,
 				509C88A12863A12D004703D2 /* UserDefaults+ManagingValues.swift in Sources */,
+				FB0B56E5286D271E00FDADE6 /* HomeViewModel + Feeling.swift in Sources */,
 				505F172128626CDE002D6BF5 /* HeaderOnboardingOne.swift in Sources */,
 				FBBAED642860F5FD00CFD86E /* Meal+CoreDataProperties.swift in Sources */,
 				505F171E28626C93002D6BF5 /* OnboardingBarGraphicModel.swift in Sources */,
@@ -1042,7 +1066,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 79MM5G543B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
@@ -1058,7 +1082,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.dev.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1077,7 +1101,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 79MM5G543B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini06-watchOSApp WatchKit Extension/Info.plist";
@@ -1093,7 +1117,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.dev.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1113,7 +1137,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 79MM5G543B;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
@@ -1124,7 +1148,7 @@
 					"@loader_path/../Frameworks",
 				);
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.dev.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1146,7 +1170,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 79MM5G543B;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Mini06_watchOSApp_WatchKit_Extension;
 				INFOPLIST_KEY_CFBundleDisplayName = "Mini06-watchOSApp WatchKit App";
@@ -1157,7 +1181,7 @@
 					"@loader_path/../Frameworks",
 				);
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.dev.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1174,9 +1198,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 79MM5G543B;
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.dev";
 				PRODUCT_NAME = "Watch App";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1187,9 +1211,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 79MM5G543B;
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.app.Mini06-watchOSApp.dev";
 				PRODUCT_NAME = "Watch App";
 				SWIFT_VERSION = 5.0;
 			};

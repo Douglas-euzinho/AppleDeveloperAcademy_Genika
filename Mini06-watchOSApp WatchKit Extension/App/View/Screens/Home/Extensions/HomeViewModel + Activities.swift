@@ -57,7 +57,7 @@ extension HomeViewModel{
             
             switch exercice.countSteps{
             case let steps where steps < 2000:
-                fallthrough
+                break
             case let steps where steps < 5000:
                 quality += 1
             case let steps where steps < 7000:
@@ -70,7 +70,7 @@ extension HomeViewModel{
             
             switch exercice.kcalLost{
             case let kcal where kcal < 100:
-                fallthrough
+                break
             case let kcal where kcal < 200:
                 quality += 1
             case let kcal where kcal < 300:
@@ -83,7 +83,7 @@ extension HomeViewModel{
             
             switch exercice.distanceWalked{
             case let distanceWalked where distanceWalked < 1:
-                fallthrough
+                break
             case let distanceWalked where distanceWalked < 3:
                 quality += 1
             case let distanceWalked where distanceWalked < 6:

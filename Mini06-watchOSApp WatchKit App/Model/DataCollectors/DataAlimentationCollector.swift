@@ -50,6 +50,7 @@ struct DataCollectorAlimentation {
     
     mutating func setAlimentationCategory(category: String, quantifier: Int) {
         alimentationCategories.append(DataCollectorAlimentationCategory(alimentationCategory: category, quantifier: quantifier))
+        point += quantifier
     }
     
     mutating func setMealCategoryArray(_ categories: [DataCollectorMealCategory]) {

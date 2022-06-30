@@ -18,37 +18,27 @@ extension HomeViewModel{
         }
         
         //quantity
-        var amount: Double = 0
+        var amount: Double = 0.0
         exerciceArray.forEach { exercice in
-            amount += Double(exercice.kcalLost)
-            print("deu quanto?", amount)
+            amount += Double(exercice.bpmWalking)
         }
         
         let average = amount / Double(exerciceArray.count)
         switch average {
-        case let exerciceScore where exerciceScore < 100:
+        case let bpm where bpm < 40:
             activityQuantityValue = .lowest
-            print("LOWEST")
-        case let exerciceScore where exerciceScore < 200:
+        case let exerciceScore where exerciceScore < 80:
             activityQuantityValue = .low
-            print("LOW")
-        case let exerciceScore where exerciceScore < 300:
+        case let exerciceScore where exerciceScore < 120:
             activityQuantityValue = .medium
-            print("MEDIUM")
-        case let exerciceScore where exerciceScore < 500:
+        case let exerciceScore where exerciceScore < 160:
             activityQuantityValue = .high
-            print("HIGH")
         default:
             activityQuantityValue = .highest
-            print("HIGHEST")
         }
         
-        activityFocusDataModel.quantityLabel = String(format: "%.1f", average)
-        if average == 1.0 {
-            activityFocusDataModel.quantityLabel.append(" ")
-        } else {
-            activityFocusDataModel.quantityLabel.append(" ")
-        }
+        activityFocusDataModel.quantityLabel = "\(Int(average)) BPM"
+
         
         //quality
         var qualityAmount: Double = 0

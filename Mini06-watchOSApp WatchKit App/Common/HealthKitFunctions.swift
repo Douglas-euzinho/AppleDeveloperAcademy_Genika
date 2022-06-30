@@ -18,6 +18,7 @@ struct HealthKitFunctions {
         HKQuantityType(.stepCount),
         HKQuantityType(.activeEnergyBurned),
         HKQuantityType(.distanceWalkingRunning),
+        HKQuantityType(.walkingHeartRateAverage)
     ]
 
     func autorizeHealthKit() {

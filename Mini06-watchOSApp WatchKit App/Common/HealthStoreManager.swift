@@ -22,6 +22,7 @@ struct HealthStoreManager {
     let stepCount = HKQuantityType(.stepCount)
     let kcalLost = HKQuantityType(.activeEnergyBurned)
     let distanceWalked = HKQuantityType(.distanceWalkingRunning)
+    let bpmWalking = HKQuantityType(.walkingHeartRateAverage)
     
     private init() {
         if HKHealthStore.isHealthDataAvailable() {
@@ -177,6 +178,38 @@ struct HealthStoreManager {
                     let distanceWalked = Double(sample.endDate.timeIntervalSince(sample.startDate))
                     
                     continuation.resume(returning: distanceWalked)
+                }
+                healthStore.execute(query)
+            }
+        }
+        throw HealthStoreManager.Errors.CannotFetchData
+    }
+    
+    func getBpmWalking() async throws -> Int {
+        if await requestAuthorization(forRead: [bpmWalking], forShare: []) {
+            let descriptors = [NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)]
+            
+            return try await withCheckedThrowingContinuation{ (continuation: CheckedContinuation<Int,Error>) in
+                guard let healthStore = healthStore else {
+                    continuation.resume(throwing: HealthStoreManager.Errors.NoHaveHealthStore)
+                    return
+                }
+                
+                let query = HKSampleQuery(sampleType: HKQuantityType(.distanceWalkingRunning), predicate: nil, limit: 2, sortDescriptors: descriptors) { query, samples, error in
+                    guard error == nil else {
+                        debugPrint("[Error - Fetch BPM Data]: \(error?.localizedDescription ?? "NO CAUSE")")
+                        continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
+                        return
+                    }
+                    
+                    guard let sample = samples?.first as? HKCategorySample else {
+                        continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
+                        return
+                    }
+                    
+                    let bpmAverange = Int(sample.endDate.timeIntervalSince(sample.startDate))
+                    
+                    continuation.resume(returning: bpmAverange)
                 }
                 healthStore.execute(query)
             }

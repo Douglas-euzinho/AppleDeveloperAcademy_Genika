@@ -2,7 +2,7 @@
 //  Sleep+CoreDataProperties.swift
 //  Mini06-watchOSApp
 //
-//  Created by Lucas Alexandre Amorim Leoncio on 20/06/22.
+//  Created by Vitor Souza on 30/06/22.
 //
 //
 
@@ -16,12 +16,8 @@ extension Sleep {
         return NSFetchRequest<Sleep>(entityName: "Sleep")
     }
 
-    @NSManaged public var finalSleepHour: Date?
     @NSManaged public var id: UUID?
-    @NSManaged public var initialSleepHour: Date?
-    @NSManaged public var score: Int64
-    @NSManaged public var timeInBed: Date?
-    @NSManaged public var timeSleeping: Date?
+    @NSManaged public var timeSleeping: Double
     @NSManaged public var timesWakeUp: Int64
     @NSManaged public var dailyGeneral: DailyGeneral?
 

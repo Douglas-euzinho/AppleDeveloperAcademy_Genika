@@ -9,10 +9,10 @@ import Foundation
 import CoreData
 
 extension PersistenceController {
-    mutating func createSleep(timeSleeping: Int) throws -> Sleep {
+    mutating func createSleep(timeSleeping: Double) throws -> Sleep {
         let sleep = Sleep(context: context)
         
-        sleep.score = Int64(timeSleeping)
+        sleep.timeSleeping = timeSleeping
 
         try saveContext()
         return sleep

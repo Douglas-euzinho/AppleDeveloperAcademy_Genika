@@ -17,7 +17,7 @@ extension HomeViewModel{
         
         var amount: Double = 0.0
         sleepArray.forEach { sleep in
-            amount += Double(sleep.score)
+            amount += sleep.timeSleeping
         }
         
         let average = amount / Double(sleepArray.count)

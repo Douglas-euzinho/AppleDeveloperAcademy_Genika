@@ -2,7 +2,7 @@
 //  Sleep+CoreDataClass.swift
 //  Mini06-watchOSApp
 //
-//  Created by Lucas Alexandre Amorim Leoncio on 20/06/22.
+//  Created by Vitor Souza on 30/06/22.
 //
 //
 

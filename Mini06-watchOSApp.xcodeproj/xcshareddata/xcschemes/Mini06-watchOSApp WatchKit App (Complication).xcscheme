@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "50BCEC3A284EC02100C85359"
-               BuildableName = "Mini06-watchOSApp WatchKit App.app"
+               BuildableName = "Genika.app"
                BlueprintName = "Mini06-watchOSApp WatchKit App"
                ReferencedContainer = "container:Mini06-watchOSApp.xcodeproj">
             </BuildableReference>
@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "50BCEC36284EC02100C85359"
-               BuildableName = "Watch App.app"
+               BuildableName = "Genika.app"
                BlueprintName = "Mini06-watchOSApp"
                ReferencedContainer = "container:Mini06-watchOSApp.xcodeproj">
             </BuildableReference>
@@ -60,7 +60,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "50BCEC3A284EC02100C85359"
-            BuildableName = "Mini06-watchOSApp WatchKit App.app"
+            BuildableName = "Genika.app"
             BlueprintName = "Mini06-watchOSApp WatchKit App"
             ReferencedContainer = "container:Mini06-watchOSApp.xcodeproj">
          </BuildableReference>
@@ -78,7 +78,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "50BCEC3A284EC02100C85359"
-            BuildableName = "Mini06-watchOSApp WatchKit App.app"
+            BuildableName = "Genika.app"
             BlueprintName = "Mini06-watchOSApp WatchKit App"
             ReferencedContainer = "container:Mini06-watchOSApp.xcodeproj">
          </BuildableReference>

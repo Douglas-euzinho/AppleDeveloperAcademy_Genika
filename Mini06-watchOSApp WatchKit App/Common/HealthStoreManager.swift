@@ -80,7 +80,7 @@ struct HealthStoreManager {
 
                 let query = HKSampleQuery(
                     sampleType: HKCategoryType(.sleepAnalysis),
-                    predicate: nil, limit: 2,
+                    predicate: nil, limit: 5,
                     sortDescriptors: descriptors,
                     resultsHandler: { query, samples, error in
                         guard error == nil else {
@@ -89,13 +89,16 @@ struct HealthStoreManager {
                             return
                         }
                         
-                        guard let sample = samples?.first as? HKCategorySample else {
+                        if let samples = samples as? [HKCategorySample] {
+                            var amount: Double = 0.0
+                            for sample in samples {
+                                amount += Double(sample.endDate.timeIntervalSince(sample.startDate))
+                            }
+                            let average = amount / 5.0
+                            continuation.resume(returning: average / 3_600.00)
+                        } else {
                             continuation.resume(throwing: HealthStoreManager.Errors.CannotFetchData)
-                            return
                         }
-                        
-                        let sleepTimeForOneDay = Double(sample.endDate.timeIntervalSince(sample.startDate))
-                        continuation.resume(returning: sleepTimeForOneDay / 3_600.00)
                     }
                 )
                 

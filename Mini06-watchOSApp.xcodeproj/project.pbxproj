@@ -62,6 +62,8 @@
 		50BFDBA5286BD9B300706E55 /* PersistenceController+Alimentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDBA4286BD9B300706E55 /* PersistenceController+Alimentation.swift */; };
 		50BFDBA7286BDAA100706E55 /* FoodQuantityRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDBA6286BDAA100706E55 /* FoodQuantityRowModel.swift */; };
 		50BFDBA9286BDFF400706E55 /* Date+dateFromTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDBA8286BDFF400706E55 /* Date+dateFromTime.swift */; };
+		50BFDBAF286E3CCE00706E55 /* Sleep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDBAD286E3CCE00706E55 /* Sleep+CoreDataClass.swift */; };
+		50BFDBB0286E3CCE00706E55 /* Sleep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BFDBAE286E3CCE00706E55 /* Sleep+CoreDataProperties.swift */; };
 		50DCF8932857B0320053887C /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8922857B0320053887C /* DiaryView.swift */; };
 		50DCF8972857B2130053887C /* CGFloat+ScreenMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */; };
 		50DCF8992857BA340053887C /* View+AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DCF8982857BA340053887C /* View+AppColor.swift */; };
@@ -87,8 +89,6 @@
 		FBBAED5E2860F5FD00CFD86E /* Alimentation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED4C2860F5FD00CFD86E /* Alimentation+CoreDataProperties.swift */; };
 		FBBAED5F2860F5FD00CFD86E /* Bpm+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED4D2860F5FD00CFD86E /* Bpm+CoreDataClass.swift */; };
 		FBBAED602860F5FD00CFD86E /* Bpm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED4E2860F5FD00CFD86E /* Bpm+CoreDataProperties.swift */; };
-		FBBAED612860F5FD00CFD86E /* Sleep+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED4F2860F5FD00CFD86E /* Sleep+CoreDataClass.swift */; };
-		FBBAED622860F5FD00CFD86E /* Sleep+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED502860F5FD00CFD86E /* Sleep+CoreDataProperties.swift */; };
 		FBBAED632860F5FD00CFD86E /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED512860F5FD00CFD86E /* Meal+CoreDataClass.swift */; };
 		FBBAED642860F5FD00CFD86E /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED522860F5FD00CFD86E /* Meal+CoreDataProperties.swift */; };
 		FBBAED652860F5FD00CFD86E /* AlimentationCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBAED532860F5FD00CFD86E /* AlimentationCategory+CoreDataClass.swift */; };
@@ -208,6 +208,8 @@
 		50BFDBA4286BD9B300706E55 /* PersistenceController+Alimentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersistenceController+Alimentation.swift"; sourceTree = "<group>"; };
 		50BFDBA6286BDAA100706E55 /* FoodQuantityRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodQuantityRowModel.swift; sourceTree = "<group>"; };
 		50BFDBA8286BDFF400706E55 /* Date+dateFromTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+dateFromTime.swift"; sourceTree = "<group>"; };
+		50BFDBAD286E3CCE00706E55 /* Sleep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sleep+CoreDataClass.swift"; sourceTree = "<group>"; };
+		50BFDBAE286E3CCE00706E55 /* Sleep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sleep+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		50DCF8922857B0320053887C /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		50DCF8962857B2130053887C /* CGFloat+ScreenMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+ScreenMetrics.swift"; sourceTree = "<group>"; };
 		50DCF8982857BA340053887C /* View+AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AppColor.swift"; sourceTree = "<group>"; };
@@ -234,8 +236,6 @@
 		FBBAED4C2860F5FD00CFD86E /* Alimentation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alimentation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FBBAED4D2860F5FD00CFD86E /* Bpm+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bpm+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FBBAED4E2860F5FD00CFD86E /* Bpm+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bpm+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		FBBAED4F2860F5FD00CFD86E /* Sleep+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sleep+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FBBAED502860F5FD00CFD86E /* Sleep+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sleep+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FBBAED512860F5FD00CFD86E /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FBBAED522860F5FD00CFD86E /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FBBAED532860F5FD00CFD86E /* AlimentationCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlimentationCategory+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -622,8 +622,8 @@
 		FBBAED6E2860F66F00CFD86E /* Sleep */ = {
 			isa = PBXGroup;
 			children = (
-				FBBAED4F2860F5FD00CFD86E /* Sleep+CoreDataClass.swift */,
-				FBBAED502860F5FD00CFD86E /* Sleep+CoreDataProperties.swift */,
+				50BFDBAD286E3CCE00706E55 /* Sleep+CoreDataClass.swift */,
+				50BFDBAE286E3CCE00706E55 /* Sleep+CoreDataProperties.swift */,
 			);
 			path = Sleep;
 			sourceTree = "<group>";
@@ -830,7 +830,6 @@
 				FBBAEDD728690D7200CFD86E /* PermissionFlowView.swift in Sources */,
 				50A3DEFB28580A59007952F8 /* EmotionalIntensiveView.swift in Sources */,
 				509C88A32863A159004703D2 /* UserDefaultsKeys.swift in Sources */,
-				FBBAED612860F5FD00CFD86E /* Sleep+CoreDataClass.swift in Sources */,
 				FBBAED972866415600CFD86E /* WarningView.swift in Sources */,
 				50350D022864F850003CD461 /* FoodQualityDataViewModel.swift in Sources */,
 				50FE6B0028528DB2007F6073 /* DashedProgressView.swift in Sources */,
@@ -844,7 +843,6 @@
 				50BFDBA3286BD9A900706E55 /* PersistenceController+Sleep.swift in Sources */,
 				50350D1728664B27003CD461 /* HomePlaceholderView.swift in Sources */,
 				36135565286CCB88001A6452 /* PersistenceController+Exercice.swift in Sources */,
-				FBBAED622860F5FD00CFD86E /* Sleep+CoreDataProperties.swift in Sources */,
 				50A3DEFE285920B3007952F8 /* View+CornerRadius.swift in Sources */,
 				507BE86C286A3FE500B0B46A /* DataEmotionalCollector.swift in Sources */,
 				FB0B56E7286D272E00FDADE6 /* HomeViewModel + Alimentation.swift in Sources */,
@@ -859,6 +857,7 @@
 				509C889F28638D50004703D2 /* OnboardingFlowView.swift in Sources */,
 				FBBAED6C2860F5FD00CFD86E /* DailyGeneral+CoreDataProperties.swift in Sources */,
 				50350D1928664E2A003CD461 /* HomePlaceholderSegmentView.swift in Sources */,
+				50BFDBAF286E3CCE00706E55 /* Sleep+CoreDataClass.swift in Sources */,
 				50957B1F285F6C8400C908BB /* FoodQuantityStepperViewModel.swift in Sources */,
 				50BCEC4E284EC02300C85359 /* ContainerView.swift in Sources */,
 				FBBAED602860F5FD00CFD86E /* Bpm+CoreDataProperties.swift in Sources */,
@@ -903,6 +902,7 @@
 				509C88A12863A12D004703D2 /* UserDefaults+ManagingValues.swift in Sources */,
 				FB0B56E5286D271E00FDADE6 /* HomeViewModel + Feeling.swift in Sources */,
 				505F172128626CDE002D6BF5 /* HeaderOnboardingOne.swift in Sources */,
+				50BFDBB0286E3CCE00706E55 /* Sleep+CoreDataProperties.swift in Sources */,
 				FBBAED642860F5FD00CFD86E /* Meal+CoreDataProperties.swift in Sources */,
 				505F171E28626C93002D6BF5 /* OnboardingBarGraphicModel.swift in Sources */,
 				364559F92861114A00368836 /* PersistenceController.swift in Sources */,

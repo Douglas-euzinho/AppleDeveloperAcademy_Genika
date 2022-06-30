@@ -49,7 +49,7 @@ struct HomePlaceholderView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle("Health")
+        .navigationTitle("Genika")
     }
 }
 

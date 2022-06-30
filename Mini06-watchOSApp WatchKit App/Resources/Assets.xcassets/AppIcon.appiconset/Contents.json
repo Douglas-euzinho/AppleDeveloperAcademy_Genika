@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Notification Center.jpg",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -8,6 +9,7 @@
       "subtype" : "38mm"
     },
     {
+      "filename" : "Notification Center-1.jpg",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -15,18 +17,21 @@
       "subtype" : "42mm"
     },
     {
+      "filename" : "Companion Settings.jpg",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "Companion Settings-1.jpg",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
+      "filename" : "Notification Center-2.jpg",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -34,6 +39,7 @@
       "subtype" : "45mm"
     },
     {
+      "filename" : "Home Screen.jpg",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -41,6 +47,7 @@
       "subtype" : "38mm"
     },
     {
+      "filename" : "Home Screen-3.jpg",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -48,6 +55,7 @@
       "subtype" : "40mm"
     },
     {
+      "filename" : "Home Screen-4.jpg",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -55,6 +63,7 @@
       "subtype" : "41mm"
     },
     {
+      "filename" : "Home Screen-1.jpg",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -62,6 +71,7 @@
       "subtype" : "44mm"
     },
     {
+      "filename" : "Home Screen-2.jpg",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -69,6 +79,7 @@
       "subtype" : "45mm"
     },
     {
+      "filename" : "Short Look.jpg",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -76,6 +87,7 @@
       "subtype" : "38mm"
     },
     {
+      "filename" : "Short Look-1.jpg",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -83,6 +95,7 @@
       "subtype" : "42mm"
     },
     {
+      "filename" : "Short Look-2.jpg",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -90,6 +103,7 @@
       "subtype" : "44mm"
     },
     {
+      "filename" : "Short Look-3.jpg",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -97,6 +111,7 @@
       "subtype" : "45mm"
     },
     {
+      "filename" : "App Store.jpg",
       "idiom" : "watch-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

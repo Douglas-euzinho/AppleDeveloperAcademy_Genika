@@ -118,7 +118,7 @@ struct HealthStoreManager {
                 }
 
                 let query = HKSampleQuery(
-                    sampleType: HKCategoryType(.sleepAnalysis),
+                    sampleType: HKQuantityType(.stepCount),
                     predicate: nil, limit: 5,
                     sortDescriptors: descriptors,
                     resultsHandler: { query, samples, error in
@@ -158,7 +158,7 @@ struct HealthStoreManager {
                 }
 
                 let query = HKSampleQuery(
-                    sampleType: HKCategoryType(.sleepAnalysis),
+                    sampleType: HKQuantityType(.activeEnergyBurned),
                     predicate: nil, limit: 5,
                     sortDescriptors: descriptors,
                     resultsHandler: { query, samples, error in
@@ -198,7 +198,7 @@ struct HealthStoreManager {
                 }
 
                 let query = HKSampleQuery(
-                    sampleType: HKCategoryType(.sleepAnalysis),
+                    sampleType: HKQuantityType(.distanceWalkingRunning),
                     predicate: nil, limit: 5,
                     sortDescriptors: descriptors,
                     resultsHandler: { query, samples, error in
@@ -237,7 +237,7 @@ struct HealthStoreManager {
                 }
 
                 let query = HKSampleQuery(
-                    sampleType: HKCategoryType(.sleepAnalysis),
+                    sampleType: HKQuantityType(.walkingHeartRateAverage),
                     predicate: nil, limit: 5,
                     sortDescriptors: descriptors,
                     resultsHandler: { query, samples, error in
